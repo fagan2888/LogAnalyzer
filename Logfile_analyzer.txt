@@ -1,0 +1,2807 @@
+<HTML height="100%">
+
+
+<head>
+
+
+
+
+
+<script type="text/javascript">
+
+function upd(a, count) {
+document.getElementById("ProgressBar").Max = count;
+document.getElementById("ProgressBar").value = a;
+}
+
+</script>
+
+
+
+
+<title>TWS Logfile Filter</title>
+
+
+<HTA:APPLICATION
+ID="TWSLogfileFilter"
+APPLICATIONNAME="TWS Logfile Filter"
+SCROLL="no"
+CAPTION="yes"
+VERSION="1.2"
+SINGLEINSTANCE="yes"
+SYSMENU="yes"
+MAXIMIZEBUTTON="yes"
+MINIMIZEBUTTON="yes"
+ICON="timberhill.ico"
+
+>
+
+
+</head>
+
+
+
+
+<SCRIPT Language="VBScript">
+
+Option Explicit
+
+
+
+
+Sub Window_OnLoad
+
+Dim intLeft, intTop
+
+window.offscreenBuffering = True
+
+
+window.resizeTo screen.availWidth - 50,screen.availHeight - 30
+intLeft = (screen.availWidth - (screen.availWidth - 50))/2
+intTop = (screen.availHeight - (screen.availHeight - 50))/2
+window.moveTo intLeft, intTop
+
+setcurrentday
+
+settimeout
+
+'updatedays
+
+fileselection
+
+displayimages
+
+refreshtitle
+
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub setcurrentday
+
+Dim dtmDayOfWeek, currday
+dtmDayOfWeek = DatePart("w", Now)
+Select Case dtmDayOfWeek
+Case 1 currday = "Sun"
+Case 2 currday = "Mon"
+Case 3 currday = "Tue"
+Case 4 currday = "Wed"
+Case 5 currday = "Thu"
+Case 6 currday = "Fri"
+Case 7 currday = "Sat"
+End Select
+
+form.day.value = currday
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+Sub settimeout
+
+Dim WshShell, timescrvalue, x, FFFFFFFF
+
+Set WshShell = CreateObject("WScript.Shell")
+form.scripttimeoutcheck.checked = False
+
+On Error resume next
+timescrvalue = WSHShell.RegRead("HKCU\SOFTWARE\Microsoft\Internet Explorer\Styles\MaxScriptStatements")
+On error goto 0
+
+Select case Err
+
+Case 0
+If timescrvalue <> 0 or timescrvalue = "" Then
+x=MsgBox("The script timeout checker integrated in IE can trigger warning messages during the program execution. Do you want to disable it?" & vbCrLf & vbCrLf & "You can then press CTRL + Z at any time to enable it again." & vbCrLf & vbCrLf & "If you click Yes you must than restart the application for the changes to take effect.",68,"Internet Explorer Script timeout checker")
+If x = 6 Then
+WSHShell.RegWrite "HKCU\SOFTWARE\Microsoft\Internet Explorer\Styles\MaxScriptStatements", FFFFFFFF, "REG_DWORD"
+form.scripttimeoutcheck.checked = True
+form.scripttimeoutcheck.disabled="disabled"
+Else
+form.scripttimeoutcheck.checked = True
+form.scripttimeoutcheck.disabled="disabled"
+End if
+
+If x = 7 then
+form.scripttimeoutcheck.checked = False
+form.scripttimeoutcheck.disabled = False
+End If
+Else
+form.scripttimeoutcheck.checked = True
+form.scripttimeoutcheck.disabled="disabled"
+End If
+
+
+Case Else
+x=MsgBox("The script timeout checker integrated in IE can trigger warning messages during the program execution. Do you want to disable it?" & vbCrLf & vbCrLf & "You can then press CTRL + Z at any time to enable it again." & vbCrLf & vbCrLf & "If you click Yes you must than restart the application for the changes to take effect.",68,"Internet Explorer Script timeout checker")
+
+If x = 6 Then
+WSHShell.RegWrite "HKCU\SOFTWARE\Microsoft\Internet Explorer\Styles\"
+WSHShell.RegWrite "HKCU\SOFTWARE\Microsoft\Internet Explorer\Styles\MaxScriptStatements", FFFFFFFF, "REG_DWORD"
+form.scripttimeoutcheck.checked = True
+form.scripttimeoutcheck.disabled="disabled"
+End if
+
+If x = 7 then
+form.scripttimeoutcheck.checked = False
+form.scripttimeoutcheck.disabled = False
+End If
+
+End select
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub getpage(user)
+
+    Dim content, page, userline, i, arrLines, b, x, count, steps, item, usr, usrdash, url, xmlhttp, ont
+
+     url = "https://wit1.interactivebrokers.com/cgi-bin/tws/tws_error_reader.pl"
+
+    set xmlhttp = CreateObject("MSXML2.XMLHTTP.6.0")
+    upd 1, 11
+    on error resume next
+    xmlhttp.Open "GET", url, false, "twserror", "twserr67"
+     upd 2, 11
+
+If form.autocache.checked = False Then
+     'prevents the cached page to be used
+     xmlhttp.setRequestHeader "If-Modified-Since", "Sat, 1 Jan 2000 00:00:00 GMT"
+End If
+
+    upd 3, 11
+     xmlhttp.send
+     upd 4, 11
+
+
+    status = xmlhttp.status
+     upd 5, 11
+    if err.number <> 0 or status <> 200 then
+        if status = 404 then
+            msgbox "Page does not exist (404)."
+        elseif status >= 401 and status < 402 then
+            msgbox "Access denied (401)."
+        elseif status >= 500 and status <= 600 then
+            msgbox "500 Internal Server Error on remote site."
+        else
+            msgbox "Server is down or not responding properly."
+        end if
+    else
+
+            page = xmlhttp.responseText
+               upd 6, 11
+       
+       
+               arrLines = Split(page, vbLf)
+               upd 7, 11
+               count = UBound(arrLines) - 1
+               upd 8, 11
+       
+       
+               item = """>" & user
+               upd 9, 11
+       
+
+     For b = 0 to count
+           userline = arrLines(b)
+           i=inStr(userline, item)
+     
+                   If i <> 0 then
+                 
+                         usr = RemoveHTML(userline)
+						 'Msgbox usr
+                         usrdash = arrangedate(usr)
+						 'MsgBox usrdash
+                     steps = steps + "<option value="+ usr +">" + usrdash +" </option>"
+                 
+                       End If
+            
+     Next
+          upd 10, 11
+  
+          If steps <> "" Then       
+              userfileselect.innerHTML = "<label style=""display:inline-block;""><select name=userfile id=userfile onkeydown=""CheckEnterkeyInUserfile()"" style=""width:350px; vertical-align:absmiddle"">" + steps + "</select> <input type=button value=""Unzip file"" style=""font:bold 12px Verdana; color:black; vertical-align:absmiddle"" title=""Decompress content of the selected Error report into the Logfiles Folder"" onclick=""extractzip(userfile.value)""/></label>"
+              form.userfile.Focus
+			   Else
+                 userfileselect.innerHTML = "<label style=vertical-align:top><b><font face=Verdana size=2px color=CC0033>The search for '"+ form.user.value + "' returned no results.</font></b></label>"
+
+          End If
+          upd 11, 11
+       
+End if
+
+    set xmlhttp = Nothing
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub extractzip(file)
+Msgbox file
+Dim objShell, fso, fileURL, filetemp, ZipFile, ExtractTo, FilesInZip, y, UnZipIt
+
+upd 0, 11
+fileURL = "https://wit1.interactivebrokers.com/tws/data/" & file
+
+
+
+
+If form.autotempcleaning.checked = True Then
+
+  If deletefiles(2) = False Then
+  'msgbox "The folder " + form.folder.value + " has not been completely cleaned. The Error Report content will NOT be extracted.", 48
+  Exit Sub
+  End If
+
+Else
+
+
+If checkfoldervalue(form.folder.value) = False Then
+msgbox "The TempDir path MUST either be \Temp or start with \Temp- and cannot contain special characters. Subfolders are not allowed." & vbCrLf & "Please be sure not to insert a backslash at the end of the string", 48, "Invalid TempDir"
+Exit Sub
+End If
+
+End If
+
+
+
+
+upd 1, 11
+
+
+'If the extraction location does not exist create it.
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+If NOT fso.FolderExists(form.folder.value) Then
+         
+            y=MsgBox("Directory "+form.folder.value+" does not exist." & vbCrLf & "Do you want to create it and extract the Error Report into it?",52,"TempDir not existent")
+
+    If y = 6 Then
+      On Error Resume Next
+      fso.CreateFolder(form.folder.value)
+                  If err.number <> 0 Then
+                     msgbox "There was an error while creating " + form.folder.value + ". Please create the folder manually. The current operation will be aborted.", 48
+                     Set fso = Nothing
+                         Exit Sub
+                  End If
+
+    Else
+      Set fso = Nothing
+       Exit Sub
+    End If
+
+ 
+End If
+
+Set fso = Nothing
+
+
+filetemp = form.folder.value+"\"+file
+
+
+'Verify that the error report has been downloaded
+upd 2, 11
+
+
+If download(fileURL, filetemp) = False Then
+Exit Sub
+End if
+
+
+upd 6, 11
+
+
+
+upd 7, 11
+
+'Extract the content of the zip file.
+
+
+set UnZipIt = CreateObject("Shell.Application")
+set FilesInzip=UnZipIt.NameSpace(filetemp).items
+
+UnZipIt.NameSpace(form.folder.value).CopyHere(FilesInzip)
+
+
+upd 8, 11
+Set fso = Nothing
+Set objShell = Nothing
+document.title = "TWS Logfile Filter - currently loaded: " +form.folder.value+"\"+file+""
+document.title = "TWS Logfile Filter - currently loaded: " +form.folder.value+"\"+file+""
+upd 11, 11
+
+
+'updatedays
+'setcurrentday
+
+fileselection
+
+displayimages
+
+If form.autocls.checked = True Then
+messages.innerHTML = ""
+connpanel.innerHTML = ""
+orders.innerHTML = ""
+basic.innerHTML = ""
+md.innerHTML = ""
+system.innerHTML = ""
+api.innerHTML = ""
+htbp.innerHTML = ""
+form.linecount.value = ""
+End If
+
+'form.day.Focus
+
+End Sub
+
+
+
+
+
+
+
+
+
+Sub fileselection
+Dim oFSO, oDir, steps1, colFiles, strFileName, objStartFolder, f, Size, Sizelabel, daylogexists, twslogexists, name, mainlog
+
+name = "log."+form.day.value+".txt"
+mainlog = "tws.log"
+
+
+objStartFolder = form.folder.value
+
+        Set oFSO = CreateObject("Scripting.FileSystemObject")	
+		
+		If oFSO.FolderExists(form.folder.value) then
+		
+        Set oDir = oFSO.GetFolder(objStartFolder)
+		
+        Set colFiles = oDir.Files
+		
+        For Each f in colFiles
+           If oFSO.GetExtensionName(f) = "log"  OR  oFSO.GetExtensionName(f) = "txt" Then  
+           Size = (Round(f.Size / 1048576, 3))
+		   Sizelabel = f.Name & " - " & Size & " Mb"
+			  
+			    If f.Name = name Then 
+				 daylogexists = True
+				 steps1 = steps1 + "<option value="+ f.Name +" selected=selected>"+Sizelabel+"</option>"
+			    
+			    ElseIf f.Name = mainlog Then
+                steps1 = steps1 + "<option value="+ f.Name +" selected=selected>"+Sizelabel+"</option>"   			
+				 twslogexists = True
+			    
+				Else
+				steps1 = steps1 + "<option value="+ f.Name +">"+Sizelabel+"</option>"
+				
+                End If
+		  
+		    End If
+		Next
+        
+
+		fileselectspan.innerHTML = "<input type=checkbox name=hid id=hid style=display:none><select name=""fileselect"" id=""fileselect"" style=""vertical-align:absmiddle; width:170px;"">" + steps1 + "</select> "
+End If
+		
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub filterfile(choice)
+'Dim StartTime, EndTime, TimeIt
+'StartTime = Timer
+
+Dim objFSO, objReadFile, objxmlDoc, line, file, a, count, item, i, arrLines
+
+
+If checkfoldervalue(form.folder.value) = False Then
+msgbox "The TempDir path MUST either be \Temp or start with \Temp- and cannot contain special characters. Subfolders are not allowed." & vbCrLf & "Please be sure not to insert a backslash at the end of the string", 48, "Invalid TempDir"
+Exit Sub
+End If
+
+
+file=form.folder.value+"\"+form.fileselect.value
+
+
+'Controllo che esista il file
+
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+
+If objFSO.FileExists(file) = false then
+msgbox "Directory "+form.folder.value+" or File "+file+" not existent", vbCritical + vbOkOnly, "Error"
+Exit Sub
+End If
+
+objReadFile = objFSO.OpenTextFile(file,1).Readall
+
+arrLines = Split(objReadFile, vbLf)
+count = UBound(arrLines) - 1
+
+upd 0, 100
+
+
+'Read as well tws.error.xml file if API button has been pressed - and put some useful lines in the settings panel
+
+'If choice = 7 AND form.readtwsxml.checked = True then
+If choice = 7 then
+
+Dim api1, api2, api3, api4, api5, api6, api7, api8, api9, api10, api11, api12, api13, api14
+Set objxmlDoc = CreateObject("Microsoft.XMLDOM")
+objxmlDoc.async="false"
+objxmlDoc.load(form.folder.value+"\Tws.error.xml")
+
+If objxmlDoc.parseError.errorCode <> 0 Then
+msgbox "File "+form.folder.value+"\tws.error.xml not existent or unreadable." & vbCrLf & "Reason: "+objxmlDoc.parseError.reason+" " & vbCrLf & "Info from this file will not be included in the Environment panel.", vbExclamation + vbOkOnly, "Info"
+Exit sub
+End If
+
+api.innerHTML = api.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from file "+form.folder.value+"\tws.xml</b></legend></fieldset>"
+
+Set objNodeList = objxmlDoc.getElementsByTagName("ApiSettings")
+If objNodeList.length > 0 Then
+api.innerHTML = api.innerHTML + "<font color=black><b>API Settings:</b></font></BR>"
+For Each Node In objNodeList
+api1 = Node.getAttribute("dde")
+api2 = Node.getAttribute("socketClient")
+api3 = Node.getAttribute("port")
+api11 = Node.getAttribute("autoOpenOrdDonwload")
+api12 = Node.getAttribute("useNegativeAutoRange")
+api4 = Node.getAttribute("includeFxPositions")
+api5 = Node.getAttribute("logLevel")
+api6 = Node.getAttribute("overridePrecautionaryConstraints")
+api7 = Node.getAttribute("bypassBondWarning")
+api13 = Node.getAttribute("bypassYtwWarning")
+api8 = Node.getAttribute("masterClientID")
+api9 = Node.getAttribute("createApiMsgLogFile")
+api14 = Node.getAttribute("includeMktData")
+api10 = Node.getAttribute("autoOpenOrdDonwload")
+
+api.innerHTML = api.innerHTML + "<font color=black>Enable DDE clients: <b>"+api1+"</b> &nbsp;&nbsp;Enable ActiveX and Socket clients: <b>"+api2+"</b> &nbsp;&nbsp;Port: <b>"+api3+"</b> &nbsp;&nbsp;Master API cliend ID: <b>"+api8+"</b> &nbsp;&nbsp;Download open order on connection: <b>"+api11+"</b> &nbsp;&nbsp;Use negative numbers to bind automatic orders: <b>"+api12+"</b> &nbsp;&nbsp;Log level: <b>"+api5+"</b> (1=System &nbsp; 2=Error &nbsp; 3=Warning &nbsp; 4=Info &nbsp; 5=Detail) &nbsp;&nbsp;Include FX positions for Portfolio: <b>"+api4+"</b> &nbsp;&nbsp;Override Precautionary Constraints: <b>"+api6+"</b> &nbsp;&nbsp;Bypass Bond Warning: <b>"+api7+"</b> &nbsp;&nbsp;Bypass negative yield to worst confirmation for API orders: <b>"+api13+"</b> &nbsp;&nbsp;Create Api Message Log File: <b>"+api9+"</b> &nbsp;&nbsp;Include Market Data in Api Log File: <b>"+api14+"</b> &nbsp;&nbsp;Download open orders: <b>"+api10+"</b></BR></font>"
+Next
+End If
+
+api.innerHTML = api.innerHTML + "<font color=black></BR>Suppress Market Cap for API orders of this types: </font>"
+Set objNodeList = objxmlDoc.getElementsByTagName("ListOfStrings")
+If objNodeList.length > 0 then
+For each Node in objNodeList
+If Node.getAttribute("varName") = "typesToSuppressMarketCap" Then
+api.innerHTML = api.innerHTML + "<b>"+ Node.Text +"</b></font></BR>"
+End If
+Next
+End If
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("ListOfStrings")
+If objNodeList.length > 0 then
+For each Node in objNodeList
+If Node.getAttribute("varName") = "trustedIPAddresses" Then
+api.innerHTML = api.innerHTML + "<font color=black></BR>Trusted IP addresses: <b>"+ Node.Text +"</b></font></BR>"
+End If
+
+Next
+End If
+
+api.innerHTML = api.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from file "+form.folder.value+"\tws.xml</b></legend></fieldset></BR></BR>"
+
+Set objxmlDoc = Nothing
+
+End If
+
+
+
+
+
+
+'Read as well tws.error.xml file if MD button has been pressed - and put some useful lines in the settings panel
+
+
+
+'If choice = 6 AND form.readtwsxml.checked = True then
+If choice = 6 then
+
+Dim md1, md2, md3, md4, md5, md6, md7, es1, es2, es3, es4, es5, es6, es7, es8, es9, es10, sm1, sm2, sm3, sm4, sm5
+
+Set objxmlDoc = CreateObject("Microsoft.XMLDOM")
+objxmlDoc.async="false"
+objxmlDoc.load(form.folder.value+"\Tws.error.xml")
+
+If objxmlDoc.parseError.errorCode <> 0 Then
+msgbox "File "+form.folder.value+"\tws.error.xml not existent or unreadable." & vbCrLf & "Reason: "+objxmlDoc.parseError.reason+" " & vbCrLf & "Info from this file will not be included in the Environment panel.", vbExclamation + vbOkOnly, "Info"
+Exit sub
+End If
+
+md.innerHTML = md.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from file "+form.folder.value+"\tws.xml</b></legend></fieldset>"
+
+md.innerHTML = md.innerHTML + "<font color=black><b>Market Data Settings:</b></font></BR>"
+Set objNodeList = objxmlDoc.getElementsByTagName("MarketDataSettings")
+If objNodeList.length > 0 Then
+For each Node in objNodeList
+md1 = Node.getAttribute("showFrozenMarketDataForIndex")
+md3 = Node.getAttribute("showFrozenMarketData")
+md5 = Node.getAttribute("showIndexCapability")
+md6 = Node.getAttribute("showNativeTop")
+md7 = Node.getAttribute("showBondNetPrice")
+
+'Looks like never changinr - removed
+md2 = Node.getAttribute("autoShowFrozenMarketDataForIndex")
+md4 = Node.getAttribute("autoShowFrozenMarketData")
+
+md.innerHTML = md.innerHTML + "<font color=black>Show last known quotes for indexes only: <b>"+md1+"</b> &nbsp;&nbsp;Show last known quotes, excluding indexes: <b>"+md3+"</b> &nbsp;&nbsp;Enable Native Indexes Prices : <b>"+md5+"</b> &nbsp;&nbsp;Prefer Native Indexes Prices: <b>"+md6+"</b> &nbsp;&nbsp;Fixed Income Pricing - Show Net Price: <b>"+md7+"</b></font></BR>"
+Next
+End If
+
+md.innerHTML = md.innerHTML + "</BR><font color=black><b>ESignal Settings:</b></font></BR>"
+Set objNodeList = objxmlDoc.getElementsByTagName("ESignalSettings")
+If objNodeList.length > 0 Then
+For each Node in objNodeList
+es1 = Node.getAttribute("allowed")
+If Node.getAttribute("username") <> "" Then
+es2 = Node.getAttribute("username")
+Else
+es2 = ""
+End If
+If Node.getAttribute("password") <> "" Then
+es3 = Node.getAttribute("password")
+Else
+es3 = ""
+End If
+es4 = Node.getAttribute("host")
+es5 = Node.getAttribute("apiUnpacedUpdates")
+
+md.innerHTML = md.innerHTML + "<font color=black>allowed: <b>"+es1+"</b> &nbsp;&nbsp;host: <b>"+es4+"</b> &nbsp;&nbsp;apiUnpacedUpdates: <b>"+es5+"</b> &nbsp;&nbsp;username: <b>"+es2+"</b> &nbsp;&nbsp;password: <b>"+es3+"</b></font></BR>"
+Next
+End If
+
+md.innerHTML = md.innerHTML + "</BR><font color=black><b>ESignal Products Settings:</b></font></BR>"
+Set objNodeList = objxmlDoc.getElementsByTagName("ESignalSecSettings")
+If objNodeList.length > 0 Then
+For each Node in objNodeList
+ es6 = Node.getAttribute("varName")
+ md.innerHTML = md.innerHTML + "<font color=black>eSignal product: <b>"+es6+"</b> &nbsp;&nbsp;</font></BR>" 
+Next
+End If
+
+Set objNodeList2 = objxmlDoc.getElementsByTagName("ESignalExchangeSettings")
+If objNodeList2.length > 0 Then
+For each Noded in objNodeList2
+  es7 = Noded.getAttribute("varName")
+  es8 = Noded.getAttribute("top")
+  es9 = Noded.getAttribute("depth")
+  es10 = Noded.getAttribute("hist")
+md.innerHTML = md.innerHTML + "<font color=black>Region: <b>"+es7+"</b> &nbsp;&nbsp;top: <b>"+es8+"</b> &nbsp;&nbsp;depth: <b>"+es9+"</b> &nbsp;&nbsp;hist: <b>"+es10+"</b> &nbsp;&nbsp;</font></BR> "
+Next
+End If
+
+
+md.innerHTML = md.innerHTML + "</BR><font color=black><b>Smart Routing Settings:</b></font></BR>"
+Set objNodeList = objxmlDoc.getElementsByTagName("SmartRoutingSettings")
+If objNodeList.length > 0 Then
+For each Node in objNodeList
+sm1 = Node.getAttribute("preOpenReroute")
+sm2 = Node.getAttribute("favorPriceImprovements")
+sm3 = Node.getAttribute("eTradeOnly")
+sm4 = Node.getAttribute("firmQuoteOnly")
+sm5 = Node.getAttribute("nbboPriceCap")
+
+md.innerHTML = md.innerHTML + "<font color=black>Pre-open re-route: <b>"+sm1+"</b> &nbsp;&nbsp;Seek price improvement: <b>"+sm2+"</b> &nbsp;&nbsp;Exclude exchanges with NON-Electronic quotes: <b>"+sm3+"</b> &nbsp;&nbsp;Exclude exchanges with NON-firm quotes: <b>"+sm4+"</b> &nbsp;&nbsp;Max distance from NBBO (#=Non defined): <b>"+sm5+"</b></font></BR>"
+Next
+End If
+
+
+
+
+md.innerHTML = md.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from file "+form.folder.value+"\tws.xml</b></legend></fieldset></BR></BR>"
+
+
+End If
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select Case choice
+Case 1
+messages.innerHTML = messages.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 2
+system.innerHTML = system.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 3
+basic.innerHTML = basic.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 4
+connpanel.innerHTML = connpanel.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 5
+orders.innerHTML = orders.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 6
+md.innerHTML = md.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 7
+api.innerHTML = api.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+Case 9
+htbp.innerHTML = htbp.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from "+file+"</b></legend></fieldset>"
+End Select
+
+
+
+
+
+
+'Definisco i criteri di analisi per Deep Analysis = True
+If form.deep.checked = True then
+
+
+
+For a = 0 to Count
+
+line = arrLines(a)
+
+Select Case choice
+
+
+
+
+Case 1
+
+If inStr(line, "TWS RESTART") <> 0 then
+messages.innerHTML = messages.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array("SPLASH Creating screen", "SPLASH Connecting to server", "SPLASH Requesting startup parameters", "SPLASH Retrieving settings key", "SPLASH Loading resources", "SPLASH Initializing environment", "SPLASH Reading market rules", "SPLASH Reading settings file", "SPLASH Loading window factories", "SPLASH Initializing resources", "SPLASH Processing startup parameters", "SPLASH Loading order defaults", "SPLASH Initializing managers", "SPLASH Starting application", "SPLASH Closing screen and saving", "S3:", "Received login", "Saving settings", "factory settings", "Copying file", "Verifying saved file", "EventQueue-0] - CCP reported time:")
+i=inStr(line, item)
+If i <> 0 then
+messages.innerHTML = messages.innerHTML + "<font color=green>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("PROXY Failed to connect", "upload failed", "Login failed", "Failed token authentication", "S3: Error", "failed to save settings file", "verification failed for settings file", "Error parsing xml", "Error reading settings file")
+i=inStr(line, item)
+If i <> 0 then
+messages.innerHTML = messages.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("Trading Login Handoff class", "SPLASH Close pressed", "Started auto log off", "Application exit", "Competition", "competition", "Competing", "User initiated exit session", "Crossing day in suspended state", "Day cross detected", "SYSTEM CLOCK HAS BEEN CHANGED BY USER")
+i=inStr(line, item)
+
+If i <> 0 then
+messages.innerHTML = messages.innerHTML + "<font color=orange>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+
+
+Case 2
+
+If inStr(line, "TWS RESTART") <> 0 then
+system.innerHTML = system.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array("Memory:total=", "CPU:cur=", "CPU Usage")
+i=inStr(line, item)
+If i <> 0 then
+system.innerHTML = system.innerHTML + "<font color=336666>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array( "of live threads:")
+i=inStr(line, item)
+If i <> 0 then
+system.innerHTML = system.innerHTML + "<font color=orange>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("has not responded", "OutOfMemoryError:" )
+i=inStr(line, item)
+If i <> 0 then
+system.innerHTML = system.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+Case 3
+
+
+If inStr(line, "TWS RESTART") <> 0 then
+basic.innerHTML = basic.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array("partitionList():", "estoring", "PROXY Cleared", "Jts dir is", "Build ", "java version =", "sun.arch.data.model =", "os =", "username =", "set audit xml file:", "Started on", "timezone:", "Locale=", "runtime =", "vendor =", "host =", "remotePort =", "S3: checkbox", "EventQueue-0] - CCP reported time:", "Monitor: Monitor:")
+i=inStr(line, item)
+If i <> 0 then
+basic.innerHTML = basic.innerHTML + "<font color=336666>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("there is no internet connectivity")
+i=inStr(line, item)
+If i <> 0 then
+basic.innerHTML = basic.innerHTML + "<font color=orange>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+Case 4
+
+If inStr(line, "TWS RESTART") <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array("changing state for connection", "via ccp", "] - Connecting", "Connected, sending auth", "natively", "Passed", " Connected to ", "DISCONNECT_BY_DESIGN", "DISCONNECT_ON_EXIT_SESSION", "DISCONNECT_ON_REDIRECTION", "DISCONNECT_ON_INACTIVITY", "DISCONNECT_ON_SETTINGS", "DISCONNECT_NATIVE_CONNECTION_RESTORED", "NS_AUTH_START", "native upgrade", "Received heartbeat")
+i=inStr(line, item)
+If i <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<font color=green>" + line + "</font></BR>"
+End If
+next
+
+
+for each item in Array("server error, will retry in seconds", "not received heartbeat", "competing", "SPLASH Creating mini screen for reconnect", ": connecting to server", "SPLASH Connecting to server", ": Authenticating")
+i=inStr(line, item)
+If i <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<font color=orange>" + line + "</font></BR>"
+End If
+next
+
+
+
+for each item in Array("creating socket failed", "java.net.SocketException:", ": Error connecting", "connection error,", "DISCONNECT_ON_BROKEN_SOCKET", "DISCONNECT_ON_CONNECTION_FAILURE", "DISCONNECT_AUTHORIZATION_FILED", "NO_PING_RESPONSE", "NO_AUTH_RESPONSE" )
+i=inStr(line, item)
+If i <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<b><font color=red>" + line + "</b></font></BR>"
+End If
+next
+
+
+
+
+
+
+
+
+
+Case 9
+
+If inStr(line, "TWS RESTART") <> 0 then
+htbp.innerHTML = htbp.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "HTBP Hot Backup PGL generated", "HTBP Host:", "HTBP Hijacked host", "HTBP Main", "HTBP Notify", "HTBP S", "HTBP U", "HTBP Top", "HTBP Peer connected", "->Accessible")
+i=inStr(line, item)
+If i <> 0 then
+htbp.innerHTML = htbp.innerHTML + "<font color=green>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("Disconnected from live peer", "HTBP Hot Backup peer resolution failed", "Connection establish failed", "Failed to probe", "->Not Accessible", "failed, remaining attempts:")
+i=inStr(line, item)
+If i <> 0 then
+htbp.innerHTML = htbp.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+for each item in Array("HotBackupStatusManager: Status sent")
+i=inStr(line, item)
+If i <> 0 then
+htbp.innerHTML = htbp.innerHTML + "<font color=blue>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+
+
+Case 5
+
+If inStr(line, "TWS RESTART") <> 0 then
+orders.innerHTML = orders.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array("moving dialog to front: Order Confirmation class", "Submitted exercise request", "on pending page", "your order will not be placed at the exchange", "Restore an order", "Current order recovery state")
+i=inStr(line, item)
+If i <> 0 then
+orders.innerHTML = orders.innerHTML + "</BR><font color=green>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("FixOrderState", "skipping trade:", "what-if")
+i=inStr(line, item)
+If i <> 0 then
+orders.innerHTML = orders.innerHTML + "</BR><font color=blue>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("Order value is too large", "WARNING: Please note that the qualifying equity within your account", "ALERT: Your account,", "URGENT: one or more futures", "URGENT: Please note", "ORDER IS NOT ACCEPTED", "Order would cross related resting order", "Invalid effective time", "The time or time-zone entered is invalid", "You must enter a valid price", "Limit price too far outside of NBBO", "does not comply", "does not conform", "Order size is not within the limits", "order rejected:", "The contract is not available for short sale", "Some positions could not be closed", "The price cannot be empty", "COULD NOT VALUE THIS CONTRACT AT THIS TIME")
+i=inStr(line, item)
+If i <> 0 then
+orders.innerHTML = orders.innerHTML + "</BR><font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+
+
+Case 6
+
+If inStr(line, "TWS RESTART") <> 0 then
+md.innerHTML = md.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "TWS Max tickers", "GRAPHS | ChartPanel", "creating subchart", "CHARTS | ChartPanel")
+i=inStr(line, item)
+If i <> 0 then
+md.innerHTML = md.innerHTML + "<font color=green>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("more deep books", "Market data is over the limit", "Historical data request pacing violation", "The application was disconnected from the HMDS Server", "No market data", "Trading TWS session is connected from a different IP address", "timed out waiting for market data")
+i=inStr(line, item)
+If i <> 0 then
+md.innerHTML = md.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array("No historical market data available","Requesting delayed data for q(ChartPanel", "Reset market data subscription", "Reset deep data subscription", "Delayed HMDS queries on config")
+i=inStr(line, item)
+If i <> 0 then
+md.innerHTML = md.innerHTML + "<font color=orange>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+
+Case 7
+
+If inStr(line, "TWS RESTART") <> 0 then
+api.innerHTML = api.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( ":DET]", ":SYS]", "Max API Backfill", "API server listening", "API Max tickers", ":INFO] Handling incoming", ":INFO] Processing", ":INFO] Placing" )
+i=inStr(line, item)
+If i <> 0 then
+api.innerHTML = api.innerHTML + "<font color=green>" + line + "</font></BR>"
+End If
+next
+
+
+for each item in Array( ":ERR]", "Address already in use")
+i=inStr(line, item)
+If i <> 0 then
+api.innerHTML = api.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+End Select
+
+'Update the progressbar if enabled
+If form.pbdisabled.checked = False then
+upd a, count
+End If
+
+next
+
+
+
+
+'ridefinisco i criteri di ricerca per Deep analysis = False
+Else
+
+
+
+For a = 0 to Count
+
+line = arrLines(a)
+
+Select Case choice
+
+
+Case 1
+
+If inStr(line, "TWS RESTART") <> 0 then
+basic.innerHTML = basic.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "Jts dir is", ": Build", "java version =", "sun.arch.data.model =", "os =", "username =", "Setting dir is", "Started on", "Default timezone:", "Locale=", "locale:", "runtime =", "vendor =", "host =", "remotePort =", "PROXY", "vm name =", "S3:", "dayInit:")
+i=inStr(line, item)
+If i <> 0 then
+basic.innerHTML = basic.innerHTML + "<font color=336666>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array( "Login failed", "Failed token authentication", "S3: Error")
+i=inStr(line, item)
+If i <> 0 then
+basic.innerHTML = basic.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+Case 2
+
+If inStr(line, "TWS RESTART") <> 0 then
+system.innerHTML = system.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "JTS-AWT-Monitor:", "has not responded", "OutOfMemoryError:" )
+i=inStr(line, item)
+If i <> 0 then
+system.innerHTML = system.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+Case 3
+
+
+If inStr(line, "TWS RESTART") <> 0 then
+messages.innerHTML = messages.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "<html>", "SPLASH", "moving dialog to front" )
+i=inStr(line, item)
+If i <> 0 then
+messages.innerHTML = messages.innerHTML + "<font color=grey>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+Case 4
+
+If inStr(line, "TWS RESTART") <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "not received heartbeat", "competing")
+i=inStr(line, item)
+If i <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<font color=orange>" + line + "</font></BR>"
+End If
+next
+
+for each item in Array( "creating socket failed", ": Error connecting", "DISCONNECT_ON_BROKEN_SOCKET", "DISCONNECT_ON_CONNECTION_FAILURE", "DISCONNECT_AUTHORIZATION_FILED", "NO_PING_RESPONSE", "NO_AUTH_RESPONSE" )
+i=inStr(line, item)
+If i <> 0 then
+connpanel.innerHTML = connpanel.innerHTML + "<b><font color=red>" + line + "</b></font></BR>"
+End If
+next
+
+
+
+
+Case 9
+
+If inStr(line, "TWS RESTART") <> 0 then
+htbp.innerHTML = htbp.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "HTBP")
+i=inStr(line, item)
+If i <> 0 then
+htbp.innerHTML = htbp.innerHTML + "<font color=black>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+Case 5
+
+If inStr(line, "TWS RESTART") <> 0 then
+orders.innerHTML = orders.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+
+for each item in Array( "ORDER IS NOT ACCEPTED", "Invalid effective time", "The time or time-zone entered is invalid", "You must enter a valid price", "Limit price too far outside of NBBO", "does not comply", "does not conform", "Order size is not within the limits", "order rejected:")
+i=inStr(line, item)
+If i <> 0 then
+orders.innerHTML = orders.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+
+
+Case 6
+
+If inStr(line, "TWS RESTART") <> 0 then
+md.innerHTML = md.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( "more deep books", "Market data is over the limit", "Historical data request pacing violation", "The application was disconnected from the HMDS Server", "No market data", "Trading TWS session is connected from a different IP address")
+i=inStr(line, item)
+If i <> 0 then
+md.innerHTML = md.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+Case 7
+
+If inStr(line, "TWS RESTART") <> 0 then
+api.innerHTML = api.innerHTML + "<font color=purple><b>" + line + "</b></font></BR>"
+End if
+
+for each item in Array( ":DET]", ":SYS]", "Max API Backfill", "API server listening")
+i=inStr(line, item)
+If i <> 0 then
+api.innerHTML = api.innerHTML + "<font color=green>" + line + "</font></BR>"
+End If
+next
+
+
+for each item in Array( ":ERR]", "Address already in use")
+i=inStr(line, item)
+If i <> 0 then
+api.innerHTML = api.innerHTML + "<font color=red>" + line + "</font></BR>"
+End If
+next
+
+
+
+
+
+
+End Select
+
+'Update the progressbar if enabled
+If form.pbdisabled.checked = False then
+upd a, count
+End If
+
+next
+
+
+
+End If
+
+
+
+
+
+
+
+Select Case choice
+Case 1
+messages.innerHTML = messages.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 2
+system.innerHTML = system.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 3
+basic.innerHTML = basic.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 4
+connpanel.innerHTML = connpanel.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 5
+orders.innerHTML = orders.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 6
+md.innerHTML = md.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 7
+api.innerHTML = api.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+Case 9
+htbp.innerHTML = htbp.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from "+file+"</b></legend></fieldset></BR></BR></BR>"
+
+End Select
+
+
+form.linecount.value = a & " Eof"
+
+Set objReadFile = Nothing
+Set objFSO = Nothing
+
+
+
+
+'Read as well Trades file if Orders button has been pressed - and put trades in the order panel
+If choice = 5 AND form.readtrd.checked = True Then
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+file = form.folder.value+"\"+form.day.value+".trd"
+
+'Controllo che esista il file
+If objFSO.FileExists(file) = false then
+msgbox "File "+file+" not existent. Trades will not be included in the Orders/Trades panel.", vbInformation + vbOkOnly, "Info"
+Exit Sub
+End If
+
+Set objReadFile = objFSO.OpenTextFile(file, 1, False)
+
+orders.innerHTML = orders.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of trades transcript from "+file+"</b></legend></fieldset>"
+do while not objReadFile.atendofstream
+line = objReadFile.readline
+orders.innerHTML = orders.innerHTML + "</BR><b><font color=green>" + line + "</font><b></BR>"
+loop
+
+orders.innerHTML = orders.innerHTML + "</BR><fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of trades transcript from "+file+"</b></legend></fieldset></BR></BR>"
+
+Set objReadFile = Nothing
+Set objFSO = Nothing
+
+End If
+
+
+
+
+
+
+
+
+
+
+'Read as well tws.error.xml file if EnvSettings button has been pressed - and put some useful lines in the settings panel
+
+'If choice = 1 AND form.readtwsxml.checked = True then
+If choice = 1 then
+
+Dim objNodeList, objNodeList2, Node, Noded, Nodem, Root, p1, p2, p3, p4, p5, p6, p7, p8, p9, w1, w2, w3, w4, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, s1, s2, s3, s4, e1, ow1, o1, o2, o3, o4
+
+Set objxmlDoc = CreateObject("Microsoft.XMLDOM")
+objxmlDoc.async="false"
+objxmlDoc.load(form.folder.value+"\Tws.error.xml")
+
+If objxmlDoc.parseError.errorCode <> 0 Then
+msgbox "File "+form.folder.value+"\tws.error.xml not existent or unreadable." & vbCrLf & "Reason: "+objxmlDoc.parseError.reason+" " & vbCrLf & "Info from this file will not be included in the Environment panel.", vbExclamation + vbOkOnly, "Info"
+Exit sub
+End If
+
+basic.innerHTML = basic.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Begin of transcript from file "+form.folder.value+"\tws.xml</b></legend></fieldset>"
+
+Set Root = objXMLDoc.documentElement
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("WorkspaceCollection")
+If objNodeList.length > 0 then
+basic.innerHTML = basic.innerHTML + "<font color=black><b>Workspaces:</b></font></BR>"
+For Each Node In objNodeList
+w1 = Node.getAttribute("currentWorkspaceKey")
+basic.innerHTML = basic.innerHTML + "<font color=black>Workspace key currently in use: <b>"+w1+"</b></font></BR>"
+next
+  End If
+
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("Workspace")
+If objNodeList.length > 0 then
+For Each Node In objNodeList
+w2 = Node.getAttribute("name")
+w3 = Node.getAttribute("mode")
+w4 = Node.getAttribute("workspaceKey")
+
+' COREZIONE PER VALORI NULLI
+     If IsNull(w3) Then
+     w3 = "Not present"
+     End If
+
+basic.innerHTML = basic.innerHTML + "<font color=black>Workspace name: <b>"+w2+"</b>&nbsp;&nbsp; Mode: <b>"+w3+"</b>&nbsp;&nbsp; WorkspaceKey: <b>"+w4+"</b></font></BR>"
+Next
+basic.innerHTML = basic.innerHTML + "</BR>"
+End If
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("TickerPageSetting")
+If objNodeList.length > 0 Then
+basic.innerHTML = basic.innerHTML + "</BR><font color=black><b>TWS Tabs:</b> (Origin:6 = Created by the user - Origin:0 = Created by the system)</font></BR>"
+For Each Node In objNodeList
+p1 = Node.getAttribute("name")
+p2 = Node.getAttribute("origin")
+p3 = Node.getAttribute("detached")
+p4 = Node.getAttribute("layout")
+p5 = Node.getAttribute("showAllOrders")
+p6 = Node.getAttribute("showAccountOnlyOrders")
+p7 = Node.getAttribute("showOrdersPanel")
+If Node.getAttribute("account") <> "" Then
+p8 = Node.getAttribute("account")
+Else p8 = ""
+End If
+basic.innerHTML = basic.innerHTML + "<font color=black>Tab: <b>"+p1+"</b> &nbsp;Origin: <b>"+p2+"</b> &nbsp;Detached: <b>"+p3+"</b> &nbsp;Layout: <b>"+p4+"</b> &nbsp;Show All Orders: <b>"+p5+"</b> &nbsp;Show Account only order: <b>"+p6+"</b> &nbsp;Show orders panel: <b>"+p7+"</b> &nbsp;Account: <b>"+p9+"</b></font></BR>"
+Next
+End If
+
+
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("SystemSettings")
+If objNodeList.length > 0 Then
+basic.innerHTML = basic.innerHTML + "</BR><font color=black><b>TWS System settings:</b></font></BR>"
+For Each Node In objNodeList
+s1 = Node.getAttribute("autoLogoffTime")
+s2 = Node.getAttribute("autoSaveSettings")
+If Node.getAttribute("saveWatchlistsToCloud") <> "" Then
+s3 = Node.getAttribute("saveWatchlistsToCloud")
+Else s3 = "Not implemented in this version"
+End If
+s4 = Node.getAttribute("twoPendingPages")
+basic.innerHTML = basic.innerHTML + "<font color=black>Auto logoff time: <b>"+s1+"</b> &nbsp;Auto save settings: <b>"+s2+"</b> &nbsp;Save watchlist to cloud: <b>"+s3+"</b> &nbsp;Store GTC and DAY orders on separate pending pages: <b>"+s4+"</b> &nbsp;</font></BR>"
+Next
+End If
+
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("AccountSettings")
+If objNodeList.length > 0 Then
+For Each Node In objNodeList
+e1 = Node.getAttribute("showAllInBaseCurrency")
+' COREZIONE PER VALORI NULLI
+     If IsNull(e1) Then
+     e1 = ""
+     End If
+Next
+basic.innerHTML = basic.innerHTML + "<font color=black>Show positions in base currency (In Account,Portfolio and Quote monitor pages): <b>"+e1+"</b></font></BR>"
+End If
+
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("UISettings")
+If objNodeList.length > 0 Then
+basic.innerHTML = basic.innerHTML + "</BR><font color=black><b>User Interface Settings: </b></font></BR>"
+For Each Node In objNodeList
+
+g1 = Node.getAttribute("browser")
+' COREZIONE PER VALORI NULLI
+     If IsNull(g1) Then
+     g1 = "Use default"
+     End If
+g2 = Node.getAttribute("audit")
+g3 = Node.getAttribute("autoRollover")
+g4 = Node.getAttribute("rapidStkEntry")
+  ' COREZIONE PER VALORI NULLI
+     If IsNull(g4) Then
+     g4 = "Not defined"
+     End If
+g5 = Node.getAttribute("roundValues")
+g6 = Node.getAttribute("roundValuesOnAccountWindow")
+g7 = Node.getAttribute("doNotPromptForMdSubscr")
+g8 = Node.getAttribute("displayTrueTickVolume")
+g9 = Node.getAttribute("displayAbbreviatedVolume")
+g10 = Node.getAttribute("includeFxPositions")
+g11 = Node.getAttribute("includeOpeningPositionInPnL")
+g12 = Node.getAttribute("showAwayZeroPosition")
+g13 = Node.getAttribute("useTickDots")
+g14 = Node.getAttribute("enableOrderSort")
+g15 = Node.getAttribute("autoRemoveFinishedOrder")
+g16 = Node.getAttribute("delayForFilled")
+g17 = Node.getAttribute("delayForCanceled")
+g18 = Node.getAttribute("bigScaleSizes")
+g19 = Node.getAttribute("bigScalePrices")
+
+
+basic.innerHTML = basic.innerHTML + "<font color=black>Browser: <b>"+g1+"</b> &nbsp;Create audit file: <b>"+g2+"</b> &nbsp;FUT Auto rollover: <b>"+g3+"</b> &nbsp;Display tick-dots instead of colored prices: <b>"+g13+"</b> &nbsp;Rapid STK entry: <b>"+g4+"</b> &nbsp;Round values to the nearest whole number: <b>"+g5+"</b> &nbsp;Round values to the nearest whole numbers in Account window: <b>"+g6+"</b> &nbsp;Do not prompt for MD subscription: <b>"+g7+"</b> &nbsp;Prefer Calculated Volume: <b>"+g8+"</b> &nbsp;Volume - Abbreviated display shows K for thousands or M for millions: <b>"+g9+"</b> &nbsp;Display FX Positions in portfolio (Virtual FX portfolio expanded): <b>"+g10+"</b> &nbsp;Include Today's Opening Position in PnL: <b>"+g11+"</b> &nbsp;Include Away positions to Portfolio and PnL: <b>"+g12+"</b></font></BR>"
+basic.innerHTML = basic.innerHTML + "<font color=black></br><b>Orders settings:</b></br>Auto sort submitted orders: <b>"+g14+"</b> &nbsp;Auto remove completed orders: <b>"+g15+"</b> &nbsp;Leave filled order on the screen for (s): <b>"+g16+"</b> &nbsp;Leave canceled order on the screen for (s): <b>"+g17+"</b> &nbsp;Big scale sizes: <b>"+g18+"</b> &nbsp;Big scale prices: <b>"+g19+"</b> &nbsp;</font></BR>"
+Next
+
+
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("OrderWizardDisplayMode")
+If objNodeList.length > 0 Then
+For Each Node In objNodeList
+ow1 = Node.getAttribute("value")
+basic.innerHTML = basic.innerHTML + "<font color=black>Order Wizard Display Mode (1=Show/Hide Manually 2=Show when an order is created): <b>"+ow1+"</b></font></BR>"
+Next
+End If
+
+
+Set objNodeList = objxmlDoc.getElementsByTagName("OrderSettings")
+If objNodeList.length > 0 Then
+For Each Node In objNodeList
+o1 = Node.getAttribute("reuseRejectedOrd")
+o2 = Node.getAttribute("autoAdjustStopLimit")
+o3 = Node.getAttribute("useAutoLogoffAsMidnight")
+o4 = Node.getAttribute("saveAsDefaultSize")
+basic.innerHTML = basic.innerHTML + "<font color=black>Reuse rejected orders: <b>"+o1+"</b> &nbsp;Auto save default size: <b>"+o4+"</b> &nbsp;Auto adjust limit price for STP LMT and LIT orders: <b>"+o2+"</b> &nbsp;Use auto-logoff time instead of midnight when downloading completed orders: <b>"+o3+"</b> &nbsp; </font></BR>"
+Next
+End If
+
+
+
+
+
+basic.innerHTML = basic.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of transcript from file "+form.folder.value+"\tws.xml</b></legend></fieldset></BR></BR>"
+End If
+
+
+
+Set objxmlDoc = Nothing
+
+
+End If
+
+
+
+
+
+'EndTime = Timer
+'TimeIt = EndTime - StartTime
+'msgbox TimeIt
+
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'Sub updatedays
+'Dim objFSO11, objFolder, colfiles, objFile, Size, selectday, daynam, tempfill
+
+
+'Set objFSO11 = CreateObject("Scripting.FileSystemObject")
+
+'  If NOT objFSO11.FolderExists(form.folder.value) Then
+'   document.getElementById("Mon").label = "Mon"
+'   document.getElementById("Tue").label = "Tue"
+'   document.getElementById("Wed").label = "Wed"
+'   document.getElementById("Thu").label = "Thu"
+'   document.getElementById("Fri").label = "Fri"
+'   document.getElementById("Sat").label = "Sat"
+'   document.getElementById("Sun").label = "Sun"
+'   Exit Sub
+'  End If
+
+
+'Set objFolder = objFSO11.GetFolder(form.folder.value)
+'Set colFiles = objFolder.Files
+
+'document.getElementById("Mon").label = "Mon"
+'document.getElementById("Tue").label = "Tue"
+'document.getElementById("Wed").label = "Wed"
+'document.getElementById("Thu").label = "Thu"
+'document.getElementById("Fri").label = "Fri"
+'document.getElementById("Sat").label = "Sat"
+'document.getElementById("Sun").label = "Sun"
+
+
+'On Error resume next
+'For Each objFile in colFiles
+
+'  If UCase(objFSO11.GetExtensionName(objFile))="TXT" Then
+'    Size = (Round(objFile.Size / 1048576, 3))
+'    daynam = Mid(objFile.Name,5,3)
+'    document.getElementById(daynam).label = daynam & " - " & Size & "Mb"
+'  End If
+'Next
+
+
+
+'Set objFSO11 = Nothing
+'Set objFolder = Nothing
+'Set colFiles = Nothing
+
+
+'End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'Change the file timestamp into a human readable form
+Function arrangedate(timestamp)
+
+     Dim RegEx2, oMatch, oMatches, retStr, month
+
+     Set RegEx2 = New RegExp
+
+'Cerco le sottostringhe del annomesegiorno orammss
+     RegEx2.Pattern = "([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})"
+     RegEx2.Global = True
+
+     Set oMatches = RegEx2.Execute(timestamp)
+     Set oMatch = oMatches(0)
+
+'Trasformo il numero de mese nel corrispondente nome
+     If oMatch.SubMatches(1) = "01" Then
+        month = "Jan"
+        elseif oMatch.SubMatches(1) = "02" Then
+        month = "Feb"
+        elseif oMatch.SubMatches(1) = "03" Then
+        month = "Mar"
+        elseif oMatch.SubMatches(1) = "04" Then
+        month = "Apr"
+        elseif oMatch.SubMatches(1) = "05" Then
+        month = "May"
+        elseif oMatch.SubMatches(1) = "06" Then
+        month = "Jun"
+        elseif oMatch.SubMatches(1) = "07" Then
+        month = "Jul"
+        elseif oMatch.SubMatches(1) = "08" Then
+        month = "Aug"
+        elseif oMatch.SubMatches(1) = "09" Then
+        month = "Sep"
+        elseif oMatch.SubMatches(1) = "10" Then
+        month = "Oct"
+        elseif oMatch.SubMatches(1) = "11" Then
+        month = "Nov"
+        elseif oMatch.SubMatches(1) = "12" Then
+        month = "Dec"
+     End If
+
+'creo il nome da visualizzare nella selectbox dell'error report
+     retStr = "   " & oMatch.SubMatches(0)
+    retStr = retStr & "-" & month
+     retStr = retStr & "-" & oMatch.SubMatches(2)
+     retStr = retStr & "   " & oMatch.SubMatches(3)
+     retStr = retStr & ":" & oMatch.SubMatches(4)
+     retStr = retStr & ":" & oMatch.SubMatches(5)
+       
+     arrangedate = RegEx2.Replace(timestamp, retStr)
+
+Set RegEx2 = Nothing
+
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'rimuovo il codice HTML dalle righe dei risultati
+Function RemoveHTML(strText)
+     Dim RegEx
+
+     Set RegEx = New RegExp
+
+     RegEx.Pattern = "<[^>]*>"
+     RegEx.Global = True
+
+     RemoveHTML = RegEx.Replace(strText, "")
+     Set RegEx = Nothing
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function download(url, destination)
+
+Dim xml, oStream, fso
+
+  set xml = CreateObject("MSXML2.XMLHTTP.6.0")
+  download = False
+  on error resume next
+  xml.Open "GET", url, False
+  xml.Send
+  status = xml.status
+    if err.number <> 0 or status <> 200 then
+        if status = 404 then
+            msgbox "Page does not exist (404)."
+        elseif status >= 401 and status < 402 then
+            msgbox "Access denied (401)."
+        elseif status >= 500 and status <= 600 then
+            msgbox "500 Internal Server Error on remote site."
+        else
+            msgbox "Server is down or not responding properly."
+    end if
+          
+   else
+        on error goto 0
+        set oStream = createobject("Adodb.Stream")
+        const adTypeBinary = 1,  adSaveCreateOverWrite = 2, adSaveCreateNotExist = 1
+        oStream.type = adTypeBinary
+        oStream.open
+        oStream.write xml.responseBody
+        oStream.saveToFile destination, adSaveCreateOverWrite
+        oStream.close
+        set oStream = nothing
+          download = True
+  
+  end if
+  set xml = Nothing
+end function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function RegExpTest(patrn)
+
+Dim objReadFile, regEx, retVal, objFSO, line, file, count, arrLines, Totlines, strData, strTemp, a
+
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+file=form.folder.value+"\"+form.fileselect.value
+
+
+' Create regular expression.
+Set regEx = New RegExp
+regEx.Pattern = patrn
+regEx.IgnoreCase = True
+regEx.Global = True
+
+
+If objFSO.FileExists(file) = false then
+msgbox "Directory "+form.folder.value+" or File log."+form.fileselect.value+".txt not existent", vbCritical + vbOkOnly, "Error"
+
+Exit Function
+End If
+
+
+If form.pbdisabled.checked = False then
+Set objReadFile = objFSO.OpenTextFile(file,1)
+count = 0
+
+Do While Not objReadFile.AtEndOfStream
+count = count + 1
+objReadFile.SkipLine()
+Loop
+
+Set objReadFile = Nothing
+
+End If
+
+
+Set objReadFile = objFSO.OpenTextFile(file,1)
+
+a = 0
+
+connpanel.innerHTML = connpanel.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>Start of regexp search results for """+ patrn +""" in "+ file +"</b></legend></fieldset>"
+
+do while not objReadFile.atendofstream
+line = objReadFile.readline
+
+'search text.
+retVal = regEx.Test(line)
+
+If retVal Then
+connpanel.innerHTML = connpanel.innerHTML + "<font color=black>" + line + "</font></BR>"
+End If
+
+
+If form.pbdisabled.checked = False Then
+a = a + 1
+upd a, count
+End If
+
+loop
+
+
+connpanel.innerHTML = connpanel.innerHTML + "<fieldset style=""border-width: 2px 0 0 0; border-color:black; padding: 2px""><legend align=center style=""font-size:90%; color:black; padding:2px; border:1px solid black""><b>End of regexp search results for """+ patrn +""" in "+ file +"</b></legend></fieldset></BR></BR>"
+
+If form.pbdisabled.checked = False Then
+form.linecount.value = count & " Eof"
+End If
+
+
+Set objReadFile = Nothing
+Set objFSO = Nothing
+
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub RunProgram
+
+Dim file, objShell, app64, app32, app, objFSO4
+
+Set objFSO4 = CreateObject("Scripting.FileSystemObject")
+
+file=form.folder.value+"\"+form.fileselect.value
+app64 = "C:\Program Files\Notepad++\Notepad++.exe"
+app32 = "C:\Program Files (x86)\Notepad++\Notepad++.exe"
+
+app = app64
+
+If objFSO4.FileExists(app64) = false AND objFSO4.FileExists(app32) = true then
+app = app32
+End If
+
+If objFSO4.FileExists(app64) = false AND objFSO4.FileExists(app32) = false then
+msgbox "Program: "+app+" not existent", vbCritical + vbOkOnly, "Application not found"
+Exit Sub
+End If
+
+If objFSO4.FileExists(file) = false then
+msgbox "File: "+file+" not existent", vbCritical + vbOkOnly, "File not found"
+Exit Sub
+End If
+
+Set objShell = CreateObject("Shell.Application")
+objShell.ShellExecute app, file, , , 1
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub RegExpClear
+
+connpanel.innerHTML = ""
+form.linecount.value = ""
+upd 0, 100
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub rst
+
+
+messages.innerHTML = ""
+connpanel.innerHTML = ""
+orders.innerHTML = ""
+basic.innerHTML = ""
+md.innerHTML = ""
+system.innerHTML = ""
+api.innerHTML = ""
+htbp.innerHTML = ""
+form.linecount.value = ""
+upd 0, 100
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub restoretimeout
+Dim x
+
+If window.event.Keycode = 26 or window.event.Keycode = 9 Then
+x=MsgBox("Do you want to set the IE script timeout to the default value?" & vbCrLf & "If you click Yes, you must restart the application for the changes to take effect.",68,"Internet Explorer Script timeout checker")
+
+If x = 6 Then
+
+Dim WshShell
+Set WshShell = CreateObject("WScript.Shell")
+
+On Error resume Next
+WSHShell.RegWrite "HKCU\SOFTWARE\Microsoft\Internet Explorer\Styles\"
+WSHShell.RegWrite "HKCU\SOFTWARE\Microsoft\Internet Explorer\Styles\MaxScriptStatements", 5000000, "REG_DWORD"
+form.scripttimeoutcheck.checked = False
+form.scripttimeoutcheck.disabled = False
+
+End if
+
+
+If x = 7 then
+Exit Sub
+End If
+
+
+End If
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function checkfoldervalue(fold)
+
+Dim regEx1, returVal
+
+Set regEx1 = New RegExp
+
+regEx1.Pattern = "^(?=.{4,255})[a-zA-Z]:(?=.\Temp\b)(?:\\[^\W]+[a-zA-Z0-9_\-]*(?=\\|$))$"
+
+regEx1.IgnoreCase = True
+regEx1.Global = True
+
+returVal = regEx1.Test(fold)
+
+If returVal Then
+checkfoldervalue = True
+Else
+checkfoldervalue = False
+End If
+
+Set regEx1 = Nothing
+
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function deletefiles(ask)
+
+Dim x, FSO7, errorraised, item, i
+
+
+If checkfoldervalue(form.folder.value) = False then
+msgbox "The TempDir path MUST either be \Temp or start with \Temp- and cannot contain special characters. Subfolders are not allowed." & vbCrLf & "Please be sure not to insert a backslash at the end of the string", 48, "Invalid TempDir"
+deletefiles = False
+Exit Function
+End If
+
+
+' The folder check is now done by the function checkfoldervalue so the below is not necessary
+'If LCase(form.folder.value) = Lcase("c") Then
+'msgbox "You would not be happy after having deleted one of your system folders, right?", 16
+'deletefiles = False
+'Exit Function
+'End If
+'for each item in Array("c:\windows", "c:\winnt", "c:\program files", "c:\users", "c:\documents and settings", "c:\programdata", "c:\MSOcache", "c:\boot")
+'i=inStr(LCase(form.folder.value), LCase(item))
+'If i <> 0 then
+'msgbox "You would not be happy after having deleted one of your system folder, right?", 16
+'deletefiles = False
+'Exit Function
+'End If
+'next
+
+
+Set FSO7 = CreateObject("scripting.filesystemobject")
+
+
+'Se deve venir richiesta la conferma metto ask = 1
+
+If ask = 1 Then
+
+  If FSO7.FolderExists(form.folder.value ) = False Then
+          x=MsgBox("Directory "+form.folder.value+" does not exist." & vbCrLf & "Do you want to create it?",52,"TempDir not existent")
+
+             If x = 6 Then
+                On Error Resume Next
+                FSO7.CreateFolder(form.folder.value)
+                    If err.number <> 0 Then
+                      msgbox "There was an error while creating " + form.folder.value + ". Please create the folder manually. The current operation will be aborted.", 48
+                      Exit function
+                         Else
+                           document.title = "TWS Logfile Filter"
+                                 imgfilesspace.innerHTML = ""
+                                 document.getElementById("Mon").label = "Mon"
+                           document.getElementById("Tue").label = "Tue"
+                           document.getElementById("Wed").label = "Wed"
+                           document.getElementById("Thu").label = "Thu"
+                           document.getElementById("Fri").label = "Fri"
+                           document.getElementById("Sat").label = "Sat"
+                           document.getElementById("Sun").label = "Sun"
+                    End If
+
+             Else
+                deletefiles = False
+                Exit function
+             End If
+
+  Else
+
+            x=MsgBox("That will permanently delete all the files and subfolders of "+form.folder.value+"" & vbCrLf & "Are you sure to continue?",52,"TempDir cleaning")
+               If x = 6 Then
+                 On Error Resume Next
+                 'Delete files
+                  FSO7.deletefile form.folder.value & "\*.*", True
+                        If err.number <> 0 Then
+                           msgbox "There was an error while deleting file/s in " + form.folder.value + ". Please delete the file/s manually. The current operation will be aborted.", 48
+                           err.clear
+                        Else
+                            document.title = "TWS Logfile Filter" 
+                            imgfilesspace.innerHTML = ""   
+                            document.getElementById("Mon").label = "Mon"
+                            document.getElementById("Tue").label = "Tue"
+                            document.getElementById("Wed").label = "Wed"
+                            document.getElementById("Thu").label = "Thu"
+                            document.getElementById("Fri").label = "Fri"
+                            document.getElementById("Sat").label = "Sat"
+                            document.getElementById("Sun").label = "Sun"                                 
+                        End If
+                      
+                  'Delete subfolders
+                   FSO7.deletefolder form.folder.value & "\*.*", True
+                        If err.number <> 0 Then
+                            msgbox "There was an error while deleting folder/s in " + form.folder.value + ". Please delete the folder/s manually. The current operation will be aborted.", 48
+                            err.clear
+                              Else
+                               document.title = "TWS Logfile Filter"
+                                imgfilesspace.innerHTML = ""   
+                               document.getElementById("Mon").label = "Mon"
+                               document.getElementById("Tue").label = "Tue"
+                               document.getElementById("Wed").label = "Wed"
+                               document.getElementById("Thu").label = "Thu"
+                               document.getElementById("Fri").label = "Fri"
+                               document.getElementById("Sat").label = "Sat"
+                               document.getElementById("Sun").label = "Sun"                                    
+                        End If
+
+                    End If
+            
+                If x = 7 then
+                Exit function
+                End If
+
+  End If         
+
+End If
+
+
+'se non deve essere richiesta conferma, metto ask = 2
+If ask = 2 Then
+
+  If FSO7.FolderExists(form.folder.value ) = False Then
+          x=MsgBox("Directory "+form.folder.value+" does not exist." & vbCrLf & "Do you want to create it?",52,"TempDir not existent")
+
+             If x = 6 Then
+                On Error Resume Next
+                FSO7.CreateFolder(form.folder.value)
+                    If err.number <> 0 Then
+                      msgbox "There was an error while creating " + form.folder.value + ". Please create the folder manually. The current operation will be aborted.", 48
+                      Exit function
+                    Else
+                     deletefiles = True 
+                     document.title = "TWS Logfile Filter"
+                        imgfilesspace.innerHTML = ""   
+                     document.getElementById("Mon").label = "Mon"
+                     document.getElementById("Tue").label = "Tue"
+                     document.getElementById("Wed").label = "Wed"
+                     document.getElementById("Thu").label = "Thu"
+                     document.getElementById("Fri").label = "Fri"
+                     document.getElementById("Sat").label = "Sat"
+                     document.getElementById("Sun").label = "Sun"                       
+                    End If
+
+             Else
+                deletefiles = False
+                Exit function
+             End If
+
+  Else
+
+        On Error Resume Next  
+          'Delete subfolders
+         FSO7.deletefolder form.folder.value & "\*.*", True
+                  if err.number <> 0 Then
+                     msgbox "There was an error while deleting folder/s in " + form.folder.value + ". Please delete the folder/s manually. The current operation will be aborted.", 48
+                     deletefiles = False
+                      errorraised = si
+                      err.clear
+                  Else
+                   errorraised = "no"
+                  End If
+  
+  
+        'Delete files
+         FSO7.deletefile form.folder.value & "\*.*", True
+               if err.number <> 0 Then
+                  msgbox "There was an error while deleting file/s in " + form.folder.value + ". Please delete the file/s manually. The current operation will be aborted.", 48
+               deletefiles = False
+                  errorraised = si
+                  err.clear
+               Else
+               If errorraised = "no" then
+                           deletefiles = True
+                           document.title = "TWS Logfile Filter"
+                                 imgfilesspace.innerHTML = ""
+                                 document.getElementById("Mon").label = "Mon"
+                           document.getElementById("Tue").label = "Tue"
+                           document.getElementById("Wed").label = "Wed"
+                           document.getElementById("Thu").label = "Thu"
+                           document.getElementById("Fri").label = "Fri"
+                           document.getElementById("Sat").label = "Sat"
+                           document.getElementById("Sun").label = "Sun"
+                         Else
+                         deletefiles = False
+                         End If
+                  End If
+          
+   End If
+
+End If
+                       
+End function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function displayimages
+
+Dim objFSO12, objFolder, imgFiles, imgFile, imagepath
+
+Set objFSO12 = CreateObject("Scripting.FileSystemObject")
+
+If NOT objFSO12.FolderExists(form.folder.value) Then
+            imgfilesspace.innerHTML = ""
+            Exit Function
+   End If
+
+Set objFolder = objFSO12.GetFolder(form.folder.value)
+Set ImgFiles = objFolder.Files
+
+imgfilesspace.innerHTML = ""
+
+
+For Each imgFile in imgFiles
+  If UCase(objFSO12.GetExtensionName(imgFile))="JPG" Then   
+imgfilesspace.innerHTML = imgfilesspace.innerHTML + "<a href=file://"+form.folder.value+"\"+imgFile.Name+" target=""screensts""><img style=""vertical-align:middle; border:0px solid black"" height=18 width=18 src=""data:image/png;base64,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"" title=""Click to open "+imgFile.Name+""" onclick=""this.style.borderColor='green'""></a>&nbsp;&nbsp;"
+End If
+Next
+
+
+
+Set objFSO12 = Nothing
+Set objFolder = Nothing
+Set imgFiles = Nothing
+
+
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub genrefresh
+Dim oFSO2
+
+If Len(form.folder.value) <= 4 Then
+Exit Sub
+End If
+
+Set oFSO2 = CreateObject("Scripting.FileSystemObject")
+ If oFSO2.FolderExists(form.folder.value) Then
+'updatedays
+fileselection
+displayimages
+refreshtitle
+
+ Else
+document.title = "TWS Logfile Filter - Folder does not exist"
+document.title = "TWS Logfile Filter - Folder does not exist"
+fileselection
+'updatedays
+displayimages
+ End If
+ End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub refreshtitle
+Dim oFSO1, objFolder, colFiles, objFile, fNewest, sNewest, parts, numparts
+
+Set oFSO1 = CreateObject("Scripting.FileSystemObject")
+Set objFolder = oFSO1.GetFolder(form.folder.value)
+Set colFiles = objFolder.Files
+
+document.title = "TWS Logfile Filter - Last loaded in this folder: Unknown"
+document.title = "TWS Logfile Filter - Last loaded in this folder: Unknown"
+
+'On Error resume next
+For Each objFile in colFiles
+
+If UCase(oFSO1.GetExtensionName(objFile))="ZIP" Then
+
+
+ parts = split(objFile.Name, ".")
+ numparts = UBound(parts)
+ 
+
+   If numparts >= 3 Then
+
+
+       If sNewest = "" Then
+        Set fNewest = objFile
+        sNewest = objFile.Name
+       Else
+        If fNewest.DateCreated < objFile.DateCreated Then
+            Set fNewest = objFile
+        End If
+       End If
+
+      document.title = "TWS Logfile Filter - Last loaded in this folder: " +form.folder.value+"\"+fNewest.Name+""
+      document.title = "TWS Logfile Filter - Last loaded in this folder: " +form.folder.value+"\"+fNewest.Name+""
+
+    Else
+	 
+	 document.title = "TWS Logfile Filter - Last loaded in this folder: Unknown"
+     document.title = "TWS Logfile Filter - Last loaded in this folder: Unknown"
+	
+	End If
+	
+
+End If
+
+
+
+Next
+
+Set oFSO1 = Nothing
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub displayinfo
+msgbox "TWS Logfile Filter version 1.2 - Author: Alessio Frisatto "& vbCrLf & vbCrLf & "Twiki page (Internal): http://websrv3/twiki/bin/view/CustServe/TWSLogfileFilter" , vbInformation
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub setsize
+connpanel.style.fontSize = form.fnt.value
+messages.style.fontSize = form.fnt.value
+connpanel.style.fontSize = form.fnt.value
+orders.style.fontSize = form.fnt.value
+basic.style.fontSize = form.fnt.value
+md.style.fontSize = form.fnt.value
+system.style.fontSize = form.fnt.value
+api.style.fontSize = form.fnt.value
+htbp.style.fontSize = form.fnt.value
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub listortype
+Dim root, oFSO, oDir, f, steps1
+
+If document.getElementById("hid").checked = true Then
+        tempselect.innerHTML = "<input type=checkbox id=hid name=hid style=display:none><input type=text name=folder value="& form.folder.value &" style=""vertical-align:absmiddle;width:200px;"" onmouseout=""genrefresh()"" onchange=""genrefresh()"" onkeypress=""genrefresh()"" onpaste=""genrefresh()"" oninput=""genrefresh()"" onkeydown=""genrefresh()"" onkeyup=""genrefresh()""> "
+
+Else
+
+        root = "C:\"
+        Set oFSO = CreateObject("Scripting.FileSystemObject")
+        Set oDir = oFSO.GetFolder(root)
+
+        For Each f in oDir.subfolders
+          If f.Attributes AND 2 OR f.Attributes AND 4 Then
+            steps1 = steps1
+          Else
+		     
+            If checkfoldervalue(f) Then
+            steps1 = steps1 + "<option value="+ f +">" + f +" </option>"
+            End If
+		  
+		  End If
+		
+		
+		
+		Next
+        tempselect.innerHTML = "<input type=checkbox id=hid name=hid checked style=display:none><select name=folder id=folder style=""vertical-align:absmiddle;width:200px;"" onchange=""genrefresh()"">" + steps1 + "</select> "
+
+End If		
+
+genrefresh
+
+End Sub
+
+
+
+
+
+
+Sub execallfilters
+filterfile(1)
+filterfile(2)
+filterfile(3)
+filterfile(4)
+filterfile(5)
+filterfile(6)
+filterfile(7)
+filterfile(8)
+filterfile(9)
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub CheckEnterkey
+        If window.event.Keycode = 13 Then
+            getpage(form.user.value)
+        End If
+End Sub
+
+
+
+
+
+
+
+
+
+Sub CheckEnterkeyInUserfile
+        If window.event.Keycode = 13 Then
+            extractzip(form.userfile.value)
+        End If
+End Sub
+
+
+
+
+
+
+
+Sub CheckEnterkeyInDayselector
+        If window.event.Keycode = 13 Then
+            execallfilters
+        End If
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</SCRIPT>
+
+
+
+
+<body bgcolor="CCCCCC" onkeypress="restoretimeout()" height="100%" style="margin-bottom:9px; margin-top:9px; margin-left:5px; margin-right:5px" onload="form.user.focus()">
+
+
+
+
+
+<form name="form" style="margin:0px; margin-bottom:0px; margin-top:0px">
+
+<font face="Verdana" id="fontdef" size="2">
+
+<label style="display: inline-block;">
+<b><font face="Arial" size="2px">Font Size:</font></b>
+<select name="fnt" id="fnt" style="vertical-align:absmiddle" onchange="setsize()">
+<option value=8px>8 pixel</option>
+<option value=9px>9 pixel</option>
+<option value=10px selected>10 pixel</option>
+<option value=11px>11 pixel</option>
+<option value=12px>12 pixel</option>
+<option value=13px>13 pixel</option>
+<option value=14px>14 pixel</option>
+<option value=15px>15 pixel</option>
+<option value=16px>16 pixel</option>
+</select>
+
+</label> &nbsp;&nbsp;&nbsp;&nbsp;
+
+<label style="display: inline-block;">
+<b><font face="Arial" size="2px">TempDir:</font></b>
+<span id="tempselect" name="tempselect">
+<input type="checkbox" name="hid" id="hid" style="display:none;"><input type="text" name="folder" value="C:\Temp" style="vertical-align:absmiddle;width:200px" onchange="genrefresh()" onkeypress="genrefresh()" onpaste="genrefresh()" oninput="genrefresh()" onkeydown="genrefresh()" onkeyup="genrefresh()">
+</span>
+<input type="button" value="List/Type" onclick="listortype()" style="font:bold 12px Verdana; ; vertical-align:absmiddle;" title="Select the TempDir from a list or type its path in"/>
+
+
+</label>
+
+<span>
+&nbsp;<input type="button" value="Empty TempDir" onclick="deletefiles(1)" style="font:bold 12px Verdana; ; vertical-align:absmiddle;" title="Delete the content of the TempDir"/>
+</span>
+
+
+<label style="display: inline-block;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font face="Arial" size="2px">User:</font></b>&nbsp;<input style="vertical-align:absmiddle" type="text" id="user" name="user" size="15" onkeydown="CheckEnterkey()" onkeyup="if(this.value.length > 0) document.getElementById('start_button').disabled = false; else document.getElementById('start_button').disabled = true";/>
+<input type="button" id="start_button" name="start_button" style="font:bold 12px Verdana; color:black; vertical-align:absmiddle" value="Search logfile / Refresh" title="Type an username or a part of it to enable this button" onmouseover="if(user.value.length > 0) document.getElementById('start_button').disabled = false; else document.getElementById('start_button').disabled = true;" onclick="getpage(form.user.value)"/>&nbsp;&nbsp;&nbsp;
+</label>
+
+<label style="display:inline-block;">
+<b><font face="Arial" size="2px">Day:</font></b>
+<select name=day style="vertical-align:middle;width:56px;" onkeydown="CheckEnterkeyInDayselector();" onchange="genrefresh()" title="Only applicable for old style log files (log.DAY.txt) For new style log files (tws.log) the selection will not be applied">
+<option value=Mon id=Mon>Mon</option>
+<option value=Tue id=Tue>Tue</option>
+<option value=Wed id=Wed>Wed</option>
+<option value=Thu id=Thu>Thu</option>
+<option value=Fri id=Fri>Fri</option>
+<option value=Sat id=Sat>Sat</option>
+<option value=Sun id=Sun>Sun</option>
+</select> &nbsp;&nbsp;
+</label>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="userfileselect" name="userfileselect">
+</span>
+
+
+<a onclick="displayinfo()"> <img alt="Info" style="border:0px solid black" align="right" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdxJREFUeNpcUc9rE0EYfbO73bjd7E6btI2t5BC0VailoCYaFA+iJ7FnD+JFQe/5Gzx68dT6F/jjUkpABL1UJFjBiEht9ZBWbaAxv2ZndmPq7sadRQP6mI+Pee/Nm28YcvrOCiTuLp0tOG6/xES/GPWM5GwzsU+TiUrU7y+vvdmQnDpz5hpuX83fqjf5g4NQuUDtJJ0+nFIn0raqqhrl3q95R/QuX1zMiXdf6lXysPy+8K3BHtlWMjdmjyI/O4XFXCq+da/l4eWHOhotBw4XtewUva50hVcCSM4yD2Fuhsbm8sYuVp5twjI05I+lITXp6XKvpLWZW6S2hSAI8HGnGZdEYkSN+2AwgB9po4aOtsOLCuNeRo9EP/CHlbJ03Lh0HMzt40V1NwrzoesqGHczmkyWCVFWvECAU0cn8fPAx9P17T88gR/60cEQmmmM7HPhZi3TwF+svt7G/+BuD9Kr2KZRcZiLwA+GtVScxc0rC/9w0iO9Co0+hZCw1mE8Hk2OqCgKCCHDvdSkR3rVZvrcXuHEEdFhYsFx3PEwDPFp5wfebn2H6/XQ7jgIw6A2PTl27/H6Vjn+6c2vrer5k9lKFEq58OxGs2N0mQgUoJ6i5vPMhF168upzWb7ltwADAGZn9dZsF/sRAAAAAElFTkSuQmCC" /></a>
+
+<br/>
+
+
+
+<label style="display: inline-block;">
+&nbsp;<span id="fileselectspan" name="fileselectspan" style="vertical-align:middle"></span>&nbsp;&nbsp;
+</label>
+
+
+
+
+<input type="button" value="*" onclick="execallfilters()" title="Apply all the filters" style="font:bold 12px Verdana; color:black; vertical-align:middle"/>
+<input type="button" value="Env." onclick="filterfile(3)" style="font:bold 12px Verdana; color:green; vertical-align:middle"/>
+<input type="button" value="Login seq." onclick="filterfile(1)" style="font:bold 12px Verdana; color:brown; vertical-align:middle"/>
+<input type="button" value="SysRes" onclick="filterfile(2)" style="font:bold 12px Verdana; color:blue; vertical-align:middle"/>
+<input type="button" value="MktData" onclick="filterfile(6)" style="font:bold 12px Verdana; color:darkorange; vertical-align:middle" title="To see the market data routing, use Regexp search: farm,"/>
+<input type="button" value="Conn." onclick="filterfile(4)" style="font:bold 12px Verdana; color:red; vertical-align:middle" title="Works only for TWS 928 or later. For earlier versions, user the Regexp search: status [1-9]$"/>
+<input type="button" value="Htbp" onclick="filterfile(9)" style="font:bold 12px Verdana; color:DeepPink; vertical-align:middle"/>
+<input type="button" value="Api" onclick="filterfile(7)" style="font:bold 12px Verdana; color:blueviolet; vertical-align:middle"/>
+<input type="button" value="Orders-Trds" onclick="filterfile(5)" style="font:bold 12px Verdana; color:lightseagreen; vertical-align:middle"/>
+<input type="button" value="Cls All" title="Clear all panels content" onclick="rst()" style="font:bold 12px Verdana; vertical-align:middle">&nbsp;&nbsp;&nbsp;
+
+
+<span id="imgfilesspace" name="imgfilesspace" style="vertical-align:absmiddle">
+</span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<label style="display: inline-block;">
+<b><font face="Arial" size="2px" style="vertical-align:middle;">Regexp search:</font></b>
+<input type="text" name="expression" size="24" style="text-align:left; vertical-align:middle;">
+<input type="button" value="Go" onclick="RegExpTest(form.expression.value)" style="font:bold 12px Verdana; color:red; vertical-align:middle" title="Search in the entire logfile and could take long. Be sure to respect regexp syntax as per http://msdn.microsoft.com/en-us/library/ms974570.aspx">
+<input type="button" value="Cls" onclick="RegExpClear()" title="Clear regexp results panel" style="font:bold 12px Verdana; color:red; vertical-align:middle"/>
+</label>&nbsp;&nbsp;&nbsp;
+
+<label style="display: inline-block;">
+&nbsp;&nbsp;<b><font face="Arial" size="2px">Lines read:</font></b>
+<input type="text" size="8" name="linecount" style="text-align:left; vertical-align:middle;" readonly />
+</label>
+
+&nbsp;&nbsp;<input type="button" value="N++" onclick="RunProgram()" title="Opens the selected log file with Notepad++" style="font:bold 12px Verdana; vertical-align:middle;"/>
+
+
+<TABLE border="0" id="tablecheckbxs" width="100%" style="margin:0px; margin-bottom:0px; margin-top:-4px" style="vertical-align:absmiddle">
+<tr>
+
+
+<td id="tdcheck1" nowrap WIDTH="6%" align="left">
+<input type="checkbox" name="pbdisabled" style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px" title="Disabling the progress bar speeds up the filtering. It is recommended to keep it disabled when filtering big logfiles. If the main search loop makes the GUI busy, the progress bar will stop updating anyhow." checked="true"/><font size="1" face="Arial"><b>Disable progressbar</b> &nbsp;</font>
+</td>
+
+<td id="tdpbar" WIDTH="35%" align="left">
+<div>
+<object classid="clsid:35053A22-8589-11D1-B16A-00C0F0283628" id="ProgressBar" style="height:13px; width:100%; vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"/>
+<param name="Min" value="0">
+<param name="Max" value="100">
+<param name="Orientation" value="0">
+<param name="Scrolling" value="1">
+</object>
+</div>
+</td>
+
+
+
+
+
+
+
+
+<td id="tdcheck1" nowrap WIDTH="20%" align="center">
+<input type="checkbox" name="autotempcleaning" checked="true" title="If enabled, the TempDir will be completely cleaned before downloading the error report file, preventing the mix up of content from different error reports. If disabled, the o.s. will preserve the existing files and ask whether to overwrite the ones with duplicate names." style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"><font size="1" face="Arial"><b>TempDir auto-cleaning</b></font>
+<input type="checkbox" name="autocls" checked="true" title="If enabled, will clean all the textarea when a new error report file is extracted" style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"><font size="1" face="Arial"><b>auto-cls</b></font>
+<input type="checkbox" name="autocache" title="If enabled, a cached version of the TWS Error Reports webpage will be searched. The operation will complete much faster but all the Error Reports which have been submitted after the last caching of the page will NOT be displayed." style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"/><font size="1" face="Arial"><b>Caching</b></font>
+</td>
+
+<td id="tdcheck1" nowrap WIDTH="30%">
+<input type="checkbox" name="deep" checked="true" title="If enabled, a deep analysis will be performed. It is recommended to disable this checkbox in case of big logfiles size." style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"/><font size="1" face="Arial"><b>Deep analysis</b></font>
+<input type="checkbox" name="readtwsxml" title="If enabled, useful information from file tws.xml will be included among the results" style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"/><font size="1" face="Arial"><b>Include Tws.xml in analysis</b></font>
+<input type="checkbox" name="readtrd" title="If enabled, .Trd files will be included among the Ords-Trds results" style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"/><font size="1" face="Arial"><b>Include .Trd files in analysis</b></font>
+</td>
+
+<td id="tdcheck1" nowrap WIDTH="15%">
+<input type="radio" name="scripttimeoutcheck" onclick="settimeout()" title="http://support.microsoft.com/kb/175500 Press Ctrl+Z to reset to default value" style="vertical-align:absmiddle; position:relative; margin: 0px; top: 2px"/><font size="1" face="Arial" color="555555"><b>IE script timeout disabled</b></font>
+</td>
+
+
+</tr>
+
+</form>
+</table>
+
+
+
+<TABLE id="table1" cellSpacing="0" cellPadding="3" border="0" width="100%" height="44%" style="table-layout:fixed; margin:0px; margin-bottom:0px; margin-top:0px">
+<tr>
+
+<td width="50%" height="32%">
+
+<div id="basic" style="width:100%; height:45%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid green">
+</div>
+
+
+<div id="messages" style="width:100%; height:54%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid brown; margin-top:0.4%">
+</div>
+</td>
+
+<td width="50%" height="32%">
+<div id="connpanel" style="width:100%; height:100%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid red">
+</div>
+</td>
+
+</tr>
+
+</table>
+
+
+<TABLE id="table2" cellSpacing="0" cellPadding="3" border="0" width="100%" height="25%" style="table-layout:fixed; margin-bottom:0px; margin-top:0px">
+<tr>
+
+<td width="50%" height="50%">
+
+<div id="system" style="width:100%; height:100%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid blue">
+</div>
+</td>
+
+<td width="50%" height="50%">
+<div id="htbp" style="width:100%; height:32%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid DeepPink">
+</div>
+<div id="api" style="width:100%; height:66.8%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid blueviolet; margin-top:0.4%">
+</div>
+</td>
+
+</tr>
+
+</table>
+
+
+
+<TABLE id="table3" cellSpacing="0" cellPadding="3" border="0" width="100%" height="25%" style="table-layout:fixed; margin:0px; margin-bottom:0px; margin-top:0px">
+
+<tr>
+
+<td width="50%" height="50%">
+<div id="md" style="width:100%; height:100%; background-color:#ffffff;; overflow:auto; font-size:10px; border:2px solid darkorange">
+</div>
+</td>
+
+<td width="50%" height="50%">
+<div id="orders" style="width:100%; height:100%; background-color:#ffffff; overflow:auto; font-size:10px; border:2px solid lightseagreen">
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+
+</font>
+
+</body>
+
+</HTML>
