@@ -1,5 +1,5 @@
 package com.ib.reader;
 
-public class TwsLogReader {
+public class TwsLogReader extends LogReader{
 
 }
