@@ -1,5 +1,5 @@
 package com.ib.reader;
 
-public class SettingsFileReader extends LogReader{
-	
+public class SettingsFileReader {
+
 }
