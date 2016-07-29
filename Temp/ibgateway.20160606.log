@@ -1,0 +1,99 @@
+2016-06-06 12:16:56.489 [LY] INFO  [JTS-Main] - OvernightManager.dayInit: new values: dayOfTheWeek: 2 (Mon), YYYYMMofToday: 201606, YYYYMMDDofToday: 20160606, m_todayDate: 20160606, dueToChangeInTimezone: false
+2016-06-06 12:16:56.490 [LY] INFO  [JTS-Main] - Created on: 20160606
+2016-06-06 12:16:56.490 [LY] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2016-06-06 12:16:56.491 [LY] INFO  [JTS-Main] - Jts dir is C:\Jts\
+2016-06-06 12:16:56.534 [LY] INFO  [JTS-Main] - PROXY Installed custom selector
+2016-06-06 12:16:56.539 [LY] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-06-06 12:16:56.544 [LY] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-06 12:16:56.544 [LY] INFO  [JTS-Main] - Region: from ini us -> America
+2016-06-06 12:16:56.544 [LY] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-06-06 12:16:56.544 [LY] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-06 12:16:56.544 [LY] INFO  [JTS-Main] - Region:America
+2016-06-06 12:16:56.546 [LY] INFO  [JTS-Main] - WebRegionURL Path:/java/classes/locales.jar URL:http://www.interactivebrokers.com/java/classes/locales.jar
+2016-06-06 12:16:56.547 [LY] INFO  [JTS-Main] - Starting to download 'http://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'http://download2.interactivebrokers.com/java/classes/locales.jar'
+2016-06-06 12:16:56.829 [LY] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=C:\Jts\locales.jar  sourceMod=2016-05-23 08:03:52  destMod=2016-05-23 08:03:52  sourceSize=97283  destSize=97283  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2016-06-06 12:16:56.830 [LY] INFO  [JTS-Main] - LOCALE: C:\Jts\locales.jar already up-to-date
+2016-06-06 12:16:56.909 [LY] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2016-06-06 12:16:56.935 [LY] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2016-06-06 12:16:56.940 [LY] INFO  [JTS-Main] - Locale from ini: en
+2016-06-06 12:16:56.940 [LY] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@1a84f40f with file:/C:/Jts/locales.jar, parent: sun.misc.Launcher$AppClassLoader@764c12b6
+2016-06-06 12:16:56.941 [LY] INFO  [JTS-Main] - LOCALE: Property locale_to_use=en
+2016-06-06 12:16:56.941 [LY] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-06 12:16:56.941 [LY] INFO  [JTS-Main] - Locale=en_US  country=United States  variant=
+2016-06-06 12:16:56.943 [LY] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2016-06-06 12:16:56.945 [LY] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en]
+2016-06-06 12:16:56.946 [LY] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en_US]
+2016-06-06 12:16:56.946 [LY] INFO  [JTS-Main] - LOCALE: type: launcher intended: en_US actual:  size: 309
+2016-06-06 12:16:56.957 [LY] INFO  [JTS-Main] - Build 956.2l, Jun 2, 2016 1:41:09 PM
+2016-06-06 12:16:57.030 [LY] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2016-06-06 12:16:57.035 [LY] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2016-06-06 12:16:57.192 [LY] INFO  [JTS-Main] - Current LAF: TWS LAF
+2016-06-06 12:16:57.193 [LY] INFO  [JTS-Main] - Hard linking is not enabled in standalone mode
+2016-06-06 12:16:57.725 [LY] INFO  [AWT-EventQueue-0] - twslaunch.autoupdate.serviceImpl: com.ib.tws.twslaunch.install4j.Install4jAutoUpdateService
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - updateDownloadUrl: null
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - skipUpdateCheck: null
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - nightlyEnabled: true
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - channelNameArg: null
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - channelName: latest
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - jtsConfigDir: null
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - sessionId: not set
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - installDir: C:\Jts\ibgateway\956\
+2016-06-06 12:16:57.728 [LY] INFO  [AWT-EventQueue-0] - exeName: null
+2016-06-06 12:16:57.899 [LY] INFO  [AWT-EventQueue-0] - Started on 20160606-17:16:57
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - Default timezone:America/Chicago name:Central Standard Time dst:3600000
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - java version = 1.8.0_60
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - os = Windows 7
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2016-06-06 12:16:57.902 [LY] INFO  [AWT-EventQueue-0] - username = 'tacdev'
+2016-06-06 12:17:01.569 [LY] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=678,732KB HeapUsage: Max=699,392KB used=20,659KB committed=99,840KB NonHeapUsage: Max=0KB used=36,726KB committed=37,216KB
+2016-06-06 12:19:00.604 [FV] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2016-06-06 12:19:00.606 [FV] INFO  [JTS-Main] - Jts dir is C:\Jts\
+2016-06-06 12:19:00.622 [FV] INFO  [JTS-Main] - PROXY Installed custom selector
+2016-06-06 12:19:00.626 [FV] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-06-06 12:19:00.629 [FV] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-06 12:19:00.630 [FV] INFO  [JTS-Main] - Region: from ini us -> America
+2016-06-06 12:19:00.630 [FV] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-06-06 12:19:00.630 [FV] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-06 12:19:00.630 [FV] INFO  [JTS-Main] - Region:America
+2016-06-06 12:19:00.631 [FV] INFO  [JTS-Main] - WebRegionURL Path:/java/classes/locales.jar URL:http://www.interactivebrokers.com/java/classes/locales.jar
+2016-06-06 12:19:00.633 [FV] INFO  [JTS-Main] - Starting to download 'http://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'http://download2.interactivebrokers.com/java/classes/locales.jar'
+2016-06-06 12:19:00.702 [FV] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=C:\Jts\locales.jar  sourceMod=2016-05-23 08:03:52  destMod=2016-05-23 08:03:52  sourceSize=97283  destSize=97283  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2016-06-06 12:19:00.703 [FV] INFO  [JTS-Main] - LOCALE: C:\Jts\locales.jar already up-to-date
+2016-06-06 12:19:00.749 [FV] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2016-06-06 12:19:00.758 [FV] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2016-06-06 12:19:00.764 [FV] INFO  [JTS-Main] - Locale from ini: en
+2016-06-06 12:19:00.764 [FV] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@5ef60048 with file:/C:/Jts/locales.jar, parent: sun.misc.Launcher$AppClassLoader@71c74864
+2016-06-06 12:19:00.765 [FV] INFO  [JTS-Main] - LOCALE: Property locale_to_use=en
+2016-06-06 12:19:00.765 [FV] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-06 12:19:00.765 [FV] INFO  [JTS-Main] - Locale=en_US  country=United States  variant=
+2016-06-06 12:19:00.766 [FV] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2016-06-06 12:19:00.768 [FV] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en]
+2016-06-06 12:19:00.769 [FV] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en_US]
+2016-06-06 12:19:00.770 [FV] INFO  [JTS-Main] - LOCALE: type: launcher intended: en_US actual:  size: 309
+2016-06-06 12:19:00.781 [FV] INFO  [JTS-Main] - Build 956.2l, Jun 2, 2016 1:41:09 PM
+2016-06-06 12:19:00.815 [FV] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2016-06-06 12:19:00.818 [FV] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2016-06-06 12:19:00.905 [FV] INFO  [JTS-Main] - Current LAF: TWS LAF
+2016-06-06 12:19:00.906 [FV] INFO  [JTS-Main] - Hard linking is not enabled in standalone mode
+2016-06-06 12:19:01.381 [FV] INFO  [AWT-EventQueue-0] - twslaunch.autoupdate.serviceImpl: com.ib.tws.twslaunch.install4j.Install4jAutoUpdateService
+2016-06-06 12:19:01.383 [FV] INFO  [AWT-EventQueue-0] - updateDownloadUrl: null
+2016-06-06 12:19:01.383 [FV] INFO  [AWT-EventQueue-0] - skipUpdateCheck: null
+2016-06-06 12:19:01.383 [FV] INFO  [AWT-EventQueue-0] - nightlyEnabled: true
+2016-06-06 12:19:01.383 [FV] INFO  [AWT-EventQueue-0] - channelNameArg: null
+2016-06-06 12:19:01.383 [FV] INFO  [AWT-EventQueue-0] - channelName: latest
+2016-06-06 12:19:01.383 [FV] INFO  [AWT-EventQueue-0] - jtsConfigDir: null
+2016-06-06 12:19:01.384 [FV] INFO  [AWT-EventQueue-0] - sessionId: not set
+2016-06-06 12:19:01.384 [FV] INFO  [AWT-EventQueue-0] - installDir: C:\Jts\ibgateway\956\
+2016-06-06 12:19:01.384 [FV] INFO  [AWT-EventQueue-0] - exeName: null
+2016-06-06 12:19:01.467 [FV] INFO  [AWT-EventQueue-0] - Started on 20160606-17:19:01
+2016-06-06 12:19:01.469 [FV] INFO  [AWT-EventQueue-0] - Default timezone:America/Chicago name:Central Standard Time dst:3600000
+2016-06-06 12:19:01.469 [FV] INFO  [AWT-EventQueue-0] - java version = 1.8.0_60
+2016-06-06 12:19:01.469 [FV] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2016-06-06 12:19:01.469 [FV] INFO  [AWT-EventQueue-0] - os = Windows 7
+2016-06-06 12:19:01.469 [FV] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2016-06-06 12:19:01.470 [FV] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2016-06-06 12:19:01.470 [FV] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2016-06-06 12:19:01.470 [FV] INFO  [AWT-EventQueue-0] - username = 'tacdev'

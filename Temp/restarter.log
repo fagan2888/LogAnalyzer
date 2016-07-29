@@ -1,0 +1,102 @@
+[INFO] logger started at Tue May 31 12:44:38 CDT 2016
+[INFO] executable name: C:\Jts\.install4j\restarter.exe
+[INFO] install4j version: 6.0.5 (build 6176)
+[INFO] Properties: 
+-- listing properties --
+install4j.detailStdout=true
+install4j.logToStderr=true
+install4j.shutdownFile=C:\Users\tacdev\AppData\Local\Temp\i4...
+java.runtime.name=Java(TM) SE Runtime Environment
+exe4j.moduleName=C:\Jts\.install4j\restarter.exe
+sun.boot.library.path=c:\users\tacdev\.i4j_jres\1.8.0_60_64...
+exe4j.semaphoreName=Local\c:_jts_.install4j_restarter.exe
+java.vm.version=25.60-b23
+install4j.fromService=false
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+exe4j.consoleCodepage=cp0
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.script=
+user.country=US
+sun.os.patch.level=Service Pack 1
+install4j.exeDir=C:\Jts\.install4j\
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Jts
+java.runtime.version=1.8.0_60-b27
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=c:\users\tacdev\.i4j_jres\1.8.0_60_64...
+os.arch=amd64
+java.io.tmpdir=C:\Users\tacdev\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+exe4j.tempDir=
+os.name=Windows 7
+sun.jnu.encoding=GBK
+java.library.path=C:\Jts\.install4j\..\.install4j;C:\Jt...
+java.class.version=52.0
+install4j.launcherId=640
+java.specification.name=Java Platform API Specification
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+exe4j.isInstall4j=true
+os.version=6.1
+install4j.swt=false
+user.home=C:\Users\tacdev
+user.timezone=America/Chicago
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+java.specification.version=1.8
+file.encoding=GBK
+user.name=tacdev
+java.class.path=C:\Jts\.install4j\i4jruntime.jar;C:\J...
+java.vm.specification.version=1.8
+sun.arch.data.model=64
+java.home=c:\users\tacdev\.i4j_jres\1.8.0_60_64
+sun.java.command=C:\Jts\.install4j\restarter.exe
+exe4j.launchName=C:\Jts\INSTAL~1\RESTAR~1.EXE
+java.specification.vendor=Oracle Corporation
+user.language=en
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+exe4j.unextractedPosition=0
+java.version=1.8.0_60
+java.ext.dirs=c:\users\tacdev\.i4j_jres\1.8.0_60_64...
+sun.boot.class.path=c:\users\tacdev\.i4j_jres\1.8.0_60_64...
+java.vendor=Oracle Corporation
+install4j.appDir=C:\Jts\
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.cpu.endian=little
+sun.io.unicode.encoding=UnicodeLittle
+install4j.debug=true
+install4j.alternativeLogfile=./.install4j/restarter.log
+install4j.keepLog=true
+sun.desktop=windows
+sun.cpu.isalist=amd64
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3740]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_37
+       Property variableName: launcherArgs
+       Property rollbackSupported: false
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property failIfNull: true
+       Variable changed: launcherArgs=[-J-DCHANNEL=latest][class [Ljava.lang.String;]
+       Execute action successful after 13 ms
+[INFO] com.install4j.runtime.beans.screens.StartupScreen [ID 641]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FinishedScreen [ID 642]: Show screen
+[INFO] com.install4j.runtime.beans.actions.update.ShutdownCallingLauncherAction [ID 643]: Execute action
+       Property rollbackSupported: false
+       Property timeout: 60
+       Property wait: true
+       Execute action successful after 2009 ms
+[INFO] com.install4j.runtime.beans.actions.finish.ExecuteLauncherAction [ID 644]: Execute action
+       Property arguments: [-J-DCHANNEL=latest]
+       Property rollbackSupported: false
+       Property launcherId: 22
+       execute using batch file
+       Execute action successful after 605 ms
+[INFO] com.install4j.runtime.beans.screens.FinishedScreen [ID 642]: command: finish
+[INFO] cleaning up
+[INFO] Finished

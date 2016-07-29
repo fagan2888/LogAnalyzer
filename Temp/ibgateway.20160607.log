@@ -1,0 +1,88 @@
+2016-06-07 13:52:45.227 [AS] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2016-06-07 13:52:45.263 [AS] INFO  [JTS-Main] - Jts dir is C:\Jts\
+2016-06-07 13:52:45.295 [AS] INFO  [JTS-Main] - PROXY Installed custom selector
+2016-06-07 13:52:45.300 [AS] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-06-07 13:52:45.303 [AS] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-07 13:52:45.303 [AS] INFO  [JTS-Main] - Region: from ini us -> America
+2016-06-07 13:52:45.303 [AS] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-06-07 13:52:45.303 [AS] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-07 13:52:45.303 [AS] INFO  [JTS-Main] - Region:America
+2016-06-07 13:52:45.305 [AS] INFO  [JTS-Main] - WebRegionURL Path:/java/classes/locales.jar URL:http://www.interactivebrokers.com/java/classes/locales.jar
+2016-06-07 13:52:45.306 [AS] INFO  [JTS-Main] - Starting to download 'http://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'http://download2.interactivebrokers.com/java/classes/locales.jar'
+2016-06-07 13:52:45.354 [AS] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=C:\Jts\locales.jar  sourceMod=2016-05-23 08:03:52  destMod=2016-05-23 08:03:52  sourceSize=97283  destSize=97283  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2016-06-07 13:52:45.354 [AS] INFO  [JTS-Main] - LOCALE: C:\Jts\locales.jar already up-to-date
+2016-06-07 13:52:45.441 [AS] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2016-06-07 13:52:45.451 [AS] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2016-06-07 13:52:45.457 [AS] INFO  [JTS-Main] - Locale from ini: en
+2016-06-07 13:52:45.457 [AS] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@258e2e41 with file:/C:/Jts/locales.jar, parent: sun.misc.Launcher$AppClassLoader@764c12b6
+2016-06-07 13:52:45.457 [AS] INFO  [JTS-Main] - LOCALE: Property locale_to_use=en
+2016-06-07 13:52:45.457 [AS] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-06-07 13:52:45.458 [AS] INFO  [JTS-Main] - Locale=en_US  country=United States  variant=
+2016-06-07 13:52:45.460 [AS] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2016-06-07 13:52:45.462 [AS] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en]
+2016-06-07 13:52:45.462 [AS] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en_US]
+2016-06-07 13:52:45.463 [AS] INFO  [JTS-Main] - LOCALE: type: launcher intended: en_US actual:  size: 309
+2016-06-07 13:52:45.473 [AS] INFO  [JTS-Main] - Build 956.2l, Jun 2, 2016 1:41:09 PM
+2016-06-07 13:52:45.506 [AS] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2016-06-07 13:52:45.510 [AS] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2016-06-07 13:52:45.591 [AS] INFO  [JTS-Main] - Current LAF: TWS LAF
+2016-06-07 13:52:45.593 [AS] INFO  [JTS-Main] - Hard linking is not enabled in standalone mode
+2016-06-07 13:52:46.079 [AS] INFO  [AWT-EventQueue-0] - twslaunch.autoupdate.serviceImpl: com.ib.tws.twslaunch.install4j.Install4jAutoUpdateService
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - updateDownloadUrl: null
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - skipUpdateCheck: null
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - nightlyEnabled: true
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - channelNameArg: null
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - channelName: latest
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - jtsConfigDir: null
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - sessionId: not set
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - installDir: C:\Jts\ibgateway\956\
+2016-06-07 13:52:46.081 [AS] INFO  [AWT-EventQueue-0] - exeName: null
+2016-06-07 13:52:46.167 [AS] INFO  [AWT-EventQueue-0] - Started on 20160607-18:52:46
+2016-06-07 13:52:46.169 [AS] INFO  [AWT-EventQueue-0] - Default timezone:America/Chicago name:Central Standard Time dst:3600000
+2016-06-07 13:52:46.169 [AS] INFO  [AWT-EventQueue-0] - java version = 1.8.0_60
+2016-06-07 13:52:46.169 [AS] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2016-06-07 13:52:46.169 [AS] INFO  [AWT-EventQueue-0] - os = Windows 7
+2016-06-07 13:52:46.169 [AS] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2016-06-07 13:52:46.169 [AS] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2016-06-07 13:52:46.170 [AS] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2016-06-07 13:52:46.170 [AS] INFO  [AWT-EventQueue-0] - username = 'tacdev'
+2016-06-07 13:52:50.294 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=678,055KB HeapUsage: Max=699,392KB used=21,336KB committed=101,888KB NonHeapUsage: Max=0KB used=36,841KB committed=37,792KB
+2016-06-07 13:52:51.299 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.39% avg=0.39% 30 min avg=0.39% 5 min avg=0.39% 1 min avg=0.39%
+GC:called=3 times CPU used=0.13%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=17 curr daemon=13
+2016-06-07 13:57:50.307 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=674,890KB HeapUsage: Max=699,392KB used=24,501KB committed=101,888KB NonHeapUsage: Max=0KB used=38,225KB committed=39,008KB
+2016-06-07 13:57:51.307 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.01% 5 min avg=0.01% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12
+2016-06-07 14:02:50.319 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=674,225KB HeapUsage: Max=699,392KB used=25,166KB committed=101,888KB NonHeapUsage: Max=0KB used=38,245KB committed=39,008KB
+2016-06-07 14:02:51.320 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.01% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12
+2016-06-07 14:07:50.328 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=673,559KB HeapUsage: Max=699,392KB used=25,832KB committed=101,888KB NonHeapUsage: Max=0KB used=38,317KB committed=39,136KB
+2016-06-07 14:07:51.329 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12
+2016-06-07 14:12:50.336 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=672,893KB HeapUsage: Max=699,392KB used=26,498KB committed=101,888KB NonHeapUsage: Max=0KB used=38,303KB committed=39,136KB
+2016-06-07 14:12:51.337 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12
+2016-06-07 14:17:50.351 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=672,227KB HeapUsage: Max=699,392KB used=27,164KB committed=101,888KB NonHeapUsage: Max=0KB used=38,385KB committed=39,136KB
+2016-06-07 14:17:51.352 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12
+2016-06-07 14:22:50.368 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=671,562KB HeapUsage: Max=699,392KB used=27,829KB committed=101,888KB NonHeapUsage: Max=0KB used=38,102KB committed=39,136KB
+2016-06-07 14:22:51.369 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12
+2016-06-07 14:27:50.385 [AS] INFO  [JTS-DeadlockMonitor-2] - Memory:total=699,392KB free=670,896KB HeapUsage: Max=699,392KB used=28,495KB committed=101,888KB NonHeapUsage: Max=0KB used=38,090KB committed=39,136KB
+2016-06-07 14:27:51.386 [AS] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=16 curr daemon=12

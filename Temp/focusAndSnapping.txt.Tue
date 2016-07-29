@@ -1,0 +1,100 @@
+15:07:40:393 AWT-EventQueue-0: FOCUS: Z-Order string restored from settings: [Container Desktop|1, MainFrame|1, MainFrame|5, Quote Details Window|2, Persistent Order Ticket|0, Activity Monitor|3, Quote Matrix Window|4, Simple Content Window|0, JTS_BASE_DIALOG|4]
+15:07:46:102 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+15:07:46:102 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.feature.welcome.H[frame7,339,336,602x352,invalid,hidden,layout=java.awt.BorderLayout,title=Starting application...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.I[,0,0,602x352,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:46:128 AWT-EventQueue-0: FOCUS: Bringing all windows to front
+15:07:46:523 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false
+15:07:48:868 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.2@DU258024 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: JTS_BASE_DIALOG.1@Warning isAlwaysOnTop: true isActive: false
+15:07:48:868 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.1@DU258024 API (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.5@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.2@DU258024  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: Persistent Order Ticket.0@Order Entry (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Activity Monitor.3@DU258024 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Quote Matrix Window.4@DU258024 Favorites (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Simple Content Window.0@ES SEP16 Futures (GLOBEX) isAlwaysOnTop: false isActive: false parent: null 
+	9: JTS_BASE_DIALOG.2@DU258024 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: JTS_BASE_DIALOG.1@Warning isAlwaysOnTop: true isActive: false
+Other Windows: 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: true isActive: false parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false
+
+15:07:51:188 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: feature.messages.as[DU258024 IB Trader Workstation (Simulated Trading),496,371,435x171,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU258024 IB Trader Workstation (Simulated Trading),defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,435x171,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:189 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,116,38,1194x838,invalid,layout=java.awt.BorderLayout,title=DU258024 Interactive Brokers (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1194x838,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@819b06,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:190 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,497,330,432x254,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x254,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:190 AWT-EventQueue-0: FOCUS: OnTop: processing child window: feature.messages.as[DU258024 IB Trader Workstation (Simulated Trading),496,371,435x171,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU258024 IB Trader Workstation (Simulated Trading),defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,435x171,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:202 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false
+15:07:51:202 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.1@DU258024 API (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.5@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.2@DU258024  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: Persistent Order Ticket.0@Order Entry (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Activity Monitor.3@DU258024 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Quote Matrix Window.4@DU258024 Favorites (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Simple Content Window.0@ES SEP16 Futures (GLOBEX) isAlwaysOnTop: false isActive: false parent: null 
+	9: JTS_BASE_DIALOG.2@DU258024 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: false isActive: false parent: JTS_BASE_DIALOG.1@Warning isAlwaysOnTop: false isActive: true
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+15:07:51:204 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: feature.messages.as[DU258024 IB Trader Workstation (Simulated Trading),496,371,435x171,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU258024 IB Trader Workstation (Simulated Trading),defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,435x171,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:882 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jclient.login.ay[Warning,497,330,432x254,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x254,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:882 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,116,38,1194x838,invalid,layout=java.awt.BorderLayout,title=DU258024 Interactive Brokers (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1194x838,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@819b06,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:882 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,497,330,432x254,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x254,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:07:51:895 AWT-EventQueue-0: FOCUS: Frame gained focus: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+15:07:51:895 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU258024 API (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.5@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: Quote Details Window.2@DU258024  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Persistent Order Ticket.0@Order Entry (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.3@DU258024 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.4@DU258024 Favorites (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Simple Content Window.0@ES SEP16 Futures (GLOBEX) isAlwaysOnTop: false isActive: false parent: null 
+	8: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: false parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: true
+	9: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+15:07:51:898 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jclient.login.ay[Warning,497,330,432x254,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x254,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:08:04:445 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0
+15:19:47:231 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0
+15:22:52:487 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0
+15:22:52:511 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jconnection.aL[dialog0,452,459,375x105,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Re-login is required,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,375x105,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:25:55:217 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0
+15:25:55:220 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jconnection.aL[dialog1,452,459,375x105,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Re-login is required,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,375x105,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:28:56:812 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0
+15:28:56:815 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jconnection.aL[dialog2,452,459,375x105,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Re-login is required,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,375x105,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:32:02:565 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0
+15:32:02:566 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jconnection.aL[dialog3,452,459,375x105,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Re-login is required,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,375x105,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:35:02:439 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jconnection.aL[dialog4,452,459,375x105,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Re-login is required,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,375x105,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:35:04:345 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jconnection.aF[dialog5,429,434,421x156,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Existing session detected,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,421x156,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:35:04:094 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.feature.welcome.H[frame8,339,471,602x81,invalid,hidden,layout=java.awt.BorderLayout,title=Starting application...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.I[,0,0,602x81,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+16:19:03:350 AWT-EventQueue-0: FOCUS: Frame gained focus: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+16:19:03:350 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU258024 API (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.5@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: Quote Details Window.2@DU258024  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Persistent Order Ticket.0@Order Entry (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.3@DU258024 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.4@DU258024 Favorites (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Simple Content Window.0@ES SEP16 Futures (GLOBEX) isAlwaysOnTop: false isActive: false parent: null 
+	8: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+16:19:12:409 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.3@Shutdown progress isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false
+16:19:12:409 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU258024 API (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.5@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: Quote Details Window.2@DU258024  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Persistent Order Ticket.0@Order Entry (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.3@DU258024 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.4@DU258024 Favorites (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Simple Content Window.0@ES SEP16 Futures (GLOBEX) isAlwaysOnTop: false isActive: false parent: null 
+	8: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: JTS_BASE_DIALOG.3@Shutdown progress isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.1@DU258024 Interactive Brokers (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+16:19:12:063 AWT-EventQueue-0: FOCUS: saving z-order: Container Desktop|1,MainFrame|1,MainFrame|5,Quote Details Window|2,Persistent Order Ticket|0,Activity Monitor|3,Quote Matrix Window|4,Simple Content Window|0,JTS_BASE_DIALOG|3
+16:19:12:195 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog6,640,512,400x140,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Uploading settings to server,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,400x140,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+16:19:12:221 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog7,640,512,400x140,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Uploading settings to server,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,400x140,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+16:19:13:386 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jclient.a9[frame9,430,382,437x260,invalid,hidden,disabled,layout=java.awt.BorderLayout,title=Loading...,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,25,431x232,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+16:19:13:386 JTS-ShutdownThread-8074: FOCUS: OnTop.fixTopWindows() called for: jclient.login.aB[Shutdown progress,548,410,330x93,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Shutdown progress,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,330x93,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+16:19:13:387 JTS-ShutdownThread-8074: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,116,38,1194x838,invalid,layout=java.awt.BorderLayout,title=DU258024 Interactive Brokers (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1194x838,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@819b06,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+16:19:13:387 JTS-ShutdownThread-8074: FOCUS: OnTop: processing child window: jclient.login.aB[Shutdown progress,548,410,330x93,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Shutdown progress,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,330x93,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]

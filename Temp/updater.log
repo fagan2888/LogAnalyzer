@@ -1,0 +1,110 @@
+[INFO] logger started at Wed Jul 27 07:50:49 CDT 2016
+[INFO] executable name: C:\Jts\.install4j\updater.exe
+[INFO] install4j version: 6.1.1 (build 6254)
+[INFO] Properties: 
+-- listing properties --
+java.vendor=Oracle Corporation
+sun.management.compiler=HotSpot Client Compiler
+install4j.alternativeLogfile=./.install4j/updater.log
+install4j.clearProxyCache=true
+exe4j.isInstall4j=true
+https.proxyHost=192.9.168.225
+os.name=Windows 7
+sun.boot.class.path=c:\users\tacdev\.i4j_jres\1.8.0_60_32...
+install4j.launcherId=443
+sun.desktop=windows
+java.vm.specification.vendor=Oracle Corporation
+install4j.appDir=C:\Jts\
+java.runtime.version=1.8.0_60-b27
+http.proxyPort=3128
+install4j.showConnectError=true
+user.name=tacdev
+install4j.shutdownFile=C:\Users\tacdev\AppData\Local\Temp\i4...
+user.language=en
+sun.boot.library.path=c:\users\tacdev\.i4j_jres\1.8.0_60_32...
+java.version=1.8.0_60
+user.timezone=America/Chicago
+sun.arch.data.model=32
+java.endorsed.dirs=c:\users\tacdev\.i4j_jres\1.8.0_60_32...
+sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+m...
+sun.jnu.encoding=GBK
+file.encoding.pkg=sun.io
+file.separator=\
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+user.country=US
+java.home=c:\users\tacdev\.i4j_jres\1.8.0_60_32
+java.vm.info=mixed mode
+os.version=6.1
+https.proxyPort=3128
+path.separator=;
+java.vm.version=25.60-b23
+user.variant=
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+sun.io.unicode.encoding=UnicodeLittle
+awt.toolkit=sun.awt.windows.WToolkit
+user.script=
+user.home=C:\Users\tacdev
+exe4j.semaphoreName=Local\c:_jts_.install4j_updater.exe
+java.specification.vendor=Oracle Corporation
+java.library.path=C:\Jts\.install4j\..\.install4j;C:\Pr...
+java.vendor.url=http://java.oracle.com/
+exe4j.consoleCodepage=cp0
+java.vm.vendor=Oracle Corporation
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.java.command=C:\Jts\.install4j\updater.exe
+java.class.path=C:\Jts\.install4j\i4jruntime.jar
+exe4j.tempDir=
+java.vm.specification.name=Java Virtual Machine Specification
+exe4j.moduleName=C:\Jts\.install4j\updater.exe
+java.vm.specification.version=1.8
+sun.cpu.endian=little
+sun.os.patch.level=Service Pack 1
+install4j.noProxy=true
+java.io.tmpdir=C:\Users\tacdev\AppData\Local\Temp\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+http.proxyHost=192.9.168.225
+os.arch=x86
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+exe4j.launchName=C:\Jts\INSTAL~1\updater.exe
+java.ext.dirs=c:\users\tacdev\.i4j_jres\1.8.0_60_32...
+user.dir=C:\Jts
+exe4j.unextractedPosition=0
+line.separator=
+
+java.vm.name=Java HotSpot(TM) Client VM
+install4j.fromService=false
+file.encoding=GBK
+install4j.exeDir=C:\Jts\.install4j\
+install4j.swt=false
+java.specification.version=1.8
+install4j.noProxyAutoDetect=true
+[INFO] com.install4j.runtime.beans.actions.update.CheckForUpdateAction [ID 479]: Execute action
+       Property variable: updateDescriptor
+       Property showError: true
+       Property rollbackSupported: false
+       Property connectTimeout: 10000
+       Property readTimeout: 20000
+       Property url: https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-windows-x86.xml
+       Property askForProxy: true
+       Property connectionFailureScript: null
+       Property requestHeaders: []
+       Property acceptAllCertificates: false
+       Download: https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-windows-x86.xml to C:\Users\tacdev\AppData\Local\Temp\i4jupd2577139957732660640.xml; size: 1232 bytes
+       Variable changed: updateDescriptor=com.install4j.runtime.installer.config.update.UpdateDescriptorImpl@149af10[class com.install4j.runtime.installer.config.update.UpdateDescriptorImpl]
+       Execute action successful after 677 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 480]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_60
+       Property variableName: updateDescriptorEntry
+       Property failIfNull: false
+       Property rollbackSupported: false
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Looking for a compatible update [channel: latest, currentVersion: latest (957.3b) 20160725 12:24:41, currentUuid: 12be2157-d51c-4d06-a7ff-580d64e60cb2]...
+       version: latest (957.3b) 20160725 12:24:41, uuid: 12be2157-d51c-4d06-a7ff-580d64e60cb2
+       No update candidates found.
+       Variable changed: updateDescriptorEntry=null
+       Execute action successful after 7 ms
+[INFO] com.install4j.runtime.beans.screens.StartupScreen [ID 444]: command: move 1 screens, executing actions, checking condition
+[INFO] cleaning up
+[INFO] Finished

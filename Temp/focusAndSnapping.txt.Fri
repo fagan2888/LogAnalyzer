@@ -1,0 +1,453 @@
+12:45:22:304 AWT-EventQueue-0: FOCUS: Z-Order string restored from settings: [MainFrame|1, MainFrame|6, Container Desktop|0, Quote Details Window|3, MainFrame|4, Simple Content Window|0, Activity Monitor|2, Quote Matrix Window|5, Persistent Order Ticket|0, JTS_BASE_DIALOG|4]
+12:45:27:558 AWT-EventQueue-0: FOCUS: Application lost focus while restoring z-order
+12:45:27:558 AWT-EventQueue-0: FOCUS: Application lost focus while restoring z-order
+12:45:28:796 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.feature.welcome.H[frame9,339,336,602x352,invalid,hidden,layout=java.awt.BorderLayout,title=Starting application...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.I[,0,0,602x352,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:28:809 AWT-EventQueue-0: FOCUS: Bringing all windows to front
+12:45:28:893 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+12:45:28:894 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog0,345,415,590x194,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,590x194,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:28:894 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jutils.dK[dialog0,345,415,590x194,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,590x194,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:28:895 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:28:895 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@15871adb,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:28:895 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,426,414,432x245,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:29:761 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: true parent: null 
+12:45:29:772 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:45:29:776 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+12:45:30:707 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: Message.1@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false
+12:45:32:572 AWT-EventQueue-0: FOCUS: Frame gained focus: Message.1@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false
+12:45:32:572 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: Message.1@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false
+Other Windows: 
+	11: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: false parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+
+12:45:34:081 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:083 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:083 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:083 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@15871adb,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:083 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,426,414,432x245,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:083 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@15871adb,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,426,414,432x245,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:34:084 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog1,363,719,338x130,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,338x130,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:45:35:200 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:45:35:200 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:45:42:641 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:45:42:641 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:45:44:687 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:45:44:687 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:45:55:236 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:45:55:236 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:45:58:636 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:45:58:636 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:02:578 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:02:579 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:08:996 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:08:996 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:35:852 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:35:852 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:39:354 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:39:355 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:43:460 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:43:460 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:46:195 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:46:195 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:46:57:347 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:46:57:347 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:02:706 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:47:02:707 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:17:122 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:47:17:122 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:21:258 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:47:21:258 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:25:810 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:47:25:810 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:29:753 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:47:29:754 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	10: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:34:584 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jclient.login.ay[Warning,431,519,432x245,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:34:585 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:34:585 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@15871adb,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:34:585 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,431,519,432x245,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:34:621 AWT-EventQueue-0: FOCUS: Frame gained focus: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+12:47:34:622 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	4: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	6: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	7: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: false parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true
+	10: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+12:47:35:014 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.2@Shutdown progress isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+12:47:35:014 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	3: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	4: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	5: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	6: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	7: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	8: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: true isActive: false parent: null 
+	9: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: false isActive: false parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+	10: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	11: JTS_BASE_DIALOG.2@Shutdown progress isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+12:47:35:094 AWT-EventQueue-0: FOCUS: saving z-order: MainFrame|1,JTS_BASE_DIALOG|1,MainFrame|6,Container Desktop|0,Quote Details Window|3,MainFrame|4,Simple Content Window|0,Activity Monitor|2,Quote Matrix Window|5,Persistent Order Ticket|0,JTS_BASE_DIALOG|2
+12:47:35:222 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog2,640,512,400x131,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Uploading settings to server,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,400x131,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:35:249 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog3,640,512,400x131,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Uploading settings to server,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,400x131,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:36:143 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jclient.a9[frame10,430,382,437x260,invalid,hidden,disabled,layout=java.awt.BorderLayout,title=Loading...,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,25,431x232,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:36:145 JTS-ShutdownThread-160: FOCUS: OnTop.fixTopWindows() called for: jclient.login.aB[Shutdown progress,477,495,330x84,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Shutdown progress,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,330x84,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:36:145 JTS-ShutdownThread-160: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:36:146 JTS-ShutdownThread-160: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@15871adb,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+12:47:36:146 JTS-ShutdownThread-160: FOCUS: OnTop: processing child window: jclient.login.aB[Shutdown progress,477,495,330x84,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Shutdown progress,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,330x84,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:18:757 AWT-EventQueue-0: FOCUS: Z-Order string restored from settings: [MainFrame|1, JTS_BASE_DIALOG|1, MainFrame|6, Container Desktop|0, Quote Details Window|3, MainFrame|4, Simple Content Window|0, Activity Monitor|2, Quote Matrix Window|5, Persistent Order Ticket|0, JTS_BASE_DIALOG|2]
+15:18:24:162 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: Message.0@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+15:18:24:757 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.feature.welcome.H[frame9,339,336,602x352,invalid,hidden,layout=java.awt.BorderLayout,title=Starting application...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.I[,0,0,602x352,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:24:771 AWT-EventQueue-0: FOCUS: Bringing all windows to front
+15:18:25:297 AWT-EventQueue-0: FOCUS: Application lost focus while restoring z-order
+15:18:25:297 AWT-EventQueue-0: FOCUS: Application lost focus while restoring z-order
+15:18:25:354 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: Message.0@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+15:18:25:417 AWT-EventQueue-0: FOCUS: received focus gained event from window while restoring z-order: JTS_BASE_DIALOG.1@Warning isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+15:18:29:669 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jclient.login.ay[Warning,468,691,432x245,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:29:670 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:29:670 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@3bc9b476,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:29:670 AWT-EventQueue-0: FOCUS: OnTop: processing child window: jclient.login.ay[Warning,468,691,432x245,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:29:680 AWT-EventQueue-0: FOCUS: Frame gained focus: Message.0@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+15:18:29:681 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	7: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	10: Message.0@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+Other Windows: 
+
+15:18:29:683 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jclient.login.ay[Warning,468,691,432x245,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Warning,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,432x245,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:492 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: feature.selector.bZ[Announcements,0,0,94x60,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Announcements,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,94x60,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:496 AWT-EventQueue-0: FOCUS: Frame gained focus: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+15:18:31:496 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	5: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	6: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: Message.0@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: false parent: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+	10: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+15:18:31:506 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog0,345,388,590x247,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,590x247,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:507 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jutils.dK[dialog0,345,388,590x247,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,590x247,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:507 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:507 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@3bc9b476,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:560 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog0,345,388,590x247,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,590x247,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:31:560 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.SwingUtilities$SharedOwnerFrame[frame0,0,0,132x38,invalid,hidden,layout=java.awt.BorderLayout,title=,resizable,normal]
+15:18:34:226 AWT-EventQueue-0: FOCUS: Frame gained focus: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+15:18:34:226 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+15:18:37:855 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: javax.swing.JDialog[dialog1,355,723,354x121,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,354x121,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:37:855 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@3bc9b476,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:37:855 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:37:884 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog1,355,723,354x121,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,354x121,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:37:886 AWT-EventQueue-0: FOCUS: Frame gained focus: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+15:18:37:886 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: MainFrame.1@DU192127 Alerts (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+15:18:37:887 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jclient.pw[DU192127 Alerts (Simulated Trading),82,429,900x710,invalid,hidden,layout=java.awt.BorderLayout,title=DU192127 Alerts (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,900x710,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:42:008 AWT-EventQueue-0: FOCUS: Frame gained focus: Message.1@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+15:18:42:008 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: Message.1@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+15:18:55:641 AWT-EventQueue-0: FOCUS: Frame gained focus: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+15:18:55:642 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Message.1@DU192127 IB Trader Workstation (Simulated Trading) isModal: true isAlwaysOnTop: true isActive: false parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true
+	9: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: true parent: null 
+Other Windows: 
+
+15:18:55:643 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog2,365,350,553x373,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,553x373,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:55:643 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jutils.dK[dialog2,365,350,553x373,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,553x373,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:55:643 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@3bc9b476,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:55:643 AWT-EventQueue-0: FOCUS: OnTop.fixTopWindows() called for: jutils.dK[dialog2,365,350,553x373,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,553x373,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:55:643 AWT-EventQueue-0: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@3bc9b476,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:55:645 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: jutils.dK[dialog2,365,350,553x373,invalid,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=DU192127 IB Trader Workstation (Simulated Trading),defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,553x373,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:57:057 AWT-EventQueue-0: FOCUS: Frame gained focus: JTS_BASE_DIALOG.2@Shutdown progress isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+15:18:57:058 AWT-EventQueue-0: FOCUS: Ordered Frames
+	1: MainFrame.6@DU192127 Pending (All) (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	2: Quote Details Window.3@DU192127  (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	3: MainFrame.4@Market (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	4: Simple Content Window.0@BA@SMART isAlwaysOnTop: false isActive: false parent: null 
+	5: Activity Monitor.2@DU192127 Orders (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	6: Quote Matrix Window.5@DU192127 Portfolio (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	7: Persistent Order Ticket.0@Buy 100 Limit n/a   GTC (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	8: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false parent: null 
+	9: JTS_BASE_DIALOG.2@Shutdown progress isModal: true isAlwaysOnTop: true isActive: true parent: Container Desktop.0@DU192127 IB Trader Workstation (Simulated Trading) isAlwaysOnTop: false isActive: false
+Other Windows: 
+
+15:18:57:138 AWT-EventQueue-0: FOCUS: saving z-order: MainFrame|6,Container Desktop|0,Quote Details Window|3,MainFrame|4,Simple Content Window|0,Activity Monitor|2,Quote Matrix Window|5,Persistent Order Ticket|0,JTS_BASE_DIALOG|2
+15:18:57:410 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog3,640,512,400x131,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Uploading settings to server,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,400x131,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:57:571 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: javax.swing.JDialog[dialog4,640,512,400x131,invalid,hidden,layout=java.awt.BorderLayout,MODELESS,title=Uploading settings to server,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,400x131,invalid,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:58:214 AWT-EventQueue-0: FOCUS: cleanUpClosingWindow() called for: twslaunch.jclient.a9[frame10,430,382,437x260,invalid,hidden,disabled,layout=java.awt.BorderLayout,title=Loading...,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,25,431x232,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:58:216 JTS-ShutdownThread-145: FOCUS: OnTop.fixTopWindows() called for: jclient.login.aB[Shutdown progress,477,495,330x84,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Shutdown progress,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,330x84,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:58:216 JTS-ShutdownThread-145: FOCUS: OnTop: processing window: jclient.py[mainTestFrame,2,25,1280x1024,invalid,layout=java.awt.BorderLayout,title=DU192127 IB Trader Workstation (Simulated Trading),resizable,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,1280x1024,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=feature.desktop.t@3bc9b476,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+15:18:58:216 JTS-ShutdownThread-145: FOCUS: OnTop: processing child window: jclient.login.aB[Shutdown progress,477,495,330x84,invalid,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Shutdown progress,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=javax.swing.JRootPane[,0,0,330x84,layout=jtscomponents.plaf.ai,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]

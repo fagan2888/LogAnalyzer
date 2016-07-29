@@ -1,0 +1,454 @@
+2016-07-26 14:13:48.647 [BR] INFO  [JTS-Main] - ------------------------------- TWS RESTART --------------------------------
+2016-07-26 14:13:48.679 [BR] INFO  [JTS-Main] - Jts dir is C:\Jts\\
+2016-07-26 14:13:48.689 [BR] INFO  [JTS-Main] - PROXY Installed custom selector
+2016-07-26 14:13:48.712 [BR] INFO  [JTS-Main] - SSL support status for cdc1.ibllc.com:4000 is  expired(last check 6)
+2016-07-26 14:13:48.728 [BR] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-07-26 14:13:48.733 [BR] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:13:48.733 [BR] INFO  [JTS-Main] - Region: from ini us -> America
+2016-07-26 14:13:48.733 [BR] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-07-26 14:13:48.733 [BR] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:13:48.733 [BR] INFO  [JTS-Main] - Region:America
+2016-07-26 14:13:48.751 [BR] INFO  [JTS-Main] - WebRegionURL Path:/java/classes/locales.jar URL:http://www.interactivebrokers.com/java/classes/locales.jar
+2016-07-26 14:13:48.752 [BR] INFO  [JTS-Main] - Starting to download 'http://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'http://download2.interactivebrokers.com/java/classes/locales.jar'
+2016-07-26 14:13:48.870 [BR] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=C:\Jts\locales.jar  sourceMod=2016-05-23 08:03:52  destMod=2016-05-23 08:03:52  sourceSize=97283  destSize=97283  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2016-07-26 14:13:48.871 [BR] INFO  [JTS-Main] - LOCALE: C:\Jts\locales.jar already up-to-date
+2016-07-26 14:13:49.052 [BR] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2016-07-26 14:13:49.109 [BR] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2016-07-26 14:13:49.136 [BR] INFO  [JTS-Main] - Locale from ini: en
+2016-07-26 14:13:49.136 [BR] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@1931956 with file:/C:/Jts/locales.jar, parent: sun.misc.Launcher$AppClassLoader@4c12b6
+2016-07-26 14:13:49.136 [BR] INFO  [JTS-Main] - LOCALE: Property locale_to_use=en
+2016-07-26 14:13:49.136 [BR] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:13:49.136 [BR] INFO  [JTS-Main] - Locale=en_US  country=United States  variant=
+2016-07-26 14:13:49.138 [BR] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2016-07-26 14:13:49.139 [BR] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en]
+2016-07-26 14:13:49.139 [BR] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en_US]
+2016-07-26 14:13:49.140 [BR] INFO  [JTS-Main] - LOCALE: type: launcher intended: en_US actual:  size: 309
+2016-07-26 14:13:49.210 [BR] INFO  [JTS-Main] - TWS installer type: updatable
+2016-07-26 14:13:49.224 [BR] INFO  [JTS-Main] - Connect and request MiscUrls
+2016-07-26 14:13:49.228 [BR] INFO  [JTS-MiscUlrsRequester-1] - Connecting cdc1.ibllc.com:4000 timeout=0
+2016-07-26 14:13:49.235 [BR] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: simulatehighdefscreen=false
+2016-07-26 14:13:49.236 [BR] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: Screen dimensions=1280x1024
+2016-07-26 14:13:49.236 [BR] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: highres=false
+2016-07-26 14:13:49.236 [BR] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: FontSize=0
+2016-07-26 14:13:49.248 [BR] INFO  [JTS-MiscUlrsRequester-1] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.9.169.104:54699
+2016-07-26 14:13:49.252 [BR] INFO  [JTS-MiscUlrsRequester-1] - Resolving mac address
+2016-07-26 14:13:49.265 [BR] INFO  [AWT-EventQueue-0] - LauncherJtsLookAndFeel initialized
+2016-07-26 14:13:49.321 [BR] INFO  [AWT-EventQueue-0] - twslaunch.autoupdate.serviceImpl: com.ib.tws.twslaunch.install4j.Install4jAutoUpdateService
+2016-07-26 14:13:49.323 [BR] INFO  [AWT-EventQueue-0] - updateDownloadUrl: https://download2.interactivebrokers.com/installers/tws/latest
+2016-07-26 14:13:49.323 [BR] INFO  [AWT-EventQueue-0] - skipUpdateCheck: null
+2016-07-26 14:13:49.323 [BR] INFO  [AWT-EventQueue-0] - nightlyEnabled: true
+2016-07-26 14:13:49.323 [BR] INFO  [AWT-EventQueue-0] - channelNameArg: null
+2016-07-26 14:13:49.323 [BR] INFO  [AWT-EventQueue-0] - channelName: latest
+2016-07-26 14:13:49.323 [BR] INFO  [AWT-EventQueue-0] - jtsConfigDir: null
+2016-07-26 14:13:49.324 [BR] INFO  [AWT-EventQueue-0] - sessionId: not set
+2016-07-26 14:13:49.324 [BR] INFO  [AWT-EventQueue-0] - installDir: C:\Jts\
+2016-07-26 14:13:49.324 [BR] INFO  [AWT-EventQueue-0] - exeName: tws
+2016-07-26 14:13:49.336 [BR] INFO  [AWT-EventQueue-0] - Checking for update [channel: LATEST, customJtsConfigDir: null]...
+2016-07-26 14:13:49.337 [BR] INFO  [AWT-EventQueue-0] - Resolved a proxy for accessing 'https://download2.interactivebrokers.com/installers/tws/latest': 192.9.168.225:3128
+2016-07-26 14:13:49.365 [BR] INFO  [JTS-MiscUlrsRequester-1] - MACNetworkInfo created <35f32e94|34:17:EB:B4:8C:62|192.9.169.104>
+2016-07-26 14:13:49.390 [BR] INFO  [JTS-MISC URLsListenerS1-2] - Starting Listener thread
+2016-07-26 14:13:49.819 [BR] INFO  [JTS-MiscUlrsRequester-1] - Sending MiscUrls request
+2016-07-26 14:13:49.819 [BR] INFO  [JTS-AuthDispatcherS1-3] - Starting dispatcher
+2016-07-26 14:13:49.830 [BR] INFO  [JTS-MiscUlrsRequester-1] - LOGIN_TIME_MONITOR	 false 14:13:49:829 since start = 0 thread delay = 0 global delay = -1 tag=null, cls=AuthDispatcher method=send
+2016-07-26 14:13:49.831 [BR] INFO  [JTS-MISC URLsListenerS1-2] - Initial listener buffer size is 8192
+2016-07-26 14:13:49.831 [BR] INFO  [JTS-AuthResponseMonitor-4] - Starting auth response monitor thread
+2016-07-26 14:13:49.839 [BR] INFO  [JTS-AuthDispatcherS1-3] - Received NS_MISC_URLS
+2016-07-26 14:13:49.855 [BR] INFO  [JTS-AuthDispatcherS1-3] - Received URLs ='{alpine_help=http://www.interactivebrokers.com/en/general/alpineHelp.php, ib_system_status=http://status.interactivebrokers.net/cgi-bin/bb_status.pl, customer_service=http://www.interactivebrokers.com/en/p.php?f=customerService&ib_entity=llc, wbdemo=direct, java_upgrade_howto=http://www.interactivebrokers.com/en/software/downloadPlugin.php?ib_entity=llc, demo=email, ssl=1, pass_change_ib=https://gdcdyn.interactivebrokers.com/sso/Login?service=AM.LOGIN&MSG=PWD, paper_account_creation=https://gdcdyn.interactivebrokers.com/sso/Login, pass_reset=https://gdcdyn.interactivebrokers.com/Universal/servlet/AccountAccess.PasswordReset, bingo_help=http://www.interactivebrokers.com/en/general/bingoHelp.php, gold_help=http://www.interactivebrokers.com/en/general/goldHelp.php, s3store=1}'
+2016-07-26 14:13:49.865 [BR] INFO  [JTS-AuthDispatcherS1-3] - Disconnecting cdc1.ibllc.com:4000 with status DISCONNECT_BY_DESIGN
+2016-07-26 14:13:49.866 [BR] INFO  [JTS-AuthDispatcherS1-3] - Terminating dispatcher
+2016-07-26 14:13:49.866 [BR] INFO  [JTS-AuthResponseMonitor-4] - Terminating auth response monitor thread
+2016-07-26 14:13:49.883 [BR] INFO  [JTS-MISC URLsListenerS1-2] - Socket for connection cdc1.ibllc.com:4000 was closed by another thread
+2016-07-26 14:13:49.884 [BR] INFO  [JTS-MISC URLsListenerS1-2] - Terminating Listener thread
+2016-07-26 14:14:01.874 [IT] INFO  [JTS-Main] - ------------------------------- TWS RESTART --------------------------------
+2016-07-26 14:14:01.876 [IT] INFO  [JTS-Main] - Jts dir is C:\Jts\
+2016-07-26 14:14:01.879 [IT] INFO  [JTS-Main] - PROXY Installed custom selector
+2016-07-26 14:14:01.887 [IT] INFO  [JTS-Main] - SSL support status for cdc1.ibllc.com:4000 is  expired(last check 6)
+2016-07-26 14:14:01.891 [IT] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-07-26 14:14:01.894 [IT] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:14:01.894 [IT] INFO  [JTS-Main] - Region: from ini us -> America
+2016-07-26 14:14:01.894 [IT] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-07-26 14:14:01.894 [IT] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:14:01.894 [IT] INFO  [JTS-Main] - Region:America
+2016-07-26 14:14:01.895 [IT] INFO  [JTS-Main] - WebRegionURL Path:/java/classes/locales.jar URL:http://www.interactivebrokers.com/java/classes/locales.jar
+2016-07-26 14:14:01.896 [IT] INFO  [JTS-Main] - Starting to download 'http://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'http://download2.interactivebrokers.com/java/classes/locales.jar'
+2016-07-26 14:14:01.928 [IT] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=C:\Jts\locales.jar  sourceMod=2016-05-23 08:03:52  destMod=2016-05-23 08:03:52  sourceSize=97283  destSize=97283  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2016-07-26 14:14:01.928 [IT] INFO  [JTS-Main] - LOCALE: C:\Jts\locales.jar already up-to-date
+2016-07-26 14:14:01.957 [IT] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2016-07-26 14:14:01.968 [IT] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2016-07-26 14:14:01.982 [IT] INFO  [JTS-Main] - Locale from ini: en
+2016-07-26 14:14:01.982 [IT] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@15b53dc with file:/C:/Jts/locales.jar, parent: sun.misc.Launcher$AppClassLoader@4c12b6
+2016-07-26 14:14:01.982 [IT] INFO  [JTS-Main] - LOCALE: Property locale_to_use=en
+2016-07-26 14:14:01.982 [IT] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:14:01.982 [IT] INFO  [JTS-Main] - Locale=en_US  country=United States  variant=
+2016-07-26 14:14:01.983 [IT] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2016-07-26 14:14:01.984 [IT] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en]
+2016-07-26 14:14:01.985 [IT] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en_US]
+2016-07-26 14:14:01.985 [IT] INFO  [JTS-Main] - LOCALE: type: launcher intended: en_US actual:  size: 319
+2016-07-26 14:14:01.995 [IT] INFO  [JTS-Main] - TWS installer version: 1.75-SNAPSHOT
+2016-07-26 14:14:01.995 [IT] INFO  [JTS-Main] - TWS installer type: updatable
+2016-07-26 14:14:01.996 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: simulatehighdefscreen=false
+2016-07-26 14:14:01.996 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: Screen dimensions=1280x1024
+2016-07-26 14:14:01.997 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: highres=false
+2016-07-26 14:14:01.997 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: FontSize=0
+2016-07-26 14:14:02.004 [IT] INFO  [AWT-EventQueue-0] - LauncherJtsLookAndFeel initialized
+2016-07-26 14:14:02.066 [IT] INFO  [AWT-EventQueue-0] - twslaunch.autoupdate.serviceImpl: com.ib.tws.twslaunch.install4j.Install4jAutoUpdateService
+2016-07-26 14:14:02.068 [IT] INFO  [AWT-EventQueue-0] - updateDownloadUrl: https://download2.interactivebrokers.com/installers/tws/latest
+2016-07-26 14:14:02.068 [IT] INFO  [AWT-EventQueue-0] - skipUpdateCheck: true
+2016-07-26 14:14:02.068 [IT] INFO  [AWT-EventQueue-0] - nightlyEnabled: true
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - channelNameArg: null
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - channelName: latest
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - jtsConfigDir: null
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - sessionId: not set
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - installDir: C:\Jts\
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - exeName: tws
+2016-07-26 14:14:02.069 [IT] INFO  [AWT-EventQueue-0] - Skipping update check.
+2016-07-26 14:14:02.070 [IT] INFO  [JTS-Main] - Codebase for jars: https://download2.interactivebrokers.com/installers/tws/latest
+2016-07-26 14:14:02.630 [IT] INFO  [JTS-Main] - Launcher will download the following missing/modified jars:
+2016-07-26 14:14:02.635 [IT] INFO  [JTS-Main] -    C:\Jts\jars\jts4launch-957_1469465177000.dat from: https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar, size: 56504210, modified: Mon Jul 25 11:46:17 CDT 2016
+2016-07-26 14:14:02.635 [IT] INFO  [JTS-Main] -    C:\Jts\jars\total-2015c_1467910706000.dat from: https://download2.interactivebrokers.com/installers/tws/latest/total-2015c.jar, size: 6213315, modified: Thu Jul 07 11:58:26 CDT 2016
+2016-07-26 14:14:02.640 [IT] INFO  [JTS-DownloadCenter-1] - WebRegionURL Path:/installers/tws/latest/jts4launch-957.jar URL:http://www.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar
+2016-07-26 14:14:02.643 [IT] INFO  [JTS-DownloadCenter-1] - Starting to download 'https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar' using HotBackup 'https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar'
+2016-07-26 14:14:02.645 [IT] INFO  [JTS-Main] - Connect and request MiscUrls
+2016-07-26 14:14:02.648 [IT] INFO  [JTS-MiscUlrsRequester-2] - Connecting cdc1.ibllc.com:4000 timeout=0
+2016-07-26 14:14:02.726 [IT] INFO  [JTS-MiscUlrsRequester-2] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.9.169.104:54703
+2016-07-26 14:14:02.759 [IT] INFO  [JTS-MiscUlrsRequester-2] - Resolving mac address
+2016-07-26 14:14:02.764 [IT] INFO  [JTS-DownloadCenter-1] - getFileFromUrl: dest=C:\Jts\jars\jts4launch-957_1469465177000.dat empty sourceSize=56504210
+2016-07-26 14:14:02.765 [IT] INFO  [JTS-DownloadCenter-1] - LOCALE: downloading file C:\Jts\jars\jts4launch-957_1469465177000.dat from https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar
+2016-07-26 14:14:02.861 [IT] INFO  [JTS-MiscUlrsRequester-2] - MACNetworkInfo created <35f32e94|34:17:EB:B4:8C:62|192.9.169.104>
+2016-07-26 14:14:02.863 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Starting Listener thread
+2016-07-26 14:14:02.877 [IT] INFO  [JTS-MiscUlrsRequester-2] - Sending MiscUrls request
+2016-07-26 14:14:02.877 [IT] INFO  [JTS-AuthDispatcherS1-4] - Starting dispatcher
+2016-07-26 14:14:02.880 [IT] INFO  [JTS-MiscUlrsRequester-2] - LOGIN_TIME_MONITOR	 false 14:14:02:880 since start = 0 thread delay = 0 global delay = 0 tag=null, cls=AuthDispatcher method=send
+2016-07-26 14:14:02.881 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Initial listener buffer size is 8192
+2016-07-26 14:14:02.881 [IT] INFO  [JTS-AuthResponseMonitor-5] - Starting auth response monitor thread
+2016-07-26 14:14:02.891 [IT] INFO  [JTS-AuthDispatcherS1-4] - Received NS_MISC_URLS
+2016-07-26 14:14:02.891 [IT] INFO  [JTS-AuthDispatcherS1-4] - Received URLs ='{alpine_help=http://www.interactivebrokers.com/en/general/alpineHelp.php, ib_system_status=http://status.interactivebrokers.net/cgi-bin/bb_status.pl, customer_service=http://www.interactivebrokers.com/en/p.php?f=customerService&ib_entity=llc, wbdemo=direct, java_upgrade_howto=http://www.interactivebrokers.com/en/software/downloadPlugin.php?ib_entity=llc, demo=email, ssl=1, pass_change_ib=https://gdcdyn.interactivebrokers.com/sso/Login?service=AM.LOGIN&MSG=PWD, paper_account_creation=https://gdcdyn.interactivebrokers.com/sso/Login, pass_reset=https://gdcdyn.interactivebrokers.com/Universal/servlet/AccountAccess.PasswordReset, bingo_help=http://www.interactivebrokers.com/en/general/bingoHelp.php, gold_help=http://www.interactivebrokers.com/en/general/goldHelp.php, s3store=1}'
+2016-07-26 14:14:02.894 [IT] INFO  [JTS-AuthDispatcherS1-4] - Disconnecting cdc1.ibllc.com:4000 with status DISCONNECT_BY_DESIGN
+2016-07-26 14:14:02.894 [IT] INFO  [AWT-EventQueue-0] - OvernightManager.dayInit: new values: dayOfTheWeek: 3 (Tue), YYYYMMofToday: 201607, YYYYMMDDofToday: 20160726, m_todayDate: 20160726, dueToChangeInTimezone: false
+2016-07-26 14:14:02.894 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Socket for connection cdc1.ibllc.com:4000 was closed by another thread
+2016-07-26 14:14:02.894 [IT] INFO  [JTS-AuthDispatcherS1-4] - Terminating dispatcher
+2016-07-26 14:14:02.894 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Terminating Listener thread
+2016-07-26 14:14:02.895 [IT] INFO  [JTS-AuthResponseMonitor-5] - Terminating auth response monitor thread
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - Started on 20160726-19:14:03
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - Default timezone:America/Chicago name:Central Standard Time dst:3600000
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - java version = 1.8.0_60
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 32
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - os = Windows 7
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) Client VM
+2016-07-26 14:14:03.163 [IT] INFO  [AWT-EventQueue-0] - username = 'tacdev'
+2016-07-26 14:14:03.339 [IT] INFO  [AWT-EventQueue-0] - Basic init done. Login window shown
+2016-07-26 14:14:03.340 [IT] INFO  [JTS-Main] - Hard linking is not enabled in standalone mode
+2016-07-26 14:14:03.340 [IT] INFO  [JTS-Main] - Launcher created @ 20160725-12:26:50
+2016-07-26 14:14:07.870 [IT] INFO  [AWT-EventQueue-0] - username = dyizsoxdm
+2016-07-26 14:14:07.871 [IT] INFO  [AWT-EventQueue-0] - Setting dir is C:\Jts\
+2016-07-26 14:14:07.877 [IT] INFO  [AWT-EventQueue-0] - PROXY Cleared HTTP proxy: no valid proxy is present (passing on :0)
+2016-07-26 14:14:07.946 [IT] INFO  [AWT-EventQueue-0] - host = cdc1.ibllc.com
+2016-07-26 14:14:07.946 [IT] INFO  [AWT-EventQueue-0] - remotePort = 4001
+2016-07-26 14:14:07.946 [IT] INFO  [AWT-EventQueue-0] - localPort = 0
+2016-07-26 14:14:07.949 [IT] INFO  [AWT-EventQueue-0] - SPLASH Creating screen with 16 steps
+2016-07-26 14:14:08.027 [IT] INFO  [AWT-EventQueue-0] - mapProdToPaper: resetSimulatedTradingModeSelectedFlag: old=false new=true
+2016-07-26 14:14:08.027 [IT] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection attempt time is cleared!
+2016-07-26 14:14:08.028 [IT] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection set as now:14:14:08:028
+2016-07-26 14:14:08.028 [IT] INFO  [AWT-EventQueue-0] - Prelogin delay:0
+2016-07-26 14:14:08.029 [IT] INFO  [JTS-Login-9] - Starting launcher login thread
+2016-07-26 14:14:08.034 [IT] INFO  [JTS-Login-9] - SPLASH Connecting to server
+2016-07-26 14:14:08.034 [IT] INFO  [AWT-EventQueue-0] - Network monitor is activated
+2016-07-26 14:14:08.037 [IT] INFO  [JTS-Login-9] - Connecting cdc1.ibllc.com:4001 (SSL) timeout=20000
+2016-07-26 14:14:08.049 [IT] INFO  [JTS-Login-9] - Connected to cdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.9.169.104:54713
+2016-07-26 14:14:08.049 [IT] INFO  [JTS-Login-9] - Changing state for connection from PRELOGON to PRELOGON in y 2647453: SessionSocket:2
+2016-07-26 14:14:08.049 [IT] INFO  [JTS-Login-9] - Authenticating
+2016-07-26 14:14:08.050 [IT] INFO  [JTS-Login-9] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:08.050 [IT] INFO  [JTS-CCPListenerS2-11] - Starting Listener thread
+2016-07-26 14:14:08.050 [IT] INFO  [JTS-Login-9] - AuthTimeoutMonitor: timeout=20000
+2016-07-26 14:14:08.050 [IT] INFO  [JTS-Login-9] - AuthTimeoutMonitor: activate
+2016-07-26 14:14:08.051 [IT] INFO  [JTS-AuthTimeoutMonitorThread-13] - Starting auth timeout monitor thread
+2016-07-26 14:14:08.051 [IT] INFO  [JTS-Login-9] - SPLASH -0001 step 1 AuthDispatcher.connect
+2016-07-26 14:14:08.052 [IT] INFO  [JTS-Login-9] - Sending connect request
+2016-07-26 14:14:08.052 [IT] INFO  [JTS-AuthDispatcherS2-12] - Starting dispatcher
+2016-07-26 14:14:08.053 [IT] INFO  [JTS-Login-9] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2016-07-26 14:14:08.309 [IT] INFO  [JTS-Login-9] - SPLASH Authenticating
+2016-07-26 14:14:08.309 [IT] INFO  [JTS-CCPListenerS2-11] - Initial listener buffer size is 8192
+2016-07-26 14:14:08.310 [IT] INFO  [JTS-Login-9] - Terminating launcher login thread
+2016-07-26 14:14:08.315 [IT] INFO  [JTS-AuthDispatcherS2-12] - SPLASH 0264 step 2 AuthDispatcher.processDataItr
+2016-07-26 14:14:08.315 [IT] INFO  [JTS-AuthDispatcherS2-12] - Received NS_REDIRECT
+2016-07-26 14:14:08.315 [IT] INFO  [JTS-AuthDispatcherS2-12] - Disconnecting cdc1.ibllc.com:4001 (SSL) with status DISCONNECT_ON_REDIRECTION
+2016-07-26 14:14:08.316 [IT] INFO  [JTS-CCPListenerS2-11] - Socket for connection cdc1.ibllc.com:4001 (SSL) was closed by another thread
+2016-07-26 14:14:08.316 [IT] INFO  [JTS-AuthDispatcherS2-12] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:08.316 [IT] INFO  [JTS-AuthTimeoutMonitorThread-13] - Terminating auth timeout monitor thread
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-AuthDispatcherS2-12] - SSL support status for gdc1.ibllc.com:4000 is  expired(last check 6)
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-AuthDispatcherS2-12] - Connect and request MiscUrls
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-AuthDispatcherS2-12] - Redirecting to gdc1.ibllc.com:4001 (SSL)
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-AuthDispatcherS2-12] - Prelogin delay:0
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-MiscUlrsRequester-18] - Connecting gdc1.ibllc.com:4000 timeout=20000
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-Login-19] - Starting launcher login thread
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-CCPListenerS2-11] - Terminating Listener thread
+2016-07-26 14:14:08.319 [IT] INFO  [JTS-AuthDispatcherS2-12] - Terminating dispatcher
+2016-07-26 14:14:08.320 [IT] INFO  [JTS-Login-19] - SPLASH Connecting to server
+2016-07-26 14:14:08.320 [IT] INFO  [JTS-Login-19] - AsyncDisconnectNotifiers:1
+2016-07-26 14:14:08.320 [IT] INFO  [JTS-Login-19] - Connecting gdc1.ibllc.com:4001 (SSL) timeout=20000
+2016-07-26 14:14:08.341 [IT] INFO  [JTS-MiscUlrsRequester-18] - Connected to gdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.9.169.104:54714
+2016-07-26 14:14:08.342 [IT] INFO  [JTS-MiscUlrsRequester-18] - Sending MiscUrls request
+2016-07-26 14:14:08.342 [IT] INFO  [JTS-MISC URLsListenerS3-21] - Starting Listener thread
+2016-07-26 14:14:08.342 [IT] INFO  [JTS-Login-19] - Connected to gdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.9.169.104:54715
+2016-07-26 14:14:08.342 [IT] INFO  [JTS-AuthDispatcherS3-22] - Starting dispatcher
+2016-07-26 14:14:08.343 [IT] INFO  [JTS-AuthResponseMonitor-23] - Starting auth response monitor thread
+2016-07-26 14:14:08.343 [IT] INFO  [JTS-Login-19] - Changing state for connection from PRELOGON to PRELOGON in y 2647453: SessionSocket:4
+2016-07-26 14:14:08.344 [IT] INFO  [JTS-MISC URLsListenerS3-21] - Initial listener buffer size is 8192
+2016-07-26 14:14:08.344 [IT] INFO  [JTS-Login-19] - Authenticating
+2016-07-26 14:14:08.347 [IT] INFO  [JTS-Login-19] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:08.347 [IT] INFO  [JTS-CCPListenerS4-24] - Starting Listener thread
+2016-07-26 14:14:08.347 [IT] INFO  [JTS-Login-19] - AuthTimeoutMonitor: timeout=20000
+2016-07-26 14:14:08.347 [IT] INFO  [JTS-Login-19] - AuthTimeoutMonitor: activate
+2016-07-26 14:14:08.348 [IT] INFO  [JTS-AuthTimeoutMonitorThread-26] - Starting auth timeout monitor thread
+2016-07-26 14:14:08.348 [IT] INFO  [JTS-Login-19] - Sending connect request
+2016-07-26 14:14:08.348 [IT] INFO  [JTS-AuthDispatcherS4-25] - Starting dispatcher
+2016-07-26 14:14:08.349 [IT] INFO  [JTS-Login-19] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2016-07-26 14:14:08.364 [IT] INFO  [JTS-AuthDispatcherS3-22] - Received NS_MISC_URLS
+2016-07-26 14:14:08.364 [IT] INFO  [JTS-AuthDispatcherS3-22] - Received URLs ='{alpine_help=http://www.interactivebrokers.com/en/general/alpineHelp.php, ib_system_status=http://status.interactivebrokers.net/cgi-bin/bb_status.pl, customer_service=http://www.interactivebrokers.com/en/p.php?f=customerService&ib_entity=llc, wbdemo=direct, java_upgrade_howto=http://www.interactivebrokers.com/en/software/downloadPlugin.php?ib_entity=llc, demo=email, ssl=1, pass_change_ib=https://gdcdyn.interactivebrokers.com/sso/Login?service=AM.LOGIN&MSG=PWD, paper_account_creation=https://gdcdyn.interactivebrokers.com/sso/Login, pass_reset=https://gdcdyn.interactivebrokers.com/Universal/servlet/AccountAccess.PasswordReset, bingo_help=http://www.interactivebrokers.com/en/general/bingoHelp.php, gold_help=http://www.interactivebrokers.com/en/general/goldHelp.php, s3store=1}'
+2016-07-26 14:14:08.364 [IT] INFO  [JTS-AuthDispatcherS3-22] - Disconnecting gdc1.ibllc.com:4000 with status DISCONNECT_BY_DESIGN
+2016-07-26 14:14:08.365 [IT] INFO  [JTS-MISC URLsListenerS3-21] - Socket for connection gdc1.ibllc.com:4000 was closed by another thread
+2016-07-26 14:14:08.365 [IT] INFO  [JTS-MISC URLsListenerS3-21] - Terminating Listener thread
+2016-07-26 14:14:08.365 [IT] INFO  [JTS-AuthDispatcherS3-22] - Terminating dispatcher
+2016-07-26 14:14:08.366 [IT] INFO  [JTS-AuthResponseMonitor-23] - Terminating auth response monitor thread
+2016-07-26 14:14:08.612 [IT] INFO  [JTS-CCPListenerS4-24] - Initial listener buffer size is 8192
+2016-07-26 14:14:08.612 [IT] INFO  [JTS-Login-19] - SPLASH Authenticating
+2016-07-26 14:14:08.613 [IT] INFO  [JTS-Login-19] - Terminating launcher login thread
+2016-07-26 14:14:08.634 [IT] INFO  [JTS-AuthDispatcherS4-25] - SPLASH 0320 step 3 AuthDispatcher.processDataItr
+2016-07-26 14:14:08.636 [IT] INFO  [JTS-AuthDispatcherS4-25] - Received NS_AUTH_START: 1
+2016-07-26 14:14:08.636 [IT] INFO  [JTS-AuthDispatcherS4-25] - pwd time to expiry ms: 2632815950000 days: 30473
+2016-07-26 14:14:08.636 [IT] INFO  [JTS-AuthDispatcherS4-25] - Long pwd allowed : false
+2016-07-26 14:14:08.636 [IT] INFO  [JTS-AuthDispatcherS4-25] -  NS_AUTH_START version=26 pwd=1 soft=0 token=0 tokenSubtype=0 initialTokenType=PWD authenticationType=MARKET_DATA_CONNECTION identityHashcode=12295486
+2016-07-26 14:14:08.637 [IT] INFO  [JTS-AuthDispatcherS4-25] - Starting password Authentication
+2016-07-26 14:14:08.637 [IT] INFO  [JTS-AuthDispatcherS4-25] - sendXYZMessage: 777
+2016-07-26 14:14:08.661 [IT] INFO  [JTS-AuthDispatcherS4-25] - Receiver: 777
+2016-07-26 14:14:08.661 [IT] INFO  [JTS-AuthDispatcherS4-25] - processXYZMessage: 777 protocol version: 26
+2016-07-26 14:14:08.661 [IT] INFO  [JTS-AuthDispatcherS4-25] - Received AUTH_PARAMS
+2016-07-26 14:14:08.662 [IT] INFO  [JTS-AuthDispatcherS4-25] - sendXYZMessage: 777
+2016-07-26 14:14:08.687 [IT] INFO  [JTS-AuthDispatcherS4-25] - Receiver: 777
+2016-07-26 14:14:08.687 [IT] INFO  [JTS-AuthDispatcherS4-25] - processXYZMessage: 777 protocol version: 26
+2016-07-26 14:14:08.687 [IT] INFO  [JTS-AuthDispatcherS4-25] - Received SERVER_PARAMS
+2016-07-26 14:14:08.689 [IT] INFO  [JTS-AuthDispatcherS4-25] - Session Token received in AuthenticationMessageXYZ: 8ba045f3d3bd97845a7b9e0dc66ac63016d34ad5  messageId=SERVER_KEY (4)
+2016-07-26 14:14:08.690 [IT] INFO  [JTS-AuthDispatcherS4-25] - sendXYZMessage: 777
+2016-07-26 14:14:08.729 [IT] INFO  [JTS-AuthDispatcherS4-25] - Receiver: 777
+2016-07-26 14:14:08.729 [IT] INFO  [JTS-AuthDispatcherS4-25] - processXYZMessage: 777 protocol version: 26
+2016-07-26 14:14:08.729 [IT] INFO  [JTS-AuthDispatcherS4-25] - Received AUTH_RESULT
+2016-07-26 14:14:08.729 [IT] INFO  [JTS-AuthDispatcherS4-25] - Passed pwd authentication.
+2016-07-26 14:14:08.729 [IT] INFO  [JTS-AuthDispatcherS4-25] - Authentication completed.
+2016-07-26 14:14:08.729 [IT] INFO  [JTS-AuthDispatcherS4-25] - setting session token in AuthenticationHandler: authenticationType=MARKET_DATA_CONNECTION hashCode=12295486 new=8ba045f3d3bd97845a7b9e0dc66ac63016d34ad5 old=NULL ctciOld=NULL
+2016-07-26 14:14:08.992 [IT] INFO  [JTS-AuthDispatcherS4-25] - SPLASH 0358 step 3 AuthDispatcher.processDataItr
+2016-07-26 14:14:08.992 [IT] INFO  [JTS-AuthDispatcherS4-25] - Received NS_CONNECT_RESPONSE
+2016-07-26 14:14:08.993 [IT] INFO  [JTS-AuthDispatcherS4-25] - Log encryption support is disabled [logKeyId: ].
+2016-07-26 14:14:09.003 [IT] INFO  [JTS-AuthDispatcherS4-25] - Competition detected: from IP=65.207.192.98 logged at=Tue Jul 26 13:49:50 CDT 2016
+2016-07-26 14:14:09.004 [IT] INFO  [JTS-AuthDispatcherS4-25] - CONN CALC: Last connection attempt time is cleared!
+2016-07-26 14:14:09.005 [IT] INFO  [JTS-AuthDispatcherS4-25] - AuthTimeoutMonitor: pause
+2016-07-26 14:14:09.009 [IT] INFO  [AWT-EventQueue-0] - Competition ip: 65.207.192.98
+2016-07-26 14:14:12.673 [IT] INFO  [AWT-EventQueue-0] - Competing selection: terminate current session
+2016-07-26 14:14:12.673 [IT] INFO  [AWT-EventQueue-0] - Application exit
+2016-07-26 14:14:15.057 [IT] INFO  [JTS-Main] - ------------------------------- TWS RESTART --------------------------------
+2016-07-26 14:14:15.058 [IT] INFO  [JTS-Main] - Jts dir is C:\Jts\
+2016-07-26 14:14:15.061 [IT] INFO  [JTS-Main] - PROXY Installed custom selector
+2016-07-26 14:14:15.069 [IT] INFO  [JTS-Main] - SSL support status for cdc1.ibllc.com:4000 is true
+2016-07-26 14:14:15.074 [IT] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-07-26 14:14:15.076 [IT] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:14:15.076 [IT] INFO  [JTS-Main] - Region: from ini us -> America
+2016-07-26 14:14:15.076 [IT] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2016-07-26 14:14:15.076 [IT] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:14:15.076 [IT] INFO  [JTS-Main] - Region:America
+2016-07-26 14:14:15.077 [IT] INFO  [JTS-Main] - WebRegionURL Path:/java/classes/locales.jar URL:http://www.interactivebrokers.com/java/classes/locales.jar
+2016-07-26 14:14:15.078 [IT] INFO  [JTS-Main] - Starting to download 'http://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'http://download2.interactivebrokers.com/java/classes/locales.jar'
+2016-07-26 14:14:15.110 [IT] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=C:\Jts\locales.jar  sourceMod=2016-05-23 08:03:52  destMod=2016-05-23 08:03:52  sourceSize=97283  destSize=97283  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2016-07-26 14:14:15.110 [IT] INFO  [JTS-Main] - LOCALE: C:\Jts\locales.jar already up-to-date
+2016-07-26 14:14:15.155 [IT] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2016-07-26 14:14:15.166 [IT] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2016-07-26 14:14:15.180 [IT] INFO  [JTS-Main] - Locale from ini: en
+2016-07-26 14:14:15.180 [IT] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@15b53dc with file:/C:/Jts/locales.jar, parent: sun.misc.Launcher$AppClassLoader@4c12b6
+2016-07-26 14:14:15.180 [IT] INFO  [JTS-Main] - LOCALE: Property locale_to_use=en
+2016-07-26 14:14:15.180 [IT] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2016-07-26 14:14:15.180 [IT] INFO  [JTS-Main] - Locale=en_US  country=United States  variant=
+2016-07-26 14:14:15.181 [IT] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2016-07-26 14:14:15.182 [IT] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en]
+2016-07-26 14:14:15.183 [IT] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_en_US]
+2016-07-26 14:14:15.183 [IT] INFO  [JTS-Main] - LOCALE: type: launcher intended: en_US actual:  size: 319
+2016-07-26 14:14:15.193 [IT] INFO  [JTS-Main] - TWS installer version: 1.75-SNAPSHOT
+2016-07-26 14:14:15.193 [IT] INFO  [JTS-Main] - TWS installer type: updatable
+2016-07-26 14:14:15.194 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: simulatehighdefscreen=false
+2016-07-26 14:14:15.194 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: Screen dimensions=1280x1024
+2016-07-26 14:14:15.194 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: highres=false
+2016-07-26 14:14:15.194 [IT] INFO  [AWT-EventQueue-0] - LauncherFontUpdater: FontSize=0
+2016-07-26 14:14:15.201 [IT] INFO  [AWT-EventQueue-0] - LauncherJtsLookAndFeel initialized
+2016-07-26 14:14:15.218 [IT] INFO  [AWT-EventQueue-0] - twslaunch.autoupdate.serviceImpl: com.ib.tws.twslaunch.install4j.Install4jAutoUpdateService
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - updateDownloadUrl: https://download2.interactivebrokers.com/installers/tws/latest
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - skipUpdateCheck: null
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - nightlyEnabled: true
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - channelNameArg: null
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - channelName: latest
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - jtsConfigDir: null
+2016-07-26 14:14:15.220 [IT] INFO  [AWT-EventQueue-0] - sessionId: not set
+2016-07-26 14:14:15.221 [IT] INFO  [AWT-EventQueue-0] - installDir: C:\Jts\
+2016-07-26 14:14:15.221 [IT] INFO  [AWT-EventQueue-0] - exeName: tws
+2016-07-26 14:14:15.233 [IT] INFO  [AWT-EventQueue-0] - Checking for update [channel: LATEST, customJtsConfigDir: null]...
+2016-07-26 14:14:15.234 [IT] INFO  [AWT-EventQueue-0] - Resolved a proxy for accessing 'https://download2.interactivebrokers.com/installers/tws/latest': 192.9.168.225:3128
+2016-07-26 14:14:17.361 [IT] INFO  [JTS-Main] - Codebase for jars: https://download2.interactivebrokers.com/installers/tws/latest
+2016-07-26 14:14:17.746 [IT] INFO  [JTS-Main] - Launcher will download the following missing/modified jars:
+2016-07-26 14:14:17.751 [IT] INFO  [JTS-Main] -    C:\Jts\jars\jts4launch-957_1469465177000.dat from: https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar, size: 56504210, modified: Mon Jul 25 11:46:17 CDT 2016
+2016-07-26 14:14:17.752 [IT] INFO  [JTS-Main] -    C:\Jts\jars\total-2015c_1467910706000.dat from: https://download2.interactivebrokers.com/installers/tws/latest/total-2015c.jar, size: 6213315, modified: Thu Jul 07 11:58:26 CDT 2016
+2016-07-26 14:14:17.757 [IT] INFO  [JTS-DownloadCenter-1] - WebRegionURL Path:/installers/tws/latest/jts4launch-957.jar URL:http://www.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar
+2016-07-26 14:14:17.758 [IT] INFO  [JTS-DownloadCenter-1] - Starting to download 'https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar' using HotBackup 'https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar'
+2016-07-26 14:14:17.761 [IT] INFO  [JTS-Main] - Connect and request MiscUrls
+2016-07-26 14:14:17.764 [IT] INFO  [JTS-MiscUlrsRequester-2] - Connecting cdc1.ibllc.com:4000 timeout=0
+2016-07-26 14:14:17.772 [IT] INFO  [JTS-MiscUlrsRequester-2] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.9.169.104:54720
+2016-07-26 14:14:17.776 [IT] INFO  [JTS-MiscUlrsRequester-2] - Resolving mac address
+2016-07-26 14:14:17.790 [IT] INFO  [JTS-DownloadCenter-1] - getFileFromUrl: dest=C:\Jts\jars\jts4launch-957_1469465177000.dat empty sourceSize=56504210
+2016-07-26 14:14:17.790 [IT] INFO  [JTS-DownloadCenter-1] - LOCALE: downloading file C:\Jts\jars\jts4launch-957_1469465177000.dat from https://download2.interactivebrokers.com/installers/tws/latest/jts4launch-957.jar
+2016-07-26 14:14:17.880 [IT] INFO  [JTS-MiscUlrsRequester-2] - MACNetworkInfo created <35f32e94|34:17:EB:B4:8C:62|192.9.169.104>
+2016-07-26 14:14:17.882 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Starting Listener thread
+2016-07-26 14:14:17.901 [IT] INFO  [JTS-MiscUlrsRequester-2] - Sending MiscUrls request
+2016-07-26 14:14:17.901 [IT] INFO  [JTS-AuthDispatcherS1-4] - Starting dispatcher
+2016-07-26 14:14:17.904 [IT] INFO  [JTS-MiscUlrsRequester-2] - LOGIN_TIME_MONITOR	 false 14:14:17:904 since start = 0 thread delay = 0 global delay = 0 tag=null, cls=AuthDispatcher method=send
+2016-07-26 14:14:17.905 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Initial listener buffer size is 8192
+2016-07-26 14:14:17.905 [IT] INFO  [JTS-AuthResponseMonitor-5] - Starting auth response monitor thread
+2016-07-26 14:14:17.911 [IT] INFO  [JTS-AuthDispatcherS1-4] - Received NS_MISC_URLS
+2016-07-26 14:14:17.912 [IT] INFO  [JTS-AuthDispatcherS1-4] - Received URLs ='{alpine_help=http://www.interactivebrokers.com/en/general/alpineHelp.php, ib_system_status=http://status.interactivebrokers.net/cgi-bin/bb_status.pl, customer_service=http://www.interactivebrokers.com/en/p.php?f=customerService&ib_entity=llc, wbdemo=direct, java_upgrade_howto=http://www.interactivebrokers.com/en/software/downloadPlugin.php?ib_entity=llc, demo=email, ssl=1, pass_change_ib=https://gdcdyn.interactivebrokers.com/sso/Login?service=AM.LOGIN&MSG=PWD, paper_account_creation=https://gdcdyn.interactivebrokers.com/sso/Login, pass_reset=https://gdcdyn.interactivebrokers.com/Universal/servlet/AccountAccess.PasswordReset, bingo_help=http://www.interactivebrokers.com/en/general/bingoHelp.php, gold_help=http://www.interactivebrokers.com/en/general/goldHelp.php, s3store=1}'
+2016-07-26 14:14:17.914 [IT] INFO  [AWT-EventQueue-0] - OvernightManager.dayInit: new values: dayOfTheWeek: 3 (Tue), YYYYMMofToday: 201607, YYYYMMDDofToday: 20160726, m_todayDate: 20160726, dueToChangeInTimezone: false
+2016-07-26 14:14:17.914 [IT] INFO  [JTS-AuthDispatcherS1-4] - Disconnecting cdc1.ibllc.com:4000 with status DISCONNECT_BY_DESIGN
+2016-07-26 14:14:17.915 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Socket for connection cdc1.ibllc.com:4000 was closed by another thread
+2016-07-26 14:14:17.915 [IT] INFO  [JTS-AuthDispatcherS1-4] - Terminating dispatcher
+2016-07-26 14:14:17.915 [IT] INFO  [JTS-MISC URLsListenerS1-3] - Terminating Listener thread
+2016-07-26 14:14:17.915 [IT] INFO  [JTS-AuthResponseMonitor-5] - Terminating auth response monitor thread
+2016-07-26 14:14:18.083 [IT] INFO  [AWT-EventQueue-0] - Started on 20160726-19:14:18
+2016-07-26 14:14:18.083 [IT] INFO  [AWT-EventQueue-0] - Default timezone:America/Chicago name:Central Standard Time dst:3600000
+2016-07-26 14:14:18.083 [IT] INFO  [AWT-EventQueue-0] - java version = 1.8.0_60
+2016-07-26 14:14:18.083 [IT] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 32
+2016-07-26 14:14:18.084 [IT] INFO  [AWT-EventQueue-0] - os = Windows 7
+2016-07-26 14:14:18.084 [IT] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2016-07-26 14:14:18.084 [IT] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2016-07-26 14:14:18.084 [IT] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) Client VM
+2016-07-26 14:14:18.084 [IT] INFO  [AWT-EventQueue-0] - username = 'tacdev'
+2016-07-26 14:14:18.208 [IT] INFO  [AWT-EventQueue-0] - Basic init done. Login window shown
+2016-07-26 14:14:18.210 [IT] INFO  [JTS-Main] - Hard linking is not enabled in standalone mode
+2016-07-26 14:14:18.210 [IT] INFO  [JTS-Main] - Launcher created @ 20160725-12:26:50
+2016-07-26 14:14:22.406 [IT] INFO  [AWT-EventQueue-0] - username = djjcfsecw
+2016-07-26 14:14:22.406 [IT] INFO  [AWT-EventQueue-0] - Setting dir is C:\Jts\
+2016-07-26 14:14:22.410 [IT] INFO  [AWT-EventQueue-0] - PROXY Cleared HTTP proxy: no valid proxy is present (passing on :0)
+2016-07-26 14:14:22.420 [IT] INFO  [AWT-EventQueue-0] - host = cdc1.ibllc.com
+2016-07-26 14:14:22.421 [IT] INFO  [AWT-EventQueue-0] - remotePort = 4001
+2016-07-26 14:14:22.421 [IT] INFO  [AWT-EventQueue-0] - localPort = 0
+2016-07-26 14:14:22.424 [IT] INFO  [AWT-EventQueue-0] - SPLASH Creating screen with 16 steps
+2016-07-26 14:14:22.481 [IT] INFO  [AWT-EventQueue-0] - mapProdToPaper: resetSimulatedTradingModeSelectedFlag: old=false new=true
+2016-07-26 14:14:22.481 [IT] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection attempt time is cleared!
+2016-07-26 14:14:22.481 [IT] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection set as now:14:14:22:481
+2016-07-26 14:14:22.481 [IT] INFO  [AWT-EventQueue-0] - Prelogin delay:0
+2016-07-26 14:14:22.483 [IT] INFO  [JTS-Login-9] - Starting launcher login thread
+2016-07-26 14:14:22.483 [IT] INFO  [AWT-EventQueue-0] - Network monitor is activated
+2016-07-26 14:14:22.484 [IT] INFO  [JTS-Login-9] - SPLASH Connecting to server
+2016-07-26 14:14:22.485 [IT] INFO  [JTS-Login-9] - Connecting cdc1.ibllc.com:4001 (SSL) timeout=20000
+2016-07-26 14:14:22.499 [IT] INFO  [JTS-Login-9] - Connected to cdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.9.169.104:54721
+2016-07-26 14:14:22.499 [IT] INFO  [JTS-Login-9] - Changing state for connection from PRELOGON to PRELOGON in y 23788370: SessionSocket:2
+2016-07-26 14:14:22.499 [IT] INFO  [JTS-Login-9] - Authenticating
+2016-07-26 14:14:22.500 [IT] INFO  [JTS-CCPListenerS2-11] - Starting Listener thread
+2016-07-26 14:14:22.500 [IT] INFO  [JTS-Login-9] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:22.500 [IT] INFO  [JTS-Login-9] - AuthTimeoutMonitor: timeout=20000
+2016-07-26 14:14:22.500 [IT] INFO  [JTS-Login-9] - AuthTimeoutMonitor: activate
+2016-07-26 14:14:22.501 [IT] INFO  [JTS-AuthTimeoutMonitorThread-13] - Starting auth timeout monitor thread
+2016-07-26 14:14:22.501 [IT] INFO  [JTS-Login-9] - SPLASH -0001 step 1 AuthDispatcher.connect
+2016-07-26 14:14:22.502 [IT] INFO  [JTS-Login-9] - Sending connect request
+2016-07-26 14:14:22.502 [IT] INFO  [JTS-AuthDispatcherS2-12] - Starting dispatcher
+2016-07-26 14:14:22.503 [IT] INFO  [JTS-Login-9] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2016-07-26 14:14:22.733 [IT] INFO  [JTS-CCPListenerS2-11] - Initial listener buffer size is 8192
+2016-07-26 14:14:22.733 [IT] INFO  [JTS-Login-9] - SPLASH Authenticating
+2016-07-26 14:14:22.735 [IT] INFO  [JTS-Login-9] - Terminating launcher login thread
+2016-07-26 14:14:22.739 [IT] INFO  [JTS-AuthDispatcherS2-12] - SPLASH 0238 step 2 AuthDispatcher.processDataItr
+2016-07-26 14:14:22.739 [IT] INFO  [JTS-AuthDispatcherS2-12] - Received NS_REDIRECT
+2016-07-26 14:14:22.739 [IT] INFO  [JTS-AuthDispatcherS2-12] - Disconnecting cdc1.ibllc.com:4001 (SSL) with status DISCONNECT_ON_REDIRECTION
+2016-07-26 14:14:22.740 [IT] INFO  [JTS-CCPListenerS2-11] - Socket for connection cdc1.ibllc.com:4001 (SSL) was closed by another thread
+2016-07-26 14:14:22.740 [IT] INFO  [JTS-AuthDispatcherS2-12] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:22.740 [IT] INFO  [JTS-AuthTimeoutMonitorThread-13] - Terminating auth timeout monitor thread
+2016-07-26 14:14:22.745 [IT] INFO  [JTS-AuthDispatcherS2-12] - SSL support status for gdc1.ibllc.com:4000 is true
+2016-07-26 14:14:22.745 [IT] INFO  [JTS-AuthDispatcherS2-12] - Redirecting to gdc1.ibllc.com:4001 (SSL)
+2016-07-26 14:14:22.745 [IT] INFO  [JTS-AuthDispatcherS2-12] - Prelogin delay:0
+2016-07-26 14:14:22.746 [IT] INFO  [JTS-CCPListenerS2-11] - Terminating Listener thread
+2016-07-26 14:14:22.746 [IT] INFO  [JTS-Login-18] - Starting launcher login thread
+2016-07-26 14:14:22.745 [IT] INFO  [JTS-AuthDispatcherS2-12] - Terminating dispatcher
+2016-07-26 14:14:22.746 [IT] INFO  [JTS-Login-18] - SPLASH Connecting to server
+2016-07-26 14:14:22.746 [IT] INFO  [JTS-Login-18] - AsyncDisconnectNotifiers:1
+2016-07-26 14:14:22.746 [IT] INFO  [JTS-Login-18] - Connecting gdc1.ibllc.com:4001 (SSL) timeout=20000
+2016-07-26 14:14:22.770 [IT] INFO  [JTS-Login-18] - Connected to gdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.9.169.104:54722
+2016-07-26 14:14:22.771 [IT] INFO  [JTS-Login-18] - Changing state for connection from PRELOGON to PRELOGON in y 23788370: SessionSocket:3
+2016-07-26 14:14:22.771 [IT] INFO  [JTS-Login-18] - Authenticating
+2016-07-26 14:14:22.771 [IT] INFO  [JTS-Login-18] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:22.771 [IT] INFO  [JTS-Login-18] - AuthTimeoutMonitor: timeout=20000
+2016-07-26 14:14:22.771 [IT] INFO  [JTS-Login-18] - AuthTimeoutMonitor: activate
+2016-07-26 14:14:22.771 [IT] INFO  [JTS-CCPListenerS3-20] - Starting Listener thread
+2016-07-26 14:14:22.772 [IT] INFO  [JTS-AuthTimeoutMonitorThread-22] - Starting auth timeout monitor thread
+2016-07-26 14:14:22.772 [IT] INFO  [JTS-Login-18] - Sending connect request
+2016-07-26 14:14:22.773 [IT] INFO  [JTS-AuthDispatcherS3-21] - Starting dispatcher
+2016-07-26 14:14:22.773 [IT] INFO  [JTS-Login-18] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2016-07-26 14:14:23.034 [IT] INFO  [JTS-Login-18] - SPLASH Authenticating
+2016-07-26 14:14:23.035 [IT] INFO  [JTS-CCPListenerS3-20] - Initial listener buffer size is 8192
+2016-07-26 14:14:23.036 [IT] INFO  [JTS-Login-18] - Terminating launcher login thread
+2016-07-26 14:14:23.057 [IT] INFO  [JTS-AuthDispatcherS3-21] - SPLASH 0319 step 3 AuthDispatcher.processDataItr
+2016-07-26 14:14:23.059 [IT] INFO  [JTS-AuthDispatcherS3-21] - Received NS_AUTH_START: 1
+2016-07-26 14:14:23.059 [IT] INFO  [JTS-AuthDispatcherS3-21] - pwd time to expiry ms: 2632815936000 days: 30473
+2016-07-26 14:14:23.059 [IT] INFO  [JTS-AuthDispatcherS3-21] - Long pwd allowed : false
+2016-07-26 14:14:23.060 [IT] INFO  [JTS-AuthDispatcherS3-21] -  NS_AUTH_START version=26 pwd=1 soft=0 token=0 tokenSubtype=0 initialTokenType=PWD authenticationType=MARKET_DATA_CONNECTION identityHashcode=32328903
+2016-07-26 14:14:23.060 [IT] INFO  [JTS-AuthDispatcherS3-21] - Starting password Authentication
+2016-07-26 14:14:23.061 [IT] INFO  [JTS-AuthDispatcherS3-21] - sendXYZMessage: 777
+2016-07-26 14:14:23.102 [IT] INFO  [JTS-AuthDispatcherS3-21] - Receiver: 777
+2016-07-26 14:14:23.102 [IT] INFO  [JTS-AuthDispatcherS3-21] - processXYZMessage: 777 protocol version: 26
+2016-07-26 14:14:23.102 [IT] INFO  [JTS-AuthDispatcherS3-21] - Received AUTH_PARAMS
+2016-07-26 14:14:23.102 [IT] INFO  [JTS-AuthDispatcherS3-21] - sendXYZMessage: 777
+2016-07-26 14:14:23.151 [IT] INFO  [JTS-AuthDispatcherS3-21] - Receiver: 777
+2016-07-26 14:14:23.151 [IT] INFO  [JTS-AuthDispatcherS3-21] - processXYZMessage: 777 protocol version: 26
+2016-07-26 14:14:23.151 [IT] INFO  [JTS-AuthDispatcherS3-21] - Received SERVER_PARAMS
+2016-07-26 14:14:23.163 [IT] INFO  [JTS-AuthDispatcherS3-21] - Session Token received in AuthenticationMessageXYZ: ba516b7b113a37990c34a4e98858a2e8b81d77cf  messageId=SERVER_KEY (4)
+2016-07-26 14:14:23.164 [IT] INFO  [JTS-AuthDispatcherS3-21] - sendXYZMessage: 777
+2016-07-26 14:14:23.241 [IT] INFO  [JTS-AuthDispatcherS3-21] - Receiver: 777
+2016-07-26 14:14:23.241 [IT] INFO  [JTS-AuthDispatcherS3-21] - processXYZMessage: 777 protocol version: 26
+2016-07-26 14:14:23.241 [IT] INFO  [JTS-AuthDispatcherS3-21] - Received AUTH_RESULT
+2016-07-26 14:14:23.241 [IT] INFO  [JTS-AuthDispatcherS3-21] - Passed pwd authentication.
+2016-07-26 14:14:23.241 [IT] INFO  [JTS-AuthDispatcherS3-21] - Authentication completed.
+2016-07-26 14:14:23.242 [IT] INFO  [JTS-AuthDispatcherS3-21] - setting session token in AuthenticationHandler: authenticationType=MARKET_DATA_CONNECTION hashCode=32328903 new=ba516b7b113a37990c34a4e98858a2e8b81d77cf old=NULL ctciOld=NULL
+2016-07-26 14:14:23.477 [IT] INFO  [JTS-AuthDispatcherS3-21] - SPLASH 0420 step 3 AuthDispatcher.processDataItr
+2016-07-26 14:14:23.478 [IT] INFO  [JTS-AuthDispatcherS3-21] - Received NS_CONNECT_RESPONSE
+2016-07-26 14:14:23.478 [IT] INFO  [JTS-AuthDispatcherS3-21] - Log encryption support is disabled [logKeyId: ].
+2016-07-26 14:14:23.610 [IT] INFO  [JTS-AuthDispatcherS3-21] - Received NS_FIX_START
+2016-07-26 14:14:23.613 [IT] INFO  [JTS-AuthDispatcherS3-21] - Terminating dispatcher
+2016-07-26 14:14:23.613 [IT] INFO  [JTS-PostAuthenticateS3-26] - AuthTimeoutMonitor: deactivate
+2016-07-26 14:14:23.614 [IT] INFO  [JTS-AuthTimeoutMonitorThread-22] - Terminating auth timeout monitor thread
+2016-07-26 14:14:23.614 [IT] INFO  [JTS-PostAuthenticateS3-26] - Authentication complete
+2016-07-26 14:14:25.617 [IT] INFO  [AWT-EventQueue-0] - LOGIN_TIME_MONITOR	 false 14:14:25:617 since start = 7713 thread delay = 7713 global delay = 0 tag=null, cls=JTS-VerifyDownload-27:JarDownloadSplashScreenReporter method=reportDownloadProgress
+2016-07-26 14:14:25.617 [IT] INFO  [AWT-EventQueue-0] - SPLASH 2140 step 4 JTS-VerifyDownload-27:JarDownloadSplashScreenReporter.reportDownloadProgress
+2016-07-26 14:14:27.617 [IT] INFO  [AWT-EventQueue-0] - SPLASH 2000 step 5 JTS-VerifyDownload-27:JarDownloadSplashScreenReporter.reportDownloadProgress
+2016-07-26 14:14:30.617 [IT] INFO  [AWT-EventQueue-0] - SPLASH 3000 step 6 JTS-VerifyDownload-27:JarDownloadSplashScreenReporter.reportDownloadProgress
+2016-07-26 14:14:32.218 [IT] INFO  [AWT-EventQueue-0] - SPLASH 1601 step 7 JTS-VerifyDownload-27:JarDownloadSplashScreenReporter.reportDownloadProgress
+2016-07-26 14:14:33.818 [IT] INFO  [AWT-EventQueue-0] - SPLASH 1600 step 8 JTS-VerifyDownload-27:JarDownloadSplashScreenReporter.reportDownloadProgress
+2016-07-26 14:14:35.379 [IT] INFO  [JTS-DownloadCenter-1] - Finished downloading file: /installers/tws/latest/jts4launch-957.jar, startPosition=0, totalBytesRead=56504210, fileLen=56504210
+2016-07-26 14:14:35.380 [IT] INFO  [JTS-DownloadCenter-1] - WebRegionURL Path:/installers/tws/latest/total-2015c.jar URL:http://www.interactivebrokers.com/installers/tws/latest/total-2015c.jar
+2016-07-26 14:14:35.381 [IT] INFO  [JTS-DownloadCenter-1] - Starting to download 'https://download2.interactivebrokers.com/installers/tws/latest/total-2015c.jar' using HotBackup 'https://download2.interactivebrokers.com/installers/tws/latest/total-2015c.jar'
+2016-07-26 14:14:35.408 [IT] INFO  [JTS-DownloadCenter-1] - getFileFromUrl: dest=C:\Jts\jars\total-2015c_1467910706000.dat empty sourceSize=6213315
+2016-07-26 14:14:35.408 [IT] INFO  [JTS-DownloadCenter-1] - LOCALE: downloading file C:\Jts\jars\total-2015c_1467910706000.dat from https://download2.interactivebrokers.com/installers/tws/latest/total-2015c.jar
+2016-07-26 14:14:36.018 [IT] INFO  [AWT-EventQueue-0] - SPLASH 2200 step 9 JTS-VerifyDownload-27:JarDownloadSplashScreenReporter.reportDownloadProgress
+2016-07-26 14:14:37.376 [IT] INFO  [JTS-DownloadCenter-1] - Finished downloading file: /installers/tws/latest/total-2015c.jar, startPosition=0, totalBytesRead=6213315, fileLen=6213315
+2016-07-26 14:14:37.464 [IT] INFO  [AWT-EventQueue-0] - Build 957.3b, Jul 25, 2016 12:24:41 PM
+2016-07-26 14:14:37.523 [IT] INFO  [AWT-EventQueue-0] - LauncherJtsLookAndFeel uninitialized
+2016-07-26 14:14:37.527 [IT] INFO  [AWT-EventQueue-0] - LookAndFeelChangedListener installed
+2016-07-26 14:14:37.530 [IT] INFO  [AWT-EventQueue-0] - JtsLookAndFeel initialized
+2016-07-26 14:14:37.539 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting class lookup [org.jfree.chart.LocalizationBundle]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting class lookup [org.jfree.chart.LocalizationBundle_en]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting resource lookup [org/jfree/chart/LocalizationBundle_en.properties]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting class lookup [org.jfree.chart.LocalizationBundle_en_US]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting resource lookup [org/jfree/chart/LocalizationBundle_en_US.properties]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting class lookup [org.jfree.chart.plot.LocalizationBundle]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting class lookup [org.jfree.chart.plot.LocalizationBundle_en]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting resource lookup [org/jfree/chart/plot/LocalizationBundle_en.properties]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting class lookup [org.jfree.chart.plot.LocalizationBundle_en_US]
+2016-07-26 14:14:37.601 [IT] INFO  [JTS-VerifyDownload-27] - prohibiting resource lookup [org/jfree/chart/plot/LocalizationBundle_en_US.properties]
+2016-07-26 14:14:37.763 [IT] INFO  [AWT-EventQueue-0] - Current LAF: TWS LAF
+2016-07-26 14:14:37.792 [IT] INFO  [JTS-VerifyDownload-27] - jfreechart version =1.0.8
+2016-07-26 14:14:37.792 [IT] INFO  [JTS-VerifyDownload-27] - jcommon version =1.0.12
+2016-07-26 14:14:37.792 [IT] INFO  [JTS-VerifyDownload-27] - JDOMFactory Class =interface org.jdom.JDOMFactory
+2016-07-26 14:14:37.800 [IT] INFO  [JTS-VerifyDownload-27] - hsqldb jdbc =class org.hsqldb.jdbcDriver 2.2
+2016-07-26 14:14:37.808 [IT] INFO  [JTS-VerifyDownload-27] - Changing state for connection from PRELOGON to PRELOGON in y 23788370: SessionSocket:3
+2016-07-26 14:14:37.809 [IT] INFO  [JTS-VerifyDownload-27] - Switching to a new log 'C:\Jts\djjcfsecw\tws.log'...
