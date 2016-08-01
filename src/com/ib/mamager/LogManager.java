@@ -16,7 +16,10 @@ public class LogManager {
 	public LogManager(){
 		this.twsVersion = null;
 		this.apiVersion = null;
+		reader = new LogReader();
 	}
 	
-	
+	public void start(){
+		reader.loadFilesList();
+	}
 }
