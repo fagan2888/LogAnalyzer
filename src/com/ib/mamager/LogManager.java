@@ -2,6 +2,8 @@ package com.ib.mamager;
 
 import com.ib.parser.*;
 import com.ib.reader.*;
+import java.io.File;
+import com.ib.parser.Choices;
 
 public class LogManager {
 	private String twsVersion;
@@ -20,6 +22,14 @@ public class LogManager {
 	}
 	
 	public void start(){
-		reader.loadFilesList();
+		try {
+			reader.loadFilesList();
+			File currentSettingsFile = reader.getTwsErrorXml();
+			reader.parseSettingsFile(currentSettingsFile, Choices.API);
+			reader.testPrint();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
