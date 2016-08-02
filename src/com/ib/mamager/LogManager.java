@@ -18,15 +18,18 @@ public class LogManager {
 	public LogManager(){
 		this.twsVersion = null;
 		this.apiVersion = null;
-		reader = new LogReader();
+		reader = new LogReader(true);
 	}
 	
 	public void start(){
 		try {
 			reader.loadFilesList();
-			File currentSettingsFile = reader.getTwsErrorXml();
-			reader.parseSettingsFile(currentSettingsFile, Choices.API);
-			reader.testPrint();
+			//File currentSettingsFile = reader.getTwsErrorXml();
+			//reader.parseSettingsFile(currentSettingsFile, Choices.API);
+			//reader.parseSettingsFile(currentSettingsFile, Choices.MD);
+			
+			reader.parseTwsLogFile(Choices.TWS);
+			//reader.testPrint();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

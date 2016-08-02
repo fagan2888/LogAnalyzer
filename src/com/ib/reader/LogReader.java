@@ -14,16 +14,22 @@ import org.apache.commons.io.FileUtils;
 import java.util.HashMap;
 
 public class LogReader {
+	boolean isTWS;
+	String twsLogFile = "tws.log";
+	String settingsFile = "tws.error.xml";
+	
 	String outputDirectory;
 	List<File> fileList;
 	
 	MarketDataSettingsMessage mdSettingsMessage;
 	ApiSettingsMessage apiSettingsMessage;
 	
-	public LogReader(){
+	public LogReader(boolean isTWS){
 		mdSettingsMessage = new MarketDataSettingsMessage();
 		apiSettingsMessage = new ApiSettingsMessage();
-		outputDirectory = "C:/Users/Siteng Jin/Documents/GitHub/LogAnalyzer/Temp";
+		this.isTWS = isTWS;
+		//outputDirectory = "C:/Users/Siteng Jin/Documents/GitHub/LogAnalyzer/Temp";
+		outputDirectory = "/Users/sitengjin/Documents/Github/LogAnalyzer/Temp";
 	}
 	
 	public void loadDiagnosticFiles(String dir){
@@ -34,23 +40,36 @@ public class LogReader {
 		if(outputDirectory == null){
 			throw new Exception("Invalid Directory");
 		}
-		File dir = new File(outputDirectory);
-		fileList = (List<File>) FileUtils.listFiles(dir, new String[] {"log", "xml"}, true);
+		
+		if(fileList == null){
+			File dir = new File(outputDirectory);
+			fileList = (List<File>) FileUtils.listFiles(dir, new String[] {"log", "xml"}, true);
+		}
 	}
 	
-	public File getTwsErrorXml(){
+	public File getSettingsFile(){
 		for(File file: fileList){
-			if(file.getName().equals("tws.error.xml")){
+			if(file.getName().equals(this.settingsFile)){
 				return new File(file.getPath());
 			}
 		}
 		return null;
 	}
 	
-	public void parseSettingsFile(File settings, int choice) throws Exception{
-		if(settings == null){
-			throw new Exception("Invalid File");
+	public File getTwsLogFile() throws Exception{
+		loadFilesList();
+		
+		for(File file: fileList){
+			if(file.getName().equals(this.twsLogFile)){
+				return new File(file.getPath());
+			}
 		}
+		
+		return null;
+	}
+	
+	public void parseSettingsFile(int choice) throws Exception{
+		File settings = this.getSettingsFile();
 		
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -64,7 +83,29 @@ public class LogReader {
 			SettingsLogParser.parseAPISettingsFile(doc, apiSettingsMessage);
 			break;
 		case Choices.MD:
+			SettingsLogParser.parseMDSettingsFile(doc, mdSettingsMessage);
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public void parseTwsLogFile(int choice) throws Exception{
+		File twsLogFile = this.getTwsLogFile();
+		
+		TwsLogParser twsLogParser = new TwsLogParser();
+		
+		switch (choice) {
+		case Choices.TWS:
+			TwsLogParser.parseTwsRestartInfo(twsLogFile);
+			break;
+		case Choices.MD:
 			
+			parseSettingsFile(Choices.MD);
+			break;
+		case Choices.API:
+			
+			parseSettingsFile(Choices.API);
 			break;
 		default:
 			break;
@@ -75,7 +116,13 @@ public class LogReader {
 		System.out.println(apiSettingsMessage.getCopyApiSettingsList().toString());
 		System.out.println(apiSettingsMessage.getCopyApiPrecautionsList().toString());
 		System.out.println(apiSettingsMessage.getCopyTrustedIPs().toString());
-		
+		System.out.println(mdSettingsMessage.getCopyMdSettingsList().toString());
+		System.out.println(mdSettingsMessage.getCopyEsignalSettingsList().toString());
+		System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListOpt().toString());
+		System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListStk().toString());
+		System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListFut().toString());
+		System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListInd().toString());
+		System.out.println(mdSettingsMessage.getCopySmartRoutSettingsList().toString());
 	}
 	
 }

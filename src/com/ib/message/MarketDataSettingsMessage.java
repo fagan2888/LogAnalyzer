@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class MarketDataSettingsMessage extends SettingsMessage{
 	private HashMap<String, String> marketDataSettingsList;
 	private HashMap<String, String> eSignalSettingsList;
+	//Samples: {intl={hist=false, depth=true, top=true}, usa={hist=false, depth=true, top=true}}
 	private HashMap<String, HashMap<String, String>> eSignalSecSettingsListOpt;
 	private HashMap<String, HashMap<String, String>> eSignalSecSettingsListStk;
 	private HashMap<String, HashMap<String, String>> eSignalSecSettingsListFut;
@@ -19,7 +20,7 @@ public class MarketDataSettingsMessage extends SettingsMessage{
 	
 	public static final String[] ESIGNALSETTINGSTAGS = {"allowed", "username", "password", "host", "apiUnpacedUpdates"};
 	
-	public static final String[] ESIGNALEXCHANGESETTINGSTAGS = {"top", "depth", "hist"};
+	public static final String[] ESIGNALEXCHANGESETTINGSTAGS = {"varName", "top", "depth", "hist"};
 	
 	public static final String[] SMARTROUTINGSETTINGSTAGS = {"preOpenReroute", "favorPriceImprovements", "eTradeOnly"
 		, "firmQuoteOnly", "nbboPriceCap"};
@@ -89,6 +90,7 @@ public class MarketDataSettingsMessage extends SettingsMessage{
 	public HashMap<String, HashMap<String, String>> getCopyEsignalSecSettingsListInd(){
 		return new HashMap<String, HashMap<String, String>>(eSignalSecSettingsListInd);
 	}
+	
 	
 	public void addAttrToSmartRoutSettingsList(String key, String value){
 		if(smartRoutingSettingsList == null){

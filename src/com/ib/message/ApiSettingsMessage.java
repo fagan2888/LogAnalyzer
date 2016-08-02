@@ -36,7 +36,7 @@ public class ApiSettingsMessage extends SettingsMessage{
 	
 	public ApiSettingsMessage(){}
 	
-	public static final String[] APISETTINGSTAGS = {"dde", "readOnlyApi", "socketClient", "autoOpenOrdDownload", "includeFxPositions"
+	public static final String[] APISETTINGSTAGS = {"dde", "readOnlyApi", "socketClient", "autoOpenOrdDonwload", "includeFxPositions"
 			, "includeContinuousUpdateChanges", "port", "useNegativeAutoRange", "createApiMsgLogFile", "includeMktData"
 			, "logLevel", "masterClientID", "slowBufferTimeout", "compExchSeparator", "allowOnlyLocalhost"};
 	
