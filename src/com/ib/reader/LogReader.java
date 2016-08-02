@@ -23,13 +23,15 @@ public class LogReader {
 	
 	MarketDataSettingsMessage mdSettingsMessage;
 	ApiSettingsMessage apiSettingsMessage;
+	EnvSettingsMessage envSettingsMessage;
 	
 	public LogReader(boolean isTWS){
 		mdSettingsMessage = new MarketDataSettingsMessage();
 		apiSettingsMessage = new ApiSettingsMessage();
+		envSettingsMessage = new EnvSettingsMessage();
 		this.isTWS = isTWS;
-		//outputDirectory = "C:/Users/Siteng Jin/Documents/GitHub/LogAnalyzer/Temp";
-		outputDirectory = "/Users/sitengjin/Documents/Github/LogAnalyzer/Temp";
+		//outputDirectory = "/Users/sitengjin/Documents/Github/LogAnalyzer/Temp";
+		this.outputDirectory = new String("C:/Users/Siteng Jin/Documents/GitHub/LogAnalyzer/Temp");
 	}
 	
 	public void loadDiagnosticFiles(String dir){
@@ -76,37 +78,109 @@ public class LogReader {
 		Document doc = dBuilder.parse(settings);
 		doc.getDocumentElement().normalize();
 		
-		SettingsLogParser settingsLogParser = new SettingsLogParser();
-		
 		switch (choice) {
 		case Choices.API:
 			SettingsLogParser.parseAPISettingsFile(doc, apiSettingsMessage);
 			break;
-		case Choices.MD:
+		case Choices.MKTDATA:
 			SettingsLogParser.parseMDSettingsFile(doc, mdSettingsMessage);
+			break;
+		case Choices.ENV:
+			SettingsLogParser.parseEnvSettingsFile(doc, envSettingsMessage);
 			break;
 		default:
 			break;
 		}
 	}
 	
-	public void parseTwsLogFile(int choice) throws Exception{
+	public void parseTwsLogFileDeep(int choice) throws Exception{
 		File twsLogFile = this.getTwsLogFile();
 		
-		TwsLogParser twsLogParser = new TwsLogParser();
+		switch (choice) {
+		case Choices.ENV:
+			parseSettingsFile(choice);
+			TwsLogParserDeep.parseTwsEnvInfo(twsLogFile);
+			break;
+		case Choices.LOGINSEQ:
+			TwsLogParserDeep.parseTwsLoginSeqInfo(twsLogFile);
+			break;
+		case Choices.SYSRES:
+			TwsLogParserDeep.parseTwsSysRes(twsLogFile);
+			break;
+		case Choices.MKTDATA:
+			parseSettingsFile(choice);
+			System.out.println(mdSettingsMessage.getCopyMdSettingsList().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSettingsList().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListOpt().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListStk().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListFut().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListInd().toString());
+			System.out.println(mdSettingsMessage.getCopySmartRoutSettingsList().toString());
+			TwsLogParserDeep.parseTwsMktData(twsLogFile);
+			break;
+		case Choices.CONN:
+			TwsLogParserDeep.parseTwsConn(twsLogFile);
+			break;
+		case Choices.HTBP:
+			TwsLogParserDeep.parseTwsHtbp(twsLogFile);
+			break;		
+		case Choices.API:
+			parseSettingsFile(choice);
+			System.out.println(apiSettingsMessage.getCopyApiSettingsList().toString());
+			System.out.println(apiSettingsMessage.getCopyApiPrecautionsList().toString());
+			System.out.println(apiSettingsMessage.getCopyTrustedIPs().toString());
+			TwsLogParserDeep.parseTwsApi(twsLogFile);	
+			break;
+		case Choices.ORDERSTRDS:
+			TwsLogParserDeep.parseTwsOrderTrds(twsLogFile);
+			break;	
+		default:
+			break;
+		}
+	}
+	
+	public void parseTwsLogFileShallow(int choice) throws Exception{
+		File twsLogFile = this.getTwsLogFile();
+		
+		TwsLogParserDeep twsLogParser = new TwsLogParserDeep();
 		
 		switch (choice) {
-		case Choices.TWS:
-			TwsLogParser.parseTwsRestartInfo(twsLogFile);
+		case Choices.ENV:
+			TwsLogParserDeep.parseTwsEnvInfo(twsLogFile);
 			break;
-		case Choices.MD:
-			
-			parseSettingsFile(Choices.MD);
+		case Choices.LOGINSEQ:
+			TwsLogParserDeep.parseTwsLoginSeqInfo(twsLogFile);
 			break;
+		case Choices.SYSRES:
+			TwsLogParserDeep.parseTwsSysRes(twsLogFile);
+			break;
+		case Choices.MKTDATA:
+			parseSettingsFile(choice);
+			System.out.println(mdSettingsMessage.getCopyMdSettingsList().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSettingsList().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListOpt().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListStk().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListFut().toString());
+			System.out.println(mdSettingsMessage.getCopyEsignalSecSettingsListInd().toString());
+			System.out.println(mdSettingsMessage.getCopySmartRoutSettingsList().toString());
+			TwsLogParserDeep.parseTwsMktData(twsLogFile);
+			break;
+		case Choices.CONN:
+			TwsLogParserDeep.parseTwsConn(twsLogFile);
+			break;
+		case Choices.HTBP:
+			TwsLogParserDeep.parseTwsHtbp(twsLogFile);
+			break;		
 		case Choices.API:
-			
-			parseSettingsFile(Choices.API);
+			parseSettingsFile(choice);
+			System.out.println(apiSettingsMessage.getCopyApiSettingsList().toString());
+			System.out.println(apiSettingsMessage.getCopyApiPrecautionsList().toString());
+			System.out.println(apiSettingsMessage.getCopyTrustedIPs().toString());
+			TwsLogParserDeep.parseTwsApi(twsLogFile);			
 			break;
+		case Choices.ORDERSTRDS:
+			TwsLogParserDeep.parseTwsOrderTrds(twsLogFile);
+			break;	
 		default:
 			break;
 		}

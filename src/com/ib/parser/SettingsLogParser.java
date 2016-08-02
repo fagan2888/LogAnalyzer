@@ -144,4 +144,112 @@ public class SettingsLogParser {
 		}
 
 	}
+	
+	public static void parseEnvSettingsFile(Document doc, SettingsMessage settingsMessage){
+		EnvSettingsMessage envSettingsMessage = null;
+
+		if (settingsMessage instanceof EnvSettingsMessage) {
+			envSettingsMessage = (EnvSettingsMessage) settingsMessage;
+		}
+
+		NodeList envNList = doc.getElementsByTagName("WorkspaceCollection");
+		System.out.println("Workspaces:");
+		
+		for (int i = 0; i < envNList.getLength(); i++){
+			Node keyNode = envNList.item(i);
+			if (keyNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element keyElement = (Element) keyNode;
+				String key = keyElement.getAttribute("currentWorkspaceKey");
+				System.out.println("Workspace key currently in use: " + key);
+			}
+		}
+		
+		envNList = doc.getElementsByTagName("Workspace");
+		System.out.println("");
+		
+		for (int i = 0; i < envNList.getLength(); i++){
+			Node keyNode = envNList.item(i);
+			if (keyNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element keyElement = (Element) keyNode;
+				for(String attr : EnvSettingsMessage.WORKSPACETAGS){
+					String attrValue = keyElement.getAttribute(attr);
+					if(!attrValue.isEmpty()){
+						System.out.println(attrValue);
+					} else {
+						System.out.println("Not present");
+					}
+				}
+			}
+		}
+		
+		envNList = doc.getElementsByTagName("TickerPageSetting");
+		System.out.println("TWS Tabs:");
+		
+		for (int i = 0; i < envNList.getLength(); i++){
+			Node keyNode = envNList.item(i);
+			if (keyNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element keyElement = (Element) keyNode;
+				for(String attr : EnvSettingsMessage.TICKERPAGESETTINGSTAGS){
+					String attrValue = keyElement.getAttribute(attr);
+					if(!attrValue.isEmpty()){
+						System.out.println(attrValue);
+					} else {
+						System.out.println("Not present");
+					}
+				}
+			}
+		}
+		
+		envNList = doc.getElementsByTagName("SystemSettings");
+		System.out.println("TWS System settings:");
+		
+		for (int i = 0; i < envNList.getLength(); i++){
+			Node keyNode = envNList.item(i);
+			if (keyNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element keyElement = (Element) keyNode;
+				for(String attr : EnvSettingsMessage.SYSTEMSETTINGSTAGS){
+					String attrValue = keyElement.getAttribute(attr);
+					if(!attrValue.isEmpty()){
+						System.out.println(attrValue);
+					} else {
+						System.out.println("Not present");
+					}
+				}
+			}
+		}
+		
+		envNList = doc.getElementsByTagName("AccountSettings");
+		System.out.println("Show positions in base currency (In Account,Portfolio and Quote monitor pages): ");
+		
+		for (int i = 0; i < envNList.getLength(); i++){
+			Node keyNode = envNList.item(i);
+			if (keyNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element keyElement = (Element) keyNode;				
+				String attrValue = keyElement.getAttribute("showAllInBaseCurrency");
+				if(!attrValue.isEmpty()){
+					System.out.println(attrValue);
+				} else {
+					System.out.println("Not present");
+				}			
+			}
+		}
+		
+		envNList = doc.getElementsByTagName("UISettings");
+		System.out.println("User Interface Settings: ");
+		
+		for (int i = 0; i < envNList.getLength(); i++){
+			Node keyNode = envNList.item(i);
+			if (keyNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element keyElement = (Element) keyNode;
+				for(String attr : EnvSettingsMessage.UISETTINGS){
+					String attrValue = keyElement.getAttribute(attr);
+					if(!attrValue.isEmpty()){
+						System.out.println(attrValue);
+					} else {
+						System.out.println("Not present");
+					}	
+				}
+			}
+		}
+	}
 }
