@@ -23,6 +23,23 @@ public class LogManager {
 		this.isDeepDiagnostic = true;
 	}
 	
+	public void extract(){
+		try {
+			reader.extractZip();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	public void setReaderLocation(String zipLocation, String outputDirectory){
+		if(zipLocation != null){
+			reader.setZipLocation(zipLocation);
+		}
+		if(outputDirectory != null){
+			reader.setOutputDirectory(outputDirectory);
+		}
+	}
+	
 	public void start(){
 		try {
 			reader.loadFilesList();

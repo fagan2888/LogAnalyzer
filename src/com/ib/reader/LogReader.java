@@ -15,15 +15,16 @@ import java.util.HashMap;
 
 public class LogReader {
 	boolean isTWS;
-	String twsLogFile = "tws.log";
-	String settingsFile = "tws.error.xml";
+	private String twsLogFile = "tws.log";
+	private String settingsFile = "tws.error.xml";
 	
-	String outputDirectory;
-	List<File> fileList;
+	private String zipLocation = null;
+	private String outputDirectory = null;
+	private List<File> fileList;
 	
-	MarketDataSettingsMessage mdSettingsMessage;
-	ApiSettingsMessage apiSettingsMessage;
-	EnvSettingsMessage envSettingsMessage;
+	private MarketDataSettingsMessage mdSettingsMessage;
+	private ApiSettingsMessage apiSettingsMessage;
+	private EnvSettingsMessage envSettingsMessage;
 	
 	public LogReader(boolean isTWS){
 		mdSettingsMessage = new MarketDataSettingsMessage();
@@ -34,8 +35,22 @@ public class LogReader {
 		this.outputDirectory = new String("C:/Users/Siteng Jin/Documents/GitHub/LogAnalyzer/Temp");
 	}
 	
-	public void loadDiagnosticFiles(String dir){
-		
+	public void setOutputDirectory(String dir){
+		if(dir != null){
+			outputDirectory = dir;
+		}
+	}
+	
+	public void setZipLocation(String dir){
+		if(dir != null){
+			zipLocation = dir;
+		}
+	}
+	
+	public void extractZip() throws Exception{
+		if(zipLocation != null && outputDirectory != null){
+			ExtractZip.unZipIt(zipLocation, outputDirectory);
+		}
 	}
 	
 	public void loadFilesList() throws Exception{
